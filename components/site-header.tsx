@@ -53,10 +53,13 @@ export function SiteHeader({ locale }: { locale: Locale }) {
           <div className="flex h-full w-[180px] items-center border-line lg:w-[215px] lg:border-r">
             <Link
               href={withLocale("/", locale)}
-              className="group inline-flex h-full items-center px-4 transition-colors lg:hover:bg-primary/5"
+              className="group inline-flex h-full items-center gap-3 px-4 transition-colors lg:hover:bg-primary/5"
               aria-label="Sanjay S — Home"
             >
               <BrandLogo />
+              <span className="font-mono text-xs font-medium uppercase tracking-[0.35em] text-foreground">
+                Sanjay
+              </span>
             </Link>
           </div>
           <div className="hidden flex-1 items-center justify-center lg:flex">

@@ -15,12 +15,15 @@ void main() {
 const simulationFragmentShader = `
 uniform sampler2D textureA;
 uniform vec2 mouse;
+uniform vec2 prevMouse;
 uniform vec2 resolution;
-uniform float time;
+uniform float step;
 uniform int frame;
-varying vec2 vUv;
 
-const float delta = 1.4;
+uniform float mouseRadius;
+uniform float mouseStrength;
+
+varying vec2 vUv;
 
 void main() {
   vec2 uv = vUv;
@@ -28,6 +31,11 @@ void main() {
     gl_FragColor = vec4(0.0);
     return;
   }
+
+  // Frame-rate independent timestep keeps wave speed consistent on 60Hz and
+  // high-refresh displays. It is capped so the explicit integrator stays
+  // numerically stable even when frames run slow (software WebGL, low FPS).
+  float delta = min(1.4 * step, 1.0);
 
   vec4 data = texture2D(textureA, uv);
   float pressure = data.x;
@@ -49,18 +57,32 @@ void main() {
 
   pressure += delta * pVel;
 
+  // Smooth, frame-rate independent damping lets ripples fade elegantly.
   pVel -= 0.005 * delta * pressure;
+  pVel *= pow(0.985, step);
+  pressure *= pow(0.96, step);
 
-  pVel *= 1.0 - 0.002 * delta;
-  pressure *= 0.999;
+  vec2 toPx = uv * resolution;
 
-  vec2 mouseUV = mouse / resolution;
+  // Cursor ripples: the surface stays still until the cursor moves. While
+  // moving, pressure is injected at the pointer, leaving a wake that
+  // radiates outward as smooth, natural waves. A stationary cursor or an
+  // idle page keeps the liquid calm.
   if (mouse.x > 0.0) {
-    float dist = distance(uv, mouseUV);
-    if (dist <= 0.02) {
-      pressure += 2.0 * (1.0 - dist / 0.02);
+    vec2 mouseVel = mouse - prevMouse;
+    float speed = length(mouseVel);
+    if (speed > 0.3) {
+      float d = distance(toPx, mouse);
+      if (d <= mouseRadius) {
+        float falloff = 1.0 - d / mouseRadius;
+        float amp = clamp(speed * 0.06, 0.4, 3.0) * mouseStrength;
+        pressure += amp * falloff * falloff;
+        pVel -= amp * 0.45 * falloff;
+      }
     }
   }
+
+  pressure = clamp(pressure, -3.0, 3.0);
 
   gl_FragColor = vec4(pressure, pVel,
     (p_right - p_left) / 2.0,
@@ -79,18 +101,26 @@ void main() {
 const renderFragmentShader = `
 uniform sampler2D textureA;
 uniform sampler2D textureB;
+uniform float distortionStrength;
 varying vec2 vUv;
 
 void main() {
   vec4 data = texture2D(textureA, vUv);
-  vec2 distortion = 0.3 * data.zw;
+  vec2 slope = data.zw;
+
+  // Gentle, clamped distortion keeps the logo recognizable while the
+  // gradient bends the image beneath it like a thin layer of glass.
+  vec2 distortion = clamp(distortionStrength * slope, -0.045, 0.045);
   vec4 color = texture2D(textureB, vUv + distortion);
 
-  vec3 normal = normalize(vec3(-data.z * 2.0, 0.5, -data.w * 2.0));
-  vec3 lightDir = normalize(vec3(-3.0, 10.0, 3.0));
-  float specular = pow(max(0.0, dot(normal, lightDir)), 60.0) * 1.5;
+  // Subtle monochrome height shading for the floating-water feel
+  color.rgb += data.x * 0.06;
 
-  gl_FragColor = color + vec4(specular);
+  vec3 normal = normalize(vec3(-slope.x * 2.0, 0.5, -slope.y * 2.0));
+  vec3 lightDir = normalize(vec3(-3.0, 10.0, 3.0));
+  float specular = pow(max(0.0, dot(normal, lightDir)), 64.0) * 1.4;
+
+  gl_FragColor = vec4(color.rgb + specular, color.a);
 }
 `
 
@@ -127,9 +157,7 @@ export function LiquidHero({
     const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1)
 
     const renderer = new THREE.WebGLRenderer({
-      antialias: true,
       alpha: true,
-      preserveDrawingBuffer: true,
     })
     renderer.setPixelRatio(dpr)
     renderer.setSize(cssWidth, cssHeight, false)
@@ -155,14 +183,18 @@ export function LiquidHero({
     let rtB = new THREE.WebGLRenderTarget(width, height, rtOptions)
 
     const mouse = new THREE.Vector2()
+    const prevMouse = new THREE.Vector2()
 
     const simMaterial = new THREE.ShaderMaterial({
       uniforms: {
         textureA: { value: null },
         mouse: { value: mouse },
+        prevMouse: { value: prevMouse },
         resolution: { value: new THREE.Vector2(width, height) },
-        time: { value: 0 },
+        step: { value: 1 },
         frame: { value: 0 },
+        mouseRadius: { value: 40 },
+        mouseStrength: { value: 2.4 },
       },
       vertexShader: simulationVertexShader,
       fragmentShader: simulationFragmentShader,
@@ -172,11 +204,18 @@ export function LiquidHero({
       uniforms: {
         textureA: { value: null },
         textureB: { value: null },
+        distortionStrength: { value: 0.55 },
       },
       vertexShader: renderVertexShader,
       fragmentShader: renderFragmentShader,
       transparent: true,
     })
+
+    const updateWaveField = () => {
+      const minDim = Math.min(width, height)
+      simMaterial.uniforms.mouseRadius.value = Math.max(40, 45 * dpr)
+    }
+    updateWaveField()
 
     const plane = new THREE.PlaneGeometry(2, 2)
     const simQuad = new THREE.Mesh(plane, simMaterial)
@@ -214,7 +253,12 @@ export function LiquidHero({
         return
       }
 
-      const imageAspect = logoImg.width / logoImg.height || 1
+      // The source portrait contains a small duplicated fragment above the
+      // head; crop it out so the hero renders a single, seamless portrait.
+      const cropTop = 0.11
+      const srcY = logoImg.height * cropTop
+      const srcH = logoImg.height * (1 - cropTop)
+      const imageAspect = logoImg.width / srcH || 1
       // Use CSS pixels for the responsive breakpoint check
       const cssW = w / dpr
       const useRightAlign = imageAlign === "right" && cssW >= 768
@@ -251,8 +295,8 @@ export function LiquidHero({
         logoY = (h - logoH) / 2
       }
 
-      // Draw the ASCII SVG into the canvas texture
-      ctx.drawImage(logoImg, logoX, logoY, logoW, logoH)
+      // Draw the logo into the canvas texture (cropped source region)
+      ctx.drawImage(logoImg, 0, srcY, logoImg.width, srcH, logoX, logoY, logoW, logoH)
 
       // Fill the theme background behind anything still transparent.
       ctx.save()
@@ -265,11 +309,17 @@ export function LiquidHero({
     }
 
     let frame = 0
+    let running = false
+    let lastFrameTime = 0
     let animationId: number | null = null
 
-    const animate = () => {
+    const tick = (now: number) => {
+      const elapsed = lastFrameTime === 0 ? 16.7 : now - lastFrameTime
+      lastFrameTime = now
+      const step = Math.min(elapsed / 16.67, 2.5)
+
+      simMaterial.uniforms.step.value = step
       simMaterial.uniforms.frame.value = frame++
-      simMaterial.uniforms.time.value = performance.now() / 1000
 
       simMaterial.uniforms.textureA.value = rtA.texture
       renderer.setRenderTarget(rtB)
@@ -284,8 +334,47 @@ export function LiquidHero({
       rtA = rtB
       rtB = tmp
 
-      animationId = requestAnimationFrame(animate)
+      // Persist this frame's cursor position so the next frame can measure
+      // how far the pointer travelled and inject a ripple accordingly.
+      simMaterial.uniforms.prevMouse.value.copy(mouse)
+
+      animationId = requestAnimationFrame(tick)
     }
+
+    const start = () => {
+      if (running || document.hidden) return
+      running = true
+      lastFrameTime = 0
+      animationId = requestAnimationFrame(tick)
+    }
+
+    const stop = () => {
+      running = false
+      if (animationId !== null) cancelAnimationFrame(animationId)
+      animationId = null
+      mouse.set(0, 0)
+    }
+
+    const onVisibilityChange = () => {
+      if (document.hidden) {
+        stop()
+      } else {
+        start()
+      }
+    }
+    document.addEventListener("visibilitychange", onVisibilityChange)
+
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          start()
+        } else {
+          stop()
+        }
+      },
+      { rootMargin: "100px" },
+    )
+    io.observe(container)
 
     const onMouseMove = (e: PointerEvent) => {
       const rect = renderer.domElement.getBoundingClientRect()
@@ -295,9 +384,17 @@ export function LiquidHero({
     const onMouseLeave = () => {
       mouse.set(0, 0)
     }
+    const onPointerDown = (e: PointerEvent) => {
+      const rect = renderer.domElement.getBoundingClientRect()
+      const x = (e.clientX - rect.left) * dpr
+      const y = (rect.height - (e.clientY - rect.top)) * dpr
+      mouse.set(x, y)
+      prevMouse.set(x - 320, y - 320)
+    }
 
     renderer.domElement.addEventListener("pointermove", onMouseMove)
     renderer.domElement.addEventListener("pointerleave", onMouseLeave)
+    renderer.domElement.addEventListener("pointerdown", onPointerDown)
 
     let resizeRaf: number | null = null
     const applyResize = () => {
@@ -336,6 +433,7 @@ export function LiquidHero({
       frame = 0
       simMaterial.uniforms.frame.value = 0
 
+      updateWaveField()
       paintCanvas(width, height)
       // CanvasTexture caches its image; reassign so three.js re-uploads at
       // the new dimensions on the next animate() tick.
@@ -363,25 +461,29 @@ export function LiquidHero({
       const img = new window.Image()
       img.decoding = "async"
       img.onload = () => {
+        if (!container.isConnected) return
         logoImg = img
         paintCanvas(width, height)
-        animate()
+        start()
       }
       img.onerror = () => {
-        animate()
+        if (container.isConnected) start()
       }
       img.src = imagePath
     } else {
-      animate()
+      start()
     }
 
     return () => {
-      if (animationId !== null) cancelAnimationFrame(animationId)
+      stop()
+      document.removeEventListener("visibilitychange", onVisibilityChange)
       if (resizeRaf !== null) cancelAnimationFrame(resizeRaf)
+      io.disconnect()
       ro.disconnect()
       themeObserver.disconnect()
       renderer.domElement.removeEventListener("pointermove", onMouseMove)
       renderer.domElement.removeEventListener("pointerleave", onMouseLeave)
+      renderer.domElement.removeEventListener("pointerdown", onPointerDown)
       try {
         renderer.domElement.parentNode?.removeChild(renderer.domElement)
       } catch {}

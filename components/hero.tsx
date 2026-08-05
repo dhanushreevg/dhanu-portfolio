@@ -22,8 +22,8 @@ export function HeroContent({
 }) {
   return (
     <Container innerClassName="overflow-hidden bg-background">
-      <div className="relative min-h-[700px] lg:h-[820px]">
-        <LiquidHero imagePath="/ascii.svg" imageAlign="right" className="z-0" />
+      <div className="relative min-h-[calc(100svh-5rem)]">
+        <LiquidHero imagePath="/sanjay-logo.png" imageAlign="right" className="z-0" />
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-br from-background/80 via-background/30 to-transparent"
@@ -34,7 +34,7 @@ export function HeroContent({
         />
 
         <div className="pointer-events-none absolute inset-0 z-10 flex flex-col">
-          <div className="mx-auto flex h-full w-full max-w-[1380px] flex-col justify-between px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-16">
+          <div className="mx-auto flex h-full w-full max-w-[1380px] flex-col justify-between gap-10 px-4 py-10 sm:px-6 sm:py-11 md:gap-14 md:px-10 md:py-11">
             <div>
               <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.4em] text-accent">
                 {eyebrow}
@@ -61,7 +61,7 @@ export function HeroContent({
               </p>
             </div>
 
-            <div className="pointer-events-auto mt-10 inline-grid w-full grid-cols-1 gap-4 sm:w-fit">
+            <div className="pointer-events-auto inline-grid w-full grid-cols-1 gap-4 sm:w-fit">
               <Link
                 href={eventsHref}
                 className="group flex items-center justify-between gap-3 border border-foreground/20 bg-background/20 px-6 py-3 text-foreground/85 backdrop-blur-[2px] transition-colors hover:border-foreground/50 hover:bg-background/40"
