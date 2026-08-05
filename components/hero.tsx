@@ -22,25 +22,29 @@ export function HeroContent({
 }) {
   return (
     <Container innerClassName="overflow-hidden bg-background">
-      <div className="relative min-h-[calc(100svh-5rem)]">
-        <LiquidHero imagePath="/sanjay-logo.png" imageAlign="right" className="z-0" />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-br from-background/80 via-background/30 to-transparent"
+      <div className="relative flex flex-col md:block md:min-h-[calc(100svh-5rem)]">
+        <LiquidHero
+          imagePath="/sanjay-logo.png"
+          imageAlign="right"
+          className="z-0 hidden md:block"
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-1/3 bg-gradient-to-t from-background/85 to-transparent"
+          className="pointer-events-none absolute inset-0 z-[1] hidden bg-gradient-to-br from-background/80 via-background/30 to-transparent md:block"
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] hidden h-1/3 bg-gradient-to-t from-background/85 to-transparent md:block"
         />
 
-        <div className="pointer-events-none absolute inset-0 z-10 flex flex-col">
-          <div className="mx-auto flex h-full w-full max-w-[1380px] flex-col justify-between gap-10 px-4 py-10 sm:px-6 sm:py-11 md:gap-14 md:px-10 md:py-11">
+        <div className="pointer-events-none relative z-10 flex flex-col md:absolute md:inset-0 md:flex-col">
+          <div className="mx-auto flex w-full max-w-[1380px] flex-col justify-between px-4 pt-8 sm:px-6 md:h-full md:gap-14 md:px-10 md:py-11">
             <div>
-              <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.4em] text-accent">
+              <p className="mb-3 font-mono text-[10px] uppercase tracking-[0.4em] text-accent md:mb-5">
                 {eyebrow}
               </p>
               <h1
-                className="select-none text-balance font-bold uppercase tracking-tight leading-[0.95] text-foreground text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem]"
+                className="select-none text-balance font-bold uppercase tracking-tight leading-[0.95] text-foreground text-[clamp(2rem,7.5vw,3rem)] md:text-6xl lg:text-7xl xl:text-[5.5rem]"
                 style={{
                   filter:
                     "drop-shadow(0 2px 24px hsl(var(--background) / 0.6))",
@@ -51,7 +55,7 @@ export function HeroContent({
                 <span className="block text-accent">{lines[2]}</span>
               </h1>
               <p
-                className="mt-6 max-w-2xl text-balance text-base leading-relaxed text-foreground/85 md:text-lg"
+                className="mt-3 max-w-2xl text-balance text-base leading-relaxed text-foreground/85 md:mt-6 md:text-lg"
                 style={{
                   filter:
                     "drop-shadow(0 1px 8px hsl(var(--background) / 0.7))",
@@ -61,7 +65,7 @@ export function HeroContent({
               </p>
             </div>
 
-            <div className="pointer-events-auto inline-grid w-full grid-cols-1 gap-4 sm:w-fit">
+            <div className="pointer-events-auto mt-8 inline-grid w-full grid-cols-1 gap-4 sm:w-fit md:mt-0">
               <Link
                 href={eventsHref}
                 className="group flex items-center justify-between gap-3 border border-foreground/20 bg-background/20 px-6 py-3 text-foreground/85 backdrop-blur-[2px] transition-colors hover:border-foreground/50 hover:bg-background/40"
@@ -69,6 +73,18 @@ export function HeroContent({
                 {eventsCta}
                 <PixelArrow />
               </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative mb-8 mt-8 md:hidden">
+          <div className="mx-auto w-[68vw]">
+            <div className="relative aspect-[1.03]">
+              <LiquidHero
+                imagePath="/sanjay-logo.png"
+                imageAlign="center"
+                fillFactor={0.92}
+              />
             </div>
           </div>
         </div>

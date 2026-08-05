@@ -253,12 +253,9 @@ export function LiquidHero({
         return
       }
 
-      // The source portrait contains a small duplicated fragment above the
-      // head; crop it out so the hero renders a single, seamless portrait.
-      const cropTop = 0.11
-      const srcY = logoImg.height * cropTop
-      const srcH = logoImg.height * (1 - cropTop)
-      const imageAspect = logoImg.width / srcH || 1
+      // The source portrait's hairstyle rises to the very top of the image;
+      // keep the full head visible by drawing the entire source.
+      const imageAspect = logoImg.width / logoImg.height || 1
       // Use CSS pixels for the responsive breakpoint check
       const cssW = w / dpr
       const useRightAlign = imageAlign === "right" && cssW >= 768
@@ -295,8 +292,9 @@ export function LiquidHero({
         logoY = (h - logoH) / 2
       }
 
-      // Draw the logo into the canvas texture (cropped source region)
-      ctx.drawImage(logoImg, 0, srcY, logoImg.width, srcH, logoX, logoY, logoW, logoH)
+      // Draw the logo into the canvas texture, contain-fitted and centered
+      // (object-fit: contain equivalent) so nothing is clipped or distorted.
+      ctx.drawImage(logoImg, logoX, logoY, logoW, logoH)
 
       // Fill the theme background behind anything still transparent.
       ctx.save()
