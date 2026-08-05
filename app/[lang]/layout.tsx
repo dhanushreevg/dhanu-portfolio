@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     template: "%s | Sanjay S",
   },
   description:
-    "Software Developer, AI Builder, Full Stack Developer, Founder, and Innovation Enthusiast.",
+    "AI Builder • Product Developer • Open Source Contributor. Building technology that solves real-world problems through AI, full-stack development, and innovative digital experiences.",
   authors: [{ name: "Sanjay S" }],
   keywords: [
     "Sanjay S",
@@ -66,16 +66,6 @@ export const metadata: Metadata = {
     apple: "/sanjay-logo.png",
   },
   manifest: "/manifest.webmanifest",
-  openGraph: {
-    siteName: siteConfig.name,
-    images: ["/ascii.svg"],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    images: ["/ascii.svg"],
-  },
 }
 
 export const viewport: Viewport = {

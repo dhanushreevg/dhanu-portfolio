@@ -9,18 +9,18 @@ function localized(value: LocalizedString, locale: Locale) {
 
 export const siteConfig = {
   name: "Sanjay S",
-  domain: "sanjay.dev",
+  domain: "tbhsanjay.vercel.app",
   tagline: {
     en: "CS Student · AI Builder · Product Developer",
     es: "CS Student · AI Builder · Product Developer",
     pt: "CS Student · AI Builder · Product Developer",
   },
   description: {
-    en: "Software Developer, AI Builder, Full Stack Developer, Founder, and Innovation Enthusiast.",
-    es: "Software Developer, AI Builder, Full Stack Developer, Founder, and Innovation Enthusiast.",
-    pt: "Software Developer, AI Builder, Full Stack Developer, Founder, and Innovation Enthusiast.",
+    en: "AI Builder • Product Developer • Open Source Contributor. Building technology that solves real-world problems through AI, full-stack development, and innovative digital experiences.",
+    es: "AI Builder • Product Developer • Open Source Contributor. Building technology that solves real-world problems through AI, full-stack development, and innovative digital experiences.",
+    pt: "AI Builder • Product Developer • Open Source Contributor. Building technology that solves real-world problems through AI, full-stack development, and innovative digital experiences.",
   },
-  url: "https://sanjay.dev",
+  url: "https://tbhsanjay.vercel.app",
   author: "Sanjay S",
   email: "sanjay@sanjay.dev",
   github: "https://github.com/sanjay-offl",

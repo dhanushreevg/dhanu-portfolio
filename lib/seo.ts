@@ -41,6 +41,13 @@ export function absoluteUrl(path: string) {
   return new URL(path, baseUrl).toString()
 }
 
+export const ogImage = {
+  url: absoluteUrl("/og-image.png"),
+  width: 1200,
+  height: 630,
+  alt: siteConfig.ogImage.alt,
+}
+
 export function localizedUrl(path: string, locale: Locale) {
   return absoluteUrl(pathForLocale(path, locale))
 }
@@ -97,7 +104,7 @@ export function buildMetadata({
       description,
       url,
       siteName: siteConfig.name,
-      images: ["/ascii.svg"],
+      images: [ogImage],
       type: "website",
       locale: ogLocales[locale],
       alternateLocale: locales
@@ -108,7 +115,7 @@ export function buildMetadata({
       card: "summary_large_image",
       title: fullTitle,
       description,
-      images: ["/ascii.svg"],
+      images: [ogImage.url],
     },
   }
 }
