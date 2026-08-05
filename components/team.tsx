@@ -10,22 +10,22 @@ export function Team({ locale }: { locale: Locale }) {
     <div id="team">
       <Container innerClassName="border-b py-6">
         <h2 className="text-center font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-          The crafters
+          The builder
         </h2>
       </Container>
       <hr className="border-line" />
       <Container innerClassName="px-6 py-12 md:px-10 md:py-16">
         <div className="mx-auto max-w-2xl text-center">
           <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-            One team, many timezones
+            One builder, one mission
           </p>
           <h3 className="mt-3 text-3xl tracking-tight md:text-4xl">
-            Senior operators only
+            Building with purpose
           </h3>
           <p className="mt-4 text-balance text-muted-foreground">
-            We stay deliberately small so every project gets senior eyes from
-            day one. No layers. No handoffs. Just the people who will actually
-            ship it, across the Americas, working as one team.
+            Every project gets my full attention — from first sketch to shipped
+            product. No layers. No handoffs. Just focused building that solves
+            real problems.
           </p>
         </div>
       </Container>

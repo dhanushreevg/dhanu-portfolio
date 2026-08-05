@@ -63,7 +63,7 @@ export const teamMembers: TeamMember[] = [
       { name: "FAYNEX", url: "https://github.com/sanjay-offl/faynex" },
     ],
     joinedYear: 2024,
-    calendar: "sanjay",
+    cal: "sanjay",
     stack: [
       { category: "Languages", items: ["Python", "TypeScript", "JavaScript", "Java", "SQL", "GDScript", "C"] },
       { category: "Frontend", items: ["React", "Next.js 14", "Tailwind CSS", "HTML5", "CSS3"] },

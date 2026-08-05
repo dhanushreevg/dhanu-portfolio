@@ -52,7 +52,7 @@ export async function Capabilities({ locale }: { locale: Locale }) {
         <div className="relative overflow-hidden p-10 md:border-r md:border-line">
           <InteractiveLines orientation="horizontal" className="opacity-60" />
           <p className="relative font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-            What we craft
+            What I build
           </p>
           <p className="relative mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
             Sanjay S is a builder solving real problems with AI, full-stack

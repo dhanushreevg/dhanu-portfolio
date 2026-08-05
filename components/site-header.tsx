@@ -1,9 +1,9 @@
 import Link from "next/link"
 import { Menu } from "lucide-react"
 import { Container } from "@/components/grid-container"
+import { BrandLogo } from "@/components/brand-logo"
 import { LanguageSwitcher } from "@/components/language-switcher"
 import { PixelArrow } from "@/components/pixel-arrow"
-import { SiteWordmark } from "@/components/site-wordmark"
 import { type Locale, withLocale } from "@/lib/i18n"
 import { navItems } from "@/lib/site"
 
@@ -12,29 +12,30 @@ const navCopy = {
     events: "Events",
     projects: "Projects",
     research: "Research",
-    impact: "Impact",
     team: "Team",
-    communityCta: "Join the community",
+    timeline: "Timeline",
+    impact: "Impact",
+    communityCta: "Follow along",
     language: "Language",
     openMenu: "Open menu",
   },
   es: {
-    events: "Eventos",
     projects: "Proyectos",
     research: "Investigacion",
-    impact: "Impacto",
     team: "Equipo",
-    communityCta: "Unete a la comunidad",
+    timeline: "Linea de tiempo",
+    impact: "Impacto",
+    communityCta: "Follow along",
     language: "Idioma",
     openMenu: "Abrir menu",
   },
   pt: {
-    events: "Eventos",
     projects: "Projetos",
     research: "Pesquisa",
-    impact: "Impacto",
     team: "Equipe",
-    communityCta: "Entre na comunidade",
+    timeline: "Linha do tempo",
+    impact: "Impacto",
+    communityCta: "Follow along",
     language: "Idioma",
     openMenu: "Abrir menu",
   },
@@ -53,8 +54,9 @@ export function SiteHeader({ locale }: { locale: Locale }) {
             <Link
               href={withLocale("/", locale)}
               className="group inline-flex h-full items-center px-4 transition-colors lg:hover:bg-primary/5"
+              aria-label="Sanjay S — Home"
             >
-              <SiteWordmark />
+              <BrandLogo />
             </Link>
           </div>
           <div className="hidden flex-1 items-center justify-center lg:flex">
@@ -107,7 +109,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
                     </div>
                   </div>
                   <Link
-                    href="https://crafters.chat"
+                    href="https://github.com/sanjay-offl"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-4 inline-flex items-center justify-between border border-foreground/20 px-4 py-3 text-sm font-medium"

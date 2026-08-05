@@ -67,12 +67,27 @@ export function buildMetadata({
 }): Metadata {
   const url = localizedUrl(path, locale)
   const fullTitle =
-    title === siteConfig.name ? `${siteConfig.name} · ${siteConfig.tagline[locale]}` : `${title} | ${siteConfig.name}`
+    title === siteConfig.name
+      ? "Sanjay S | Portfolio"
+      : `${title} | ${siteConfig.name}`
 
   return {
     metadataBase: new URL(baseUrl),
     title: fullTitle,
     description,
+    authors: [{ name: "Sanjay S" }],
+    keywords: [
+      "Sanjay S",
+      "Portfolio",
+      "Software Engineer",
+      "React",
+      "Next.js",
+      "AI",
+      "Spring Boot",
+      "Full Stack",
+      "Innovation",
+      "Developer Portfolio",
+    ],
     alternates: {
       canonical: url,
       languages: languageAlternates(path),
@@ -82,14 +97,7 @@ export function buildMetadata({
       description,
       url,
       siteName: siteConfig.name,
-      images: [
-        {
-          url: "/og.png",
-          width: 1200,
-          height: 630,
-          alt: `${siteConfig.name} · ${siteConfig.tagline[locale]}`,
-        },
-      ],
+      images: ["/ascii.svg"],
       type: "website",
       locale: ogLocales[locale],
       alternateLocale: locales
@@ -100,7 +108,7 @@ export function buildMetadata({
       card: "summary_large_image",
       title: fullTitle,
       description,
-      images: ["/og-twitter.png"],
+      images: ["/ascii.svg"],
     },
   }
 }

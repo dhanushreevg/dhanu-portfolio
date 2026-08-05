@@ -1,5 +1,5 @@
 import React from "react"
-import type { Viewport } from "next"
+import type { Metadata, Viewport } from "next"
 import { JetBrains_Mono, Space_Grotesk } from "next/font/google"
 import { notFound } from "next/navigation"
 import { setRequestLocale } from "next-intl/server"
@@ -27,7 +27,7 @@ const structuredData = [
     "@type": "Organization",
     name: siteConfig.name,
     url: baseUrl,
-    logo: `${baseUrl}/brand/logo-liquid.png`,
+    logo: `${baseUrl}/sanjay-logo.png`,
     sameAs: socials.map((social) => social.href),
   },
   {
@@ -39,8 +39,47 @@ const structuredData = [
   },
 ]
 
+export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl),
+  title: {
+    default: "Sanjay S | Portfolio",
+    template: "%s | Sanjay S",
+  },
+  description:
+    "Software Developer, AI Builder, Full Stack Developer, Founder, and Innovation Enthusiast.",
+  authors: [{ name: "Sanjay S" }],
+  keywords: [
+    "Sanjay S",
+    "Portfolio",
+    "Software Engineer",
+    "React",
+    "Next.js",
+    "AI",
+    "Spring Boot",
+    "Full Stack",
+    "Innovation",
+    "Developer Portfolio",
+  ],
+  icons: {
+    icon: "/sanjay-logo.png",
+    shortcut: "/sanjay-logo.png",
+    apple: "/sanjay-logo.png",
+  },
+  manifest: "/manifest.webmanifest",
+  openGraph: {
+    siteName: siteConfig.name,
+    images: ["/ascii.svg"],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/ascii.svg"],
+  },
+}
+
 export const viewport: Viewport = {
-  themeColor: "#0d0d0d",
+  themeColor: "#000000",
 }
 
 export const dynamicParams = false

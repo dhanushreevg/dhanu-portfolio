@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils"
-import { CrafterStationLogo } from "./crafter-station-logo"
+import { BrandLogo } from "./brand-logo"
 
 export function SiteWordmark({
   className,
@@ -16,7 +16,7 @@ export function SiteWordmark({
       )}
       aria-label="Sanjay S"
     >
-      {showIcon ? <CrafterStationLogo className="h-4 w-4" /> : null}
+      {showIcon ? <BrandLogo className="h-6 w-auto" /> : null}
       <span className="wordmark-crafter text-sm tracking-[0.08em] text-foreground">
         Sanjay S
       </span>

@@ -16,9 +16,9 @@ export const siteConfig = {
     pt: "CS Student · AI Builder · Product Developer",
   },
   description: {
-    en: "CS student, AI builder, and product developer building technology that solves real problems.",
-    es: "CS student, AI builder, and product developer building technology that solves real problems.",
-    pt: "CS student, AI builder, and product developer building technology that solves real problems.",
+    en: "Software Developer, AI Builder, Full Stack Developer, Founder, and Innovation Enthusiast.",
+    es: "Software Developer, AI Builder, Full Stack Developer, Founder, and Innovation Enthusiast.",
+    pt: "Software Developer, AI Builder, Full Stack Developer, Founder, and Innovation Enthusiast.",
   },
   url: "https://sanjay.dev",
   author: "Sanjay S",

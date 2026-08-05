@@ -23,10 +23,10 @@ const buildLinks = [
 ]
 
 const communityLinks = [
-  { key: "joinCommunity", href: "https://crafters.chat" },
-  { key: "lumaEvents", href: "https://luma.com/hack0" },
-  { key: "hack0", href: "https://hack0.dev" },
-  { key: "shippingBible", href: "https://theshippingbible.com/" },
+  { key: "joinCommunity", href: "https://sanjay-offl.github.io" },
+  { key: "lumaEvents", href: "https://research.sanjay.dev" },
+  { key: "hack0", href: "https://instagram.com/sanjay_offl/" },
+  { key: "shippingBible", href: "https://www.youtube.com/@sanjayoffl" },
 ]
 
 export async function SiteFooter({ locale }: { locale: Locale }) {
