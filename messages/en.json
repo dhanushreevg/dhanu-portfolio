@@ -5,19 +5,19 @@
     "openCta": "Open"
   },
   "home": {
-    "eyebrow": "Crafter Station · LatAm",
-    "line1": "The LatAm",
-    "line2": "network of",
-    "line3": "shippers.",
-    "description": "A community of 800+ builders, a project lab, research, and events helping LatAm shippers meet, learn, and build in public.",
+    "eyebrow": "Sanjay S · India",
+    "line1": "I am",
+    "line2": "a builder solving",
+    "line3": "real problems.",
+    "description": "CS student, AI builder, and product developer building technology that solves real problems.",
     "workCta": "Work with us",
     "communityCta": "Join the community",
     "eventsCta": "See events",
     "workPreview": {
-      "section": "LatAm growth partner",
+      "section": "Sanjay S growth partner",
       "eyebrow": "For devtools and startups",
       "title": "Launch with the builders you actually want to reach.",
-      "description": "We design hackathons, Code Brews, workshops, product launches, content, and community activations for teams that want real LatAm adoption, not vanity impressions.",
+      "description": "We design hackathons, workshops, product launches, content, and community activations for teams that want real India adoption, not vanity impressions.",
       "cta": "Work with us",
       "cardCta": "Start a conversation"
     },
@@ -27,15 +27,15 @@
     },
     "communityPreview": {
       "eyebrow": "Community first",
-      "title": "The best LatAm builders are already shipping.",
-      "description": "Crafter Station exists to connect them, celebrate their work, and help more people build in public with taste, speed, and ambition.",
+      "title": "The best builders are already building.",
+      "description": "Sanjay S exists to connect them, celebrate their work, and help more people build in public with taste, speed, and ambition.",
       "communityCta": "Join the community",
       "eventsCta": "Explore events"
     },
     "eventsResearch": {
       "eventsEyebrow": "Events engine",
-      "eventsTitle": "Meet the shippers.",
-      "researchEyebrow": "Crafter Research",
+      "eventsTitle": "Meet the builders.",
+      "researchEyebrow": "Sanjay S Research",
       "researchTitle": "Study the next shift.",
       "researchDescription": "We research AI-first engineering, agents, developer experience, product workflows, and the systems that help teams ship with AI.",
       "partnerCta": "Partner on events",
@@ -44,21 +44,21 @@
     "communityQr": {
       "eyebrow": "Join the community",
       "title": "Scan to join crafters.chat.",
-      "description": "The WhatsApp-first home for LatAm builders shipping products, finding collaborators, sharing events, and building in public.",
+      "description": "The WhatsApp-first home for builders shipping products, finding collaborators, sharing events, and building in public.",
       "cta": "Open crafters.chat",
       "alt": "QR code for crafters.chat"
     },
     "instagram": {
       "eyebrow": "Follow along",
-      "title": "See the rooms, demos, and builders we are shipping with.",
-      "description": "Follow @crafter.station and our YouTube channel for event recaps, community moments, builder spotlights, and the work we are shipping across LatAm.",
+      "title": "See the rooms, demos, and builders we are building with.",
+      "description": "Follow @sanjay_offl and our YouTube channel for event recaps, community moments, builder spotlights, and the work we are shipping across India.",
       "instagramCta": "Follow us on Instagram",
       "youtubeCta": "Watch on YouTube"
     },
     "openCalendars": {
       "eyebrow": "Open calendars",
-      "title": "Book free 30-minute time with a Crafter Station member.",
-      "description": "You can book mentorship, career advice, product feedback, or a calm conversation with any Crafter Station member. This is how we give back to the community that made the network possible.",
+      "title": "Book free 30-minute time with a Sanjay S member.",
+      "description": "You can book mentorship, career advice, product feedback, or a calm conversation with Sanjay S. This is how we give back to the community that made the network possible.",
       "instructions": "Go to the team page, pick a member, and use the calendar on their profile.",
       "cta": "See team calendars"
     }
@@ -74,7 +74,7 @@
     "closeMenu": "Close menu"
   },
   "footer": {
-    "company": "Crafter Station",
+    "company": "Sanjay S",
     "build": "Build",
     "productLab": "Projects",
     "community": "Community",
@@ -100,30 +100,69 @@
       "hack0": "hack0.dev",
       "shippingBible": "Shipping Bible"
     },
-    "copyright": "© {year} Crafter Station. Built fast, built well."
+    "copyright": "© {year} Sanjay S. Built fast, built well."
   },
   "pages": {
-    "work-with-us": {"eyebrow":"Work with us","title":"Work with the team behind Crafter Station.","description":"For companies that want senior product execution, LatAm community activations, event partnerships, product collaborations, and high-signal builder access.","section":"A negotiable LatAm growth partner","sectionDescription":"Every collaboration is shaped around the product, audience, timing, and trust required."},
-    "events": {"eyebrow":"Events","title":"Code Brews, hackathons, launches, and workshops across LatAm.","description":"Events are how we turn online community into real trust. We host formats that help builders meet, learn, demo, and ship together.","section":"Built for participation, not passive attendance.","sectionDescription":"We design events around builders doing the work: trying products, shipping demos, sharing lessons, and meeting collaborators.","all":"All","upcoming":"Upcoming","past":"Past events","register":"Register","noEvents":"[*] No events found. Check back soon.","noFilteredEvents":"No events match this filter."},
-    "events-sponsors": {"eyebrow":"Sponsor events","title":"Sponsor Crafter Station hackathons, meetups, and builder rooms.","description":"Partner with Crafter Station to support high-signal events where LatAm builders try products, ship demos, meet collaborators, and remember the companies that showed up.","section":"For companies that want more than a logo.","sectionDescription":"We work with sponsors on hackathons, Code Brews, workshops, product launches, prizes, venue support, food, developer tools, and hands-on activations."},
-    "projects": {"eyebrow":"Project lab","title":"Projects we ship to learn, teach, and prove the work.","description":"Our projects span event infrastructure, legal data, voice interfaces, AI-native tools, open-source releases, design systems, code search, and community playbooks.","githubEyebrow":"GitHub","githubTitle":"We build in public when the work should be inspectable.","githubDescription":"The Crafter Station GitHub organization is where we publish open-source products, community infrastructure, experiments, and reusable engineering artifacts. Some projects are full products, some are public datasets, and some are the raw material behind the work we ship.","githubCta":"Open GitHub org","timelineCta":"Explore project activity","section":"The lab is public.","sectionDescription":"Some projects are hosted products, some are open source, some are playbooks, and some are community infrastructure. Open-source projects are tagged in the catalog.","nextEyebrow":"Next projects","nextTitle":"Help choose what the community should build next.","nextDescription":"We run a realtime, community-ranked project board for requests, experiments, and useful ideas the network can work on together. Submit an idea, vote on the queue, and watch priorities move live.","nextCta":"Open next projects"},
+    "work-with-us": {
+      "eyebrow": "Work with us",
+      "title": "Work with Sanjay S.",
+      "description": "For companies that want senior product execution, India community activations, event partnerships, product collaborations, and high-signal builder access.",
+      "section": "A negotiable India growth partner",
+      "sectionDescription": "Every collaboration is shaped around the product, audience, timing, and trust required."
+    },
+    "events": {
+      "eyebrow": "Events",
+      "title": "Hackathons, meetups, and workshops across India.",
+      "description": "Events are how we turn online community into real trust. We host formats that help builders meet, learn, demo, and build together.",
+      "section": "Built for participation, not passive attendance.",
+      "sectionDescription": "We design events around builders doing the work: trying products, building demos, sharing lessons, and meeting collaborators.",
+      "all": "All",
+      "upcoming": "Upcoming",
+      "past": "Past events",
+      "register": "Register",
+      "noEvents": "[*] No events found. Check back soon.",
+      "noFilteredEvents": "No events match this filter."
+    },
+    "events-sponsors": {
+      "eyebrow": "Sponsor events",
+      "title": "Sponsor Sanjay S hackathons, meetups, and builder rooms.",
+      "description": "Partner with Sanjay S to support high-signal events where Indian builders try products, build demos, meet collaborators, and remember the companies that showed up.",
+      "section": "For companies that want more than a logo.",
+      "sectionDescription": "We work with sponsors on hackathons, workshops, product launches, prizes, venue support, food, developer tools, and hands-on activations."
+    },
+    "projects": {
+      "eyebrow": "Project lab",
+      "title": "Projects we build to learn, teach, and prove the work.",
+      "description": "Our projects span event infrastructure, legal data, voice interfaces, AI-native tools, open-source releases, design systems, code search, and community playbooks.",
+      "githubEyebrow": "GitHub",
+      "githubTitle": "We build in public when the work should be inspectable.",
+      "githubDescription": "The Sanjay S GitHub organization is where we publish open-source products, community infrastructure, experiments, and reusable engineering artifacts. Some projects are full products, some are public datasets, and some are the raw material behind the work we build.",
+      "githubCta": "Open GitHub org",
+      "timelineCta": "Explore project activity",
+      "section": "The lab is public.",
+      "sectionDescription": "Some projects are hosted products, some are open source, some are playbooks, and some are community infrastructure. Open-source projects are tagged in the catalog.",
+      "nextEyebrow": "Next projects",
+      "nextTitle": "Help choose what the community should build next.",
+      "nextDescription": "We run a realtime, community-ranked project board for requests, experiments, and useful ideas the community can work on together. Submit an idea, vote on the queue, and watch priorities move live.",
+      "nextCta": "Open next projects"
+    },
     "timeline": {
       "eyebrow": "Open-source activity",
       "title": "A year of building in public.",
-      "description": "Explore public projects from Crafter Station, Crafter Research, and our team. See when each project moved forward, who worked on it, and how active it was week by week.",
+      "description": "Explore public projects from Sanjay S and our team. See when each project moved forward, who worked on it, and how active it was week by week.",
       "exploreCta": "Explore the activity",
       "githubCta": "Open GitHub",
-      "signalLabel": "Crafter team commits by week",
+      "signalLabel": "Sanjay team commits by week",
       "oneYear": "Last 52 weeks",
       "heroStats": {
         "active": "Projects with team commits",
-        "commits": "Crafter team commits",
+        "commits": "Sanjay team commits",
         "stars": "GitHub stars"
       },
       "timelineEyebrow": "Public projects over time",
       "timelineTitle": "What we have been building.",
-      "timelineDescription": "The main timeline counts only commits from the Crafter team. Each row is one public project, and brighter blocks mean more team commits that week. Open a project to see every contributor and the full GitHub details.",
-      "timelineLabel": "Crafter public project activity over time",
+      "timelineDescription": "The main timeline counts only commits from the Sanjay team. Each row is one public project, and brighter blocks mean more team commits that week. Open a project to see every contributor and the full GitHub details.",
+      "timelineLabel": "Sanjay public project activity over time",
       "searchPlaceholder": "Search projects",
       "filterLabel": "Filter projects",
       "filters": {
@@ -146,12 +185,12 @@
       "stats": {
         "projects": "Projects shown",
         "allCommits": "All commits",
-        "teamCommits": "Crafter team commits",
+        "teamCommits": "Sanjay team commits",
         "stars": "GitHub stars",
         "contributors": "Contributors"
       },
       "allContributors": "Choose a team member to see only their commits and projects.",
-      "coreTeam": "Crafter team",
+      "coreTeam": "Sanjay team",
       "updated": "Updated",
       "liveData": "Latest GitHub data",
       "snapshotData": "Saved GitHub data",
@@ -161,7 +200,7 @@
       "showMore": "Show more",
       "noResultsTitle": "No projects found",
       "noResultsDescription": "Try another search, time period, person, or filter.",
-      "legend": "Crafter team commits",
+      "legend": "Sanjay team commits",
       "less": "Less",
       "more": "More",
       "commits": "commits",
@@ -181,14 +220,14 @@
       "license": "License",
       "activity": "Commit activity",
       "contributorBreakdown": "All contributors in this period",
-      "teamBadge": "Crafter team",
+      "teamBadge": "Sanjay team",
       "archivedBadge": "Archived",
       "incomplete": "Partial history",
       "method": {
         "barTitle": "Position shows team activity",
-        "barDescription": "Each project runs from its first Crafter team commit to its latest within the chosen period.",
+        "barDescription": "Each project runs from its first Sanjay team commit to its latest within the chosen period.",
         "intensityTitle": "Brightness shows commit volume",
-        "intensityDescription": "Brighter blocks mean more Crafter team commits that week. The scale keeps busy launches and steady progress easy to compare.",
+        "intensityDescription": "Brighter blocks mean more Sanjay team commits that week. The scale keeps busy launches and steady progress easy to compare.",
         "coreTitle": "Open a project for the full picture",
         "coreDescription": "Project details include every commit and contributor, plus GitHub stars, forks, open issues, and other project information."
       },
@@ -197,16 +236,80 @@
       "catalogDescription": "Open the project lab for product stories, live links, technologies, and ideas we may build next.",
       "catalogCta": "Open project lab"
     },
-    "research": {"eyebrow":"Research","title":"Researching the systems behind better shipping.","description":"Crafter Research explores AI-first engineering, agents, developer experience, and the practices that help modern teams build with more leverage.","section":"For now, research lives on its own domain.","sectionDescription":"This page features the unit and links to the active research site and GitHub organization."},
-    "team": {"eyebrow":"Team","title":"The people growing the shipping culture.","description":"Crafter Station is built by engineers, designers, researchers, marketers, product people, operators, and community organizers across Latin America.","section":"Small core, large network.","sectionDescription":"The team combines product engineering, AI, design systems, backend, data, growth, automation, project management, and community building.","calendarEyebrow":"Open calendars","calendarTitle":"Book free 30-minute time with a Crafter Station member.","calendarDescription":"You can book mentorship, career advice, product feedback, or a calm conversation with any Crafter Station member. This is how we give back to the community that made the network possible.","calendarInstructions":"Go to the team page, pick a member, and use the calendar on their profile.","calendarCta":"See team calendars"},
-    "blog": {"eyebrow":"Blog","title":"Stories about shipping, AI, community, and product craft.","description":"The unified blog will collect lessons from Crafter Station, Crafter Research, open-source launches, hackathons, and the LatAm community.","section":"Start with the philosophy and research.","sectionDescription":"The full content migration can come next. For now, this page points to the most important writing surfaces."},
-    "brand": {"eyebrow":"Brand resources","title":"Made to be recognized.","description":"Download the official Crafter Station logo assets for articles, presentations, event pages, and partner materials.","assets":"Assets","iconTitle":"Logo icon","iconDescription":"Use the standalone mark when space is limited or the Crafter Station name already appears nearby.","wordmarkTitle":"Logo + wordmark","wordmarkDescription":"Use the complete lockup when introducing the brand or when extra context is useful.","standaloneTitle":"Wordmark","standaloneDescription":"Use the standalone wordmark when the Crafter Station name needs to lead without the icon.","lightMode":"Light mode","darkMode":"Dark mode","usageTitle":"A small request","usageDescription":"Keep the logo legible, give it room to breathe, and do not stretch, rotate, recolor, or alter the relationship between the mark and wordmark."},
-    "contact": {"eyebrow":"Contact","title":"Start with the right path.","description":"Tell us whether you want to partner, build, host an event, sponsor a hackathon, or join the community.","section":"What are you trying to do?","sectionDescription":"Choose the type of conversation and we will reply with the fastest path to start."},
-    "next": {"eyebrow":"/projects/next","title":"Vote on the next thing we should craft.","description":"A live, community-ranked queue for project ideas the community can work on. Submit anonymously, leave an alias if you want, and move the best ideas up in realtime."},
-    "workshopQuestions": {"eyebrow":"/workshops/questions","title":"Ask the questions we should answer live.","description":"A realtime workshop queue where attendees submit validated questions, add their name, and vote the most useful topics to the top."},
-    "opencodeQuestions": {"eyebrow":"/opencode","title":"Ask Anthony about building with OpenCode.","description":"Submit your OpenCode questions and vote on what Anthony should answer live during the workshop."},
-    "n8nQuestions": {"eyebrow":"/n8n","title":"Ask Javo about n8n MCP + Claude Code automations.","description":"Submit your questions about n8n, MCP servers, Claude Code, automation, and flows. Vote on what Javo should answer live during the presentation."},
-    "claudeCodeQuestions": {"eyebrow":"/claude-code","title":"Ask Shiara about building with Claude Code.","description":"Submit your Claude Code questions and vote on what Shiara should answer live during the workshop."}
+    "research": {
+      "eyebrow": "Research",
+      "title": "Researching the systems behind better building.",
+      "description": "Sanjay S Research explores AI-first engineering, agents, developer experience, and the practices that help modern teams build with more leverage.",
+      "section": "For now, research lives on its own domain.",
+      "sectionDescription": "This page features the unit and links to the active research site and GitHub organization."
+    },
+    "team": {
+      "eyebrow": "Team",
+      "title": "The person behind the projects.",
+      "description": "Sanjay S is built by a CS student, AI builder, and product developer based in Coimbatore, India.",
+      "section": "Solo core, broad network.",
+      "sectionDescription": "The work combines product engineering, AI, design systems, backend, data, growth, automation, and community building.",
+      "calendarEyebrow": "Open calendars",
+      "calendarTitle": "Book free 30-minute time with a Sanjay S member.",
+      "calendarDescription": "You can book mentorship, career advice, product feedback, or a calm conversation with Sanjay S. This is how we give back to the community that made the network possible.",
+      "calendarInstructions": "Go to the team page, pick a member, and use the calendar on their profile.",
+      "calendarCta": "See team calendars"
+    },
+    "blog": {
+      "eyebrow": "Blog",
+      "title": "Stories about building, AI, community, and product craft.",
+      "description": "The unified blog will collect lessons from Sanjay S, research, open-source launches, hackathons, and the developer community.",
+      "section": "Start with the philosophy and research.",
+      "sectionDescription": "The full content migration can come next. For now, this page points to the most important writing surfaces."
+    },
+    "brand": {
+      "eyebrow": "Brand resources",
+      "title": "Made to be recognized.",
+      "description": "Download the official Sanjay S logo assets for articles, presentations, event pages, and partner materials.",
+      "assets": "Assets",
+      "iconTitle": "Logo icon",
+      "iconDescription": "Use the standalone mark when space is limited or the Sanjay S name already appears nearby.",
+      "wordmarkTitle": "Logo + wordmark",
+      "wordmarkDescription": "Use the complete lockup when introducing the brand or when extra context is useful.",
+      "standaloneTitle": "Wordmark",
+      "standaloneDescription": "Use the standalone wordmark when the Sanjay S name needs to lead without the icon.",
+      "lightMode": "Light mode",
+      "darkMode": "Dark mode",
+      "usageTitle": "A small request",
+      "usageDescription": "Keep the logo legible, give it room to breathe, and do not stretch, rotate, recolor, or alter the relationship between the mark and wordmark."
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Start with the right path.",
+      "description": "Tell us whether you want to partner, build, host an event, sponsor a hackathon, or join the community.",
+      "section": "What are you trying to do?",
+      "sectionDescription": "Choose the type of conversation and we will reply with the fastest path to start."
+    },
+    "next": {
+      "eyebrow": "/projects/next",
+      "title": "Vote on the next thing we should build.",
+      "description": "A live, community-ranked queue for project ideas the community can work on. Submit anonymously, leave an alias if you want, and move the best ideas up in realtime."
+    },
+    "workshopQuestions": {
+      "eyebrow": "/workshops/questions",
+      "title": "Ask the questions we should answer live.",
+      "description": "A realtime workshop queue where attendees submit validated questions, add their name, and vote the most useful topics to the top."
+    },
+    "opencodeQuestions": {
+      "eyebrow": "/opencode",
+      "title": "Ask Sanjay about building with OpenCode.",
+      "description": "Submit your OpenCode questions and vote on what Sanjay should answer live during the workshop."
+    },
+    "n8nQuestions": {
+      "eyebrow": "/n8n",
+      "title": "Ask Sanjay about n8n MCP + Claude Code automations.",
+      "description": "Submit your questions about n8n, MCP servers, Claude Code, automation, and flows. Vote on what Sanjay should answer live during the presentation."
+    },
+    "claudeCodeQuestions": {
+      "eyebrow": "/claude-code",
+      "title": "Ask Sanjay about building with Claude Code.",
+      "description": "Submit your Claude Code questions and vote on what Sanjay should answer live during the workshop."
+    }
   },
   "member": {
     "back": "Back to team",
@@ -231,13 +334,13 @@
   },
   "teamWorkCallout": {
     "eyebrow": "Work with us",
-    "title": "Need the team behind Crafter Station?",
-    "description": "For product engineering, event partnerships, community activations, and LatAm growth collaborations, start here.",
+    "title": "Need Sanjay S?",
+    "description": "For product engineering, event partnerships, community activations, and India growth collaborations, start here.",
     "cta": "Work with us"
   },
   "cta": {
     "eyebrow": "Join the network",
-    "title": "Build with the LatAm shipping network",
+    "title": "Build with the Sanjay S network",
     "description": "Join the community, come to an event, follow the projects, or partner with us on the next room full of builders.",
     "emailLabel": "Email address",
     "emailPlaceholder": "you@company.com",

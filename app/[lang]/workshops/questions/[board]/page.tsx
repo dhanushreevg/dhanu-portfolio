@@ -18,7 +18,7 @@ export function generateMetadata({ params }: { params: Promise<{ lang: string; b
       locale: lang,
       path: `/workshops/questions/${board}`,
       title: `${board} questions`,
-      description: "Submit and vote on questions for this Crafter Station workshop.",
+      description: "Submit and vote on questions for this Sanjay S workshop.",
     })
   })
 }

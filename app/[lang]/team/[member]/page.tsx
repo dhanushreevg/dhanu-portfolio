@@ -74,7 +74,7 @@ function socials(member: NonNullable<ReturnType<typeof getTeamMember>>) {
   ].filter(Boolean) as { label: string; href: string }[]
 }
 
-const raillyImpact = {
+const sanjayImpact = {
   en: {
     eyebrow: "Petdex impact, Q2 2026",
     metrics: [
@@ -149,7 +149,7 @@ export default async function Page({
   const links = socials(teamMember)
   const meetingSlug = calSlug(teamMember.cal)
   const building = await getBuildingActivity(teamMember.github)
-  const impact = teamMember.username === "railly" ? raillyImpact[lang] : null
+  const impact = teamMember.username === "sanjay" ? sanjayImpact[lang] : null
 
   const heading =
     "font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground"
@@ -293,7 +293,7 @@ export default async function Page({
                     <Link href={withLocale("/impact/petdex", lang)} className="group">
                       <ArrowLink>{impact.report}</ArrowLink>
                     </Link>
-                    <Link href="https://github.com/crafter-station/petdex" target="_blank" rel="noopener noreferrer" className="group">
+                     <Link href="https://github.com/sanjay-offl/petdex" target="_blank" rel="noopener noreferrer" className="group">
                       <ArrowLink>{impact.github}</ArrowLink>
                     </Link>
                   </div>

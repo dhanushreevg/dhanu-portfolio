@@ -22,22 +22,22 @@ export function generateMetadata({ params }: { params: Promise<{ lang: string }>
 
 const startupCalendarCopy = {
   en: {
-    eyebrow: "Book a startup call",
+    eyebrow: "Book a call",
     title: "Bring the product, growth, or community problem you want solved.",
     description:
-      "Use the calendar to book a focused conversation with Crafter Station about product engineering, AI products, launch support, LatAm growth, or community activations.",
+      "Use the calendar to book a focused conversation with Sanjay S about product engineering, AI products, or community activations.",
   },
   es: {
-    eyebrow: "Agenda una llamada para startups",
-    title: "Trae el problema de producto, growth o comunidad que quieres resolver.",
+    eyebrow: "Book a call",
+    title: "Bring the product, growth, or community problem you want solved.",
     description:
-      "Usa el calendario para agendar una conversacion enfocada con Crafter Station sobre product engineering, productos con IA, lanzamientos, crecimiento en LatAm o activaciones de comunidad.",
+      "Use the calendar to book a focused conversation with Sanjay S about product engineering, AI products, or community activations.",
   },
   pt: {
-    eyebrow: "Agende uma chamada para startups",
-    title: "Traga o problema de produto, growth ou comunidade que voce quer resolver.",
+    eyebrow: "Book a call",
+    title: "Bring the product, growth, or community problem you want solved.",
     description:
-      "Use o calendario para agendar uma conversa focada com a Crafter Station sobre product engineering, produtos com IA, lancamentos, crescimento no LatAm ou ativacoes de comunidade.",
+      "Use the calendar to book a focused conversation with Sanjay S about product engineering, AI products, or community activations.",
   },
 } as const
 
@@ -65,7 +65,7 @@ export default async function Page({
         <Container><div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">{services.slice(0, 6).map((service, i) => <Link key={service.title} href={withLocale(service.href, lang)} className={"group min-h-56 p-8 transition-colors hover:bg-accent/10 " + (i > 0 ? "border-t border-line md:border-t-0 md:border-l " : "") + (i >= 2 ? "md:border-t xl:border-t-0 " : "")}><h3 className="text-lg tracking-tight">{service.title}</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">{service.body}</p><ArrowLink className="mt-8">{common("openCta")}</ArrowLink></Link>)}</div></Container>
         <SectionGap />
         <Container innerClassName="border-y px-6 py-10 md:px-10"><p className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">{calendar.eyebrow}</p><h2 className="mt-3 max-w-3xl text-3xl tracking-tight md:text-4xl">{calendar.title}</h2><p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">{calendar.description}</p></Container>
-        <CalEmbed calLink="cuevaio/crafter-station-startup" namespace="contact-startup" />
+        <CalEmbed calLink="sanjay-offl/portfolio" namespace="contact-startup" />
       </main>
       <SiteFooter locale={lang} />
     </>

@@ -73,7 +73,7 @@ async function viaGraphQL(username: string): Promise<BuildingActivity | null> {
       headers: {
         Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
         "Content-Type": "application/json",
-        "User-Agent": "crafter-station-website",
+        "User-Agent": "sanjay-portfolio",
       },
       body: JSON.stringify({ query, variables: { login: username, from, to } }),
       next: { revalidate: 86400 },
@@ -114,7 +114,7 @@ async function viaEvents(username: string): Promise<BuildingActivity | null> {
       {
         headers: {
           Accept: "application/vnd.github+json",
-          "User-Agent": "crafter-station-website",
+        "User-Agent": "sanjay-portfolio",
         },
         next: { revalidate: 86400 },
       },

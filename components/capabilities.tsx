@@ -55,9 +55,9 @@ export async function Capabilities({ locale }: { locale: Locale }) {
             What we craft
           </p>
           <p className="relative mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-            Crafter Station is a network where LatAm builders meet, share work,
-            research new tools, ship open source, host events, and build useful
-            products in public.
+            Sanjay S is a builder solving real problems with AI, full-stack
+            engineering, and thoughtful product development. Building in public,
+            open source, and civic technology.
           </p>
         </div>
         <IconCard letter="C" />

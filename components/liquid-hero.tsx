@@ -95,11 +95,13 @@ void main() {
 `
 
 export function LiquidHero({
-  imagePath = "/brand/cs_liquid_2.png",
+  imagePath = "",
+  imageAlign = "center",
   className,
   fillFactor = 0.5,
 }: {
   imagePath?: string
+  imageAlign?: "center" | "right"
   className?: string
   fillFactor?: number
 }) {
@@ -211,21 +213,45 @@ export function LiquidHero({
         textTexture.needsUpdate = true
         return
       }
-      const canvasAspect = w / h
+
       const imageAspect = logoImg.width / logoImg.height || 1
+      // Use CSS pixels for the responsive breakpoint check
+      const cssW = w / dpr
+      const useRightAlign = imageAlign === "right" && cssW >= 768
+
       let logoW: number
       let logoH: number
-      if (imageAspect > canvasAspect) {
-        logoW = w * fillFactor
-        logoH = logoW / imageAspect
-      } else {
-        logoH = h * fillFactor
-        logoW = logoH * imageAspect
-      }
-      const logoX = (w - logoW) / 2
-      const logoY = (h - logoH) / 2
+      let logoX: number
+      let logoY: number
 
-      // Draw the image as-is.
+      if (useRightAlign) {
+        // Desktop: fill the right ~46% of the canvas, vertically centered
+        const availW = w * 0.46
+        const availH = h * 0.92
+        if (imageAspect > availW / availH) {
+          logoW = availW
+          logoH = logoW / imageAspect
+        } else {
+          logoH = availH
+          logoW = logoH * imageAspect
+        }
+        logoX = w - logoW
+        logoY = (h - logoH) / 2
+      } else {
+        // Mobile / center: use fillFactor, centered
+        const canvasAspect = w / h
+        if (imageAspect > canvasAspect) {
+          logoW = w * fillFactor
+          logoH = logoW / imageAspect
+        } else {
+          logoH = h * fillFactor
+          logoW = logoH * imageAspect
+        }
+        logoX = (w - logoW) / 2
+        logoY = (h - logoH) / 2
+      }
+
+      // Draw the ASCII SVG into the canvas texture
       ctx.drawImage(logoImg, logoX, logoY, logoW, logoH)
 
       // Fill the theme background behind anything still transparent.
@@ -333,17 +359,21 @@ export function LiquidHero({
 
     paintCanvas(width, height)
 
-    const img = new window.Image()
-    img.decoding = "async"
-    img.onload = () => {
-      logoImg = img
-      paintCanvas(width, height)
+    if (imagePath) {
+      const img = new window.Image()
+      img.decoding = "async"
+      img.onload = () => {
+        logoImg = img
+        paintCanvas(width, height)
+        animate()
+      }
+      img.onerror = () => {
+        animate()
+      }
+      img.src = imagePath
+    } else {
       animate()
     }
-    img.onerror = () => {
-      animate()
-    }
-    img.src = imagePath
 
     return () => {
       if (animationId !== null) cancelAnimationFrame(animationId)
@@ -363,7 +393,7 @@ export function LiquidHero({
       plane.dispose()
       renderer.dispose()
     }
-  }, [imagePath, fillFactor])
+  }, [imagePath, imageAlign, fillFactor])
 
   return (
     <div

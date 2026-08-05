@@ -1,7 +1,7 @@
 import { env } from "@/env"
 
 const LUMA_API_BASE = "https://api.lu.ma/public/v1"
-const CS_TAG = "Crafter Station"
+const CS_TAG = "Sanjay S"
 
 export interface LumaEvent {
   id: string
@@ -50,7 +50,7 @@ interface LumaApiResponse {
   next_cursor?: string | null
 }
 
-export interface CrafterStationEvents {
+export interface SanjaySEvents {
   upcoming: LumaEvent[]
   past: LumaEvent[]
   all: LumaEvent[]
@@ -88,12 +88,12 @@ async function fetchPage(apiKey: string, cursor?: string) {
   return res.json() as Promise<LumaApiResponse>
 }
 
-export async function fetchCrafterStationEvents(): Promise<CrafterStationEvents> {
+export async function fetchSanjaySEvents(): Promise<SanjaySEvents> {
   const apiKey = env.LUMA_API_KEY
 
   if (!apiKey) {
     console.warn("[luma] LUMA_API_KEY is not set; returning empty events")
-    return { upcoming: [], past: [], all: [], filterTags: [] }
+    return { upcoming: [], past: [], all: [], filterTags: [] } as SanjaySEvents
   }
 
   const allEntries: LumaApiEntry[] = []

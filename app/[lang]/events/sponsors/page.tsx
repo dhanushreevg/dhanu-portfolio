@@ -43,21 +43,21 @@ const calendarCopy = {
 const sponsorCopy = {
   en: {
     eyebrow: "Past sponsors",
-    title: "Teams that have already shown up for Crafter Station builders.",
+    title: "Teams that have already shown up for Sanjay S builders.",
     description:
-      "We have worked with devtools, AI labs, infrastructure teams, and fintech startups on high-signal builder events across LatAm.",
+      "We have worked with devtools, AI labs, infrastructure teams, and fintech startups on high-signal builder events across India.",
   },
   es: {
     eyebrow: "Sponsors anteriores",
-    title: "Equipos que ya apostaron por los builders de Crafter Station.",
+    title: "Equipos que ya apostaron por los builders de Sanjay S.",
     description:
-      "Hemos trabajado con devtools, labs de IA, equipos de infraestructura y startups fintech en eventos de alto signal para builders en LatAm.",
+      "Hemos trabajado con devtools, labs de IA, equipos de infraestructura y startups fintech en eventos de alto signal para builders en India.",
   },
   pt: {
     eyebrow: "Sponsors anteriores",
-    title: "Times que ja apareceram para os builders da Crafter Station.",
+    title: "Times que ja apareceram para os builders de Sanjay S.",
     description:
-      "Ja trabalhamos com devtools, labs de IA, times de infraestrutura e startups fintech em eventos de alto sinal para builders no LatAm.",
+      "Ja trabalhamos com devtools, labs de IA, times de infraestrutura e startups fintech em eventos de alto sinal para builders na India.",
   },
 } as const
 
@@ -164,7 +164,7 @@ export default async function Page({
             {calendar.description}
           </p>
         </Container>
-        <CalEmbed calLink="cuevaio/crafter-station-sponsor" namespace="sponsor-events" />
+        <CalEmbed calLink="sanjay-offl/sponsor" namespace="sponsor-events" />
       </main>
       <SiteFooter locale={lang} />
     </>

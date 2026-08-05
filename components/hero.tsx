@@ -8,9 +8,9 @@ export function Hero() {
 }
 
 export function HeroContent({
-  eyebrow = "Crafter Station · LatAm",
-  lines = ["The LatAm", "network of", "shippers."],
-  description = "A community of 800+ builders, a product lab, an open-source ecosystem, research, and events helping LatAm shippers meet, learn, and build in public.",
+  eyebrow = "Sanjay S · India",
+  lines = ["I build", "AI-powered", "products."],
+  description = "CS student, AI builder, and product developer building technology that solves real problems.",
   eventsCta = "See events",
   eventsHref = "/events",
 }: {
@@ -23,7 +23,7 @@ export function HeroContent({
   return (
     <Container innerClassName="overflow-hidden bg-background">
       <div className="relative min-h-[700px] lg:h-[820px]">
-        <LiquidHero className="z-0" />
+        <LiquidHero imagePath="/ascii.svg" imageAlign="right" className="z-0" />
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-br from-background/80 via-background/30 to-transparent"
@@ -32,6 +32,7 @@ export function HeroContent({
           aria-hidden
           className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-1/3 bg-gradient-to-t from-background/85 to-transparent"
         />
+
         <div className="pointer-events-none absolute inset-0 z-10 flex flex-col">
           <div className="mx-auto flex h-full w-full max-w-[1380px] flex-col justify-between px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-16">
             <div>

@@ -72,7 +72,7 @@ export default async function Page({
                   <ArrowLink>{t("timelineCta")}</ArrowLink>
                 </LocalizedLink>
                 <Link
-                  href="https://github.com/crafter-station/"
+                  href="https://github.com/sanjay-offl"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group"

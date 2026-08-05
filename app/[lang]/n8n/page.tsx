@@ -43,10 +43,10 @@ export default async function Page({
           <WorkshopQuestionsBoard
             boardSlug="n8n"
             submitLabel="Ask about n8n + MCP"
-            dialogTitle="What should Javo answer about n8n MCP + Claude Code?"
-            dialogDescription="Ask about automations, flows, MCP servers, Claude Code workflows, integrations, or anything you want covered live. Add your name only if you want."
-            heading="n8n MCP + Claude Code questions"
-            emptyState="No n8n questions yet. Be the first person to steer Javo's session."
+          dialogTitle="What should Sanjay answer about n8n MCP + Claude Code?"
+          dialogDescription="Ask about automations, flows, MCP servers, Claude Code workflows, integrations, or anything you want covered live. Add your name only if you want."
+          heading="n8n MCP + Claude Code questions"
+          emptyState="No n8n questions yet. Be the first person to steer Sanjay's session."
           />
         </Container>
       </main>

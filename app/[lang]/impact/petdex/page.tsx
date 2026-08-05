@@ -12,11 +12,11 @@ export const dynamicParams = false
 const copy = {
   en: {
     eyebrow: "Impact · Petdex · Q2 2026",
-    title: "The project behind 96.72% of Crafter Station's Q2 star growth.",
+    title: "The project behind 96.72% of Sanjay S's Q2 star growth.",
     description: "Petdex generated 28,875 npm downloads and 3,218 net new stars during OSSCAR's published Q2 measurement window.",
     githubEyebrow: "GitHub attribution",
     githubTitle: "Nearly all of the organization's star growth came from Petdex.",
-    githubBody: "Petdex grew from 70 to 3,288 stars while Crafter Station grew from 870 to 4,197. The calculation is (3,288 - 70) / (4,197 - 870) = 96.72%.",
+    githubBody: "Petdex grew from 70 to 3,288 stars while Sanjay S grew from 870 to 4,197. The calculation is (3,288 - 70) / (4,197 - 870) = 96.72%.",
     packageEyebrow: "Package signal",
     packageTitle: "From 380 to 28,875 downloads in ten weekly buckets.",
     packageBody: "The public npm API matches OSSCAR's cumulative series. The actual ratio is 75.99x. OSSCAR displays 28.9x because its methodology pads a new project's baseline to 1,000 downloads.",
@@ -26,11 +26,11 @@ const copy = {
   },
   es: {
     eyebrow: "Impacto · Petdex · Q2 2026",
-    title: "El proyecto detras del 96.72% del crecimiento de estrellas de Crafter Station en Q2.",
+    title: "El proyecto detras del 96.72% del crecimiento de estrellas de Sanjay S en Q2.",
     description: "Petdex genero 28,875 descargas npm y 3,218 nuevas estrellas netas durante la ventana Q2 publicada por OSSCAR.",
     githubEyebrow: "Atribucion en GitHub",
     githubTitle: "Casi todo el crecimiento de estrellas de la organizacion vino de Petdex.",
-    githubBody: "Petdex crecio de 70 a 3,288 estrellas mientras Crafter Station paso de 870 a 4,197. El calculo es (3,288 - 70) / (4,197 - 870) = 96.72%.",
+    githubBody: "Petdex crecio de 70 a 3,288 estrellas mientras Sanjay S paso de 870 a 4,197. El calculo es (3,288 - 70) / (4,197 - 870) = 96.72%.",
     packageEyebrow: "Senal del paquete",
     packageTitle: "De 380 a 28,875 descargas en diez periodos semanales.",
     packageBody: "La API publica de npm coincide con la serie acumulada de OSSCAR. El crecimiento real es 75.99x. OSSCAR muestra 28.9x porque normaliza el baseline de proyectos nuevos a 1,000 descargas.",
@@ -40,11 +40,11 @@ const copy = {
   },
   pt: {
     eyebrow: "Impacto · Petdex · Q2 2026",
-    title: "O projeto por tras de 96.72% do crescimento de estrelas da Crafter Station no Q2.",
+    title: "O projeto por tras de 96.72% do crescimento de estrelas de Sanjay S no Q2.",
     description: "O Petdex gerou 28,875 downloads npm e 3,218 novas estrelas liquidas durante a janela Q2 publicada pela OSSCAR.",
     githubEyebrow: "Atribuicao no GitHub",
     githubTitle: "Quase todo o crescimento de estrelas da organizacao veio do Petdex.",
-    githubBody: "O Petdex cresceu de 70 para 3,288 estrelas enquanto a Crafter Station passou de 870 para 4,197. O calculo e (3,288 - 70) / (4,197 - 870) = 96.72%.",
+    githubBody: "O Petdex cresceu de 70 para 3,288 estrelas enquanto Sanjay S passou de 870 para 4,197. O calculo e (3,288 - 70) / (4,197 - 870) = 96.72%.",
     packageEyebrow: "Sinal do pacote",
     packageTitle: "De 380 para 28,875 downloads em dez periodos semanais.",
     packageBody: "A API publica do npm corresponde a serie acumulada da OSSCAR. O crescimento real e 75.99x. A OSSCAR mostra 28.9x porque normaliza o baseline de novos projetos para 1,000 downloads.",
@@ -55,10 +55,10 @@ const copy = {
 } as const
 
 const sources = [
-  ["OSSCAR organization profile", "https://osscar.dev/org/crafter-station"],
+  ["OSSCAR organization profile", "https://osscar.dev/org/sanjay-offl"],
   ["OSSCAR methodology", "https://osscar.dev/methodology"],
   ["Petdex npm range API", "https://api.npmjs.org/downloads/range/2026-04-26:2026-07-04/petdex"],
-  ["Petdex contributors API", "https://api.github.com/repos/crafter-station/petdex/contributors?per_page=100"],
+  ["Petdex contributors API", "https://api.github.com/repos/sanjay-offl/petdex/contributors?per_page=100"],
   ["Hermes Petdex integration", "https://github.com/NousResearch/hermes-agent/blob/main/agent/pet/manifest.py"],
   ["Decrypt coverage", "https://decrypt.co/es/372082/tu-agente-hermes-ahora-tiene-una-mascota-que-no-hace-absolutamente-nada-y-ese-es-el-punto"],
 ] as const
@@ -120,7 +120,7 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <Container innerClassName="grid grid-cols-1 border-b border-line lg:grid-cols-[0.7fr_1.3fr]">
           <div className="border-b border-line p-8 lg:border-b-0 lg:border-r lg:p-10">
             <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">{t.sources}</p>
-            <Link href={withLocale("/team/railly", lang)} className="group mt-8 inline-flex">
+            <Link href={withLocale("/team/sanjay", lang)} className="group mt-8 inline-flex">
               <ArrowLink>{t.profile}</ArrowLink>
             </Link>
           </div>

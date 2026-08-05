@@ -173,7 +173,7 @@ export async function CommunityPreview({ locale }: { locale: Locale }) {
             {t("description")}
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="https://crafters.chat" className="group" target="_blank" rel="noopener noreferrer">
+            <Link href="https://sanjay-offl.github.io" className="group" target="_blank" rel="noopener noreferrer">
               <ArrowLink>{t("communityCta")}</ArrowLink>
             </Link>
             <LocalizedLink href="/events" locale={locale} className="group">
@@ -281,8 +281,8 @@ export async function CommunityQrCode({ locale }: { locale: Locale }) {
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
             {t("description")}
           </p>
-          <Link
-            href="https://crafters.chat"
+            <Link
+            href="https://sanjay-offl.github.io"
             target="_blank"
             rel="noopener noreferrer"
             className="group mt-8 inline-block"
@@ -326,15 +326,15 @@ export async function InstagramFollow({ locale }: { locale: Locale }) {
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
-                href="https://instagram.com/crafter.station/"
-                target="_blank"
+            href="https://instagram.com/sanjay_offl/"
+            target="_blank"
                 rel="noopener noreferrer"
                 className="group"
               >
                 <ArrowLink>{t("instagramCta")}</ArrowLink>
               </Link>
               <Link
-                href="https://www.youtube.com/@crafterstation"
+                href="https://www.youtube.com/@sanjayoffl"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group"

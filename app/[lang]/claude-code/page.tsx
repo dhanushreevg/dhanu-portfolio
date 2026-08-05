@@ -48,10 +48,10 @@ export default async function Page({
         <WorkshopQuestionsBoard
           boardSlug="claude-code"
           submitLabel="Ask about Claude Code"
-          dialogTitle="What should Shiara answer about Claude Code?"
+          dialogTitle="What should Sanjay answer about Claude Code?"
           dialogDescription="Ask about workflows, prompts, context, reviews, handoffs, or anything you want covered live. Add your name only if you want."
           heading="Claude Code questions"
-          emptyState="No Claude Code questions yet. Be the first person to steer Shiara's session."
+          emptyState="No Claude Code questions yet. Be the first person to steer Sanjay's session."
         />
       </Container>
     </main>

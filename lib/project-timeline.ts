@@ -1,7 +1,7 @@
 import { teamMembers } from "@/lib/team"
 
 const GITHUB_GRAPHQL_URL = "https://api.github.com/graphql"
-const ORGANIZATION_OWNERS = ["crafter-station", "crafter-research"]
+const ORGANIZATION_OWNERS = ["sanjay-offl"]
 const REPOSITORIES_PER_PAGE = 50
 const COMMITS_PER_PAGE = 100
 const MAX_COMMITS_PER_REPOSITORY = 2500
@@ -280,7 +280,7 @@ async function githubGraphQL<T>(
           Accept: "application/vnd.github+json",
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json",
-          "User-Agent": "crafter-station-website",
+          "User-Agent": "sanjay-portfolio",
         },
         body: JSON.stringify({ query, variables }),
         cache: "no-store",

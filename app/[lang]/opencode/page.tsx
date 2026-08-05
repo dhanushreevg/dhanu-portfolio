@@ -43,10 +43,10 @@ export default async function Page({
           <WorkshopQuestionsBoard
             boardSlug="opencode"
             submitLabel="Ask about OpenCode"
-            dialogTitle="What should Anthony answer about OpenCode?"
-            dialogDescription="Ask about agents, workflows, codebase context, reviews, or anything you want covered live. Add your name only if you want."
-            heading="OpenCode questions"
-            emptyState="No OpenCode questions yet. Be the first person to steer Anthony's session."
+          dialogTitle="What should Sanjay answer about OpenCode?"
+          dialogDescription="Ask about agents, workflows, codebase context, reviews, or anything you want covered live. Add your name only if you want."
+          heading="OpenCode questions"
+          emptyState="No OpenCode questions yet. Be the first person to steer Sanjay's session."
           />
         </Container>
       </main>

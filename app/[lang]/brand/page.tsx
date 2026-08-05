@@ -34,7 +34,7 @@ function AssetCard({
   dark: boolean
   wide?: boolean
 }) {
-  const basename = `crafter-station-${name}-${variant}`
+  const basename = `sanjay-s-${name}-${variant}`
   const assetLabel = name === "icon" ? "logo" : name === "logo-wordmark" ? "logo and wordmark" : "wordmark"
 
   return (
@@ -46,7 +46,7 @@ function AssetCard({
       >
         <Image
           src={`/brand/${basename}.svg`}
-          alt={`${previewLabel} Crafter Station ${assetLabel}`}
+          alt={`${previewLabel} Sanjay S ${assetLabel}`}
           width={wide ? 800 : 280}
           height={wide ? 200 : 280}
           loading="eager"

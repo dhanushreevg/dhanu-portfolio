@@ -8,20 +8,28 @@ function localized(value: LocalizedString, locale: Locale) {
 }
 
 export const siteConfig = {
-  name: "Crafter Station",
-  domain: "crafter.run",
+  name: "Sanjay S",
+  domain: "sanjay.dev",
   tagline: {
-    en: "The LatAm network of shippers",
-    es: "La red LatAm de shippers",
-    pt: "A rede LatAm de shippers",
+    en: "CS Student · AI Builder · Product Developer",
+    es: "CS Student · AI Builder · Product Developer",
+    pt: "CS Student · AI Builder · Product Developer",
   },
   description: {
-    en: "Crafter Station is a LatAm shipping network: community, products, open source, research, and events for builders across the region.",
-    es: "Crafter Station es una red LatAm para shippers: comunidad, productos, codigo abierto, investigacion y eventos para builders de la region.",
-    pt: "Crafter Station e uma rede LatAm para shippers: comunidade, produtos, codigo aberto, pesquisa e eventos para builders da regiao.",
+    en: "CS student, AI builder, and product developer building technology that solves real problems.",
+    es: "CS student, AI builder, and product developer building technology that solves real problems.",
+    pt: "CS student, AI builder, and product developer building technology that solves real problems.",
   },
-  url: "https://crafter.run",
-  org: "https://github.com/crafter-station",
+  url: "https://sanjay.dev",
+  author: "Sanjay S",
+  email: "sanjay@sanjay.dev",
+  github: "https://github.com/sanjay-offl",
+  twitter: "https://twitter.com/sanjay_offl",
+  linkedin: "https://linkedin.com/in/sanjayoffl",
+  location: "Coimbatore, India",
+  ogImage: {
+    alt: "Sanjay S — AI Builder & Product Developer",
+  },
 } as const
 
 export function getSiteConfig(locale: Locale = defaultLocale) {
@@ -33,11 +41,11 @@ export function getSiteConfig(locale: Locale = defaultLocale) {
 }
 
 export const navItems = [
-  { key: "events", href: "/events" },
   { key: "projects", href: "/projects" },
   { key: "research", href: "/research" },
-  { key: "impact", href: "/impact/petdex" },
   { key: "team", href: "/team" },
+  { key: "timeline", href: "/timeline" },
+  { key: "impact", href: "/impact/petdex" },
 ] as const
 
 export const languageLinks = [
@@ -47,10 +55,9 @@ export const languageLinks = [
 ] as const
 
 export const stats = [
-  { value: "800+", label: { en: "WhatsApp community members", es: "Miembros en la comunidad de WhatsApp", pt: "Membros na comunidade do WhatsApp" } },
-  { value: "50+", label: { en: "Events and hackathons hosted", es: "Eventos y hackathons organizados", pt: "Eventos e hackathons organizados" } },
-  { value: "25+", label: { en: "Products shipped", es: "Productos construidos", pt: "Produtos construidos" } },
-  { value: "3.2k+", label: { en: "Open-source stars", es: "Estrellas en codigo abierto", pt: "Estrelas em codigo aberto" } },
+  { value: "6+", label: { en: "Projects Shipped", es: "Projects Shipped", pt: "Projects Shipped" } },
+  { value: "3+", label: { en: "Hackathons", es: "Hackathons", pt: "Hackathons" } },
+  { value: "2026", label: { en: "B.Tech CSE", es: "B.Tech CSE", pt: "B.Tech CSE" } },
 ] as const
 
 export function getStats(locale: Locale = defaultLocale) {
@@ -59,49 +66,49 @@ export function getStats(locale: Locale = defaultLocale) {
 
 export const ecosystem = [
   {
-    title: { en: "Community", es: "Comunidad", pt: "Comunidade" },
+    title: { en: "Community", es: "Community", pt: "Community" },
     body: {
-      en: "A WhatsApp-first network of 800+ engineers, designers, founders, product, growth, and marketing people building across LatAm.",
-      es: "Una red WhatsApp-first de 800+ ingenieros, disenadores, founders, producto, growth y marketing construyendo en LatAm.",
-      pt: "Uma rede WhatsApp-first de 800+ engenheiros, designers, founders, produto, growth e marketing construindo no LatAm.",
+      en: "I share my journey building AI-powered applications, full-stack products, and learning in public.",
+      es: "I share my journey building AI-powered applications, full-stack products, and learning in public.",
+      pt: "I share my journey building AI-powered applications, full-stack products, and learning in public.",
     },
-    href: "https://crafters.chat",
+    href: "https://sanjay-offl.github.io",
   },
   {
-    title: { en: "Events", es: "Eventos", pt: "Eventos" },
+    title: { en: "Projects", es: "Projects", pt: "Projects" },
     body: {
-      en: "Code Brews, hackathons, product launches, workshops, and partner activations that bring serious builders into the same room.",
-      es: "Code Brews, hackathons, lanzamientos, workshops y activaciones con partners que juntan a builders serios en la misma sala.",
-      pt: "Code Brews, hackathons, lancamentos, workshops e ativacoes com parceiros que colocam builders serios na mesma sala.",
+      en: "AI-powered platforms, full-stack applications, and open-source tools built with purpose.",
+      es: "AI-powered platforms, full-stack applications, and open-source tools built with purpose.",
+      pt: "AI-powered platforms, full-stack applications, and open-source tools built with purpose.",
     },
-    href: "/events",
+    href: "/projects",
   },
   {
-    title: { en: "Research", es: "Investigacion", pt: "Pesquisa" },
+    title: { en: "Research", es: "Research", pt: "Research" },
     body: {
-      en: "Crafter Research studies AI-first engineering, agents, developer experience, and the new workflows shaping how teams ship.",
-      es: "Crafter Research estudia ingenieria AI-first, agentes, developer experience y los nuevos flujos que cambian como los equipos construyen.",
-      pt: "Crafter Research estuda engenharia AI-first, agentes, developer experience e os novos fluxos que mudam como os times constroem.",
+      en: "I explore ideas at the intersection of artificial intelligence, civic technology, sustainability, and software engineering.",
+      es: "I explore ideas at the intersection of artificial intelligence, civic technology, sustainability, and software engineering.",
+      pt: "I explore ideas at the intersection of artificial intelligence, civic technology, sustainability, and software engineering.",
     },
     href: "/research",
   },
   {
-    title: { en: "Open source", es: "Codigo abierto", pt: "Codigo aberto" },
+    title: { en: "Open source", es: "Open source", pt: "Open source" },
     body: {
-      en: "We build in public and release tools developers actually use, from design systems to AI-native writing and codebase search.",
-      es: "Construimos en publico y liberamos herramientas que developers realmente usan: sistemas de diseno, escritura con IA y busqueda de codigo.",
-      pt: "Construimos em publico e liberamos ferramentas que developers realmente usam: sistemas de design, escrita com IA e busca de codigo.",
+      en: "I build in public and contribute to open-source projects that developers actually use.",
+      es: "I build in public and contribute to open-source projects that developers actually use.",
+      pt: "I build in public and contribute to open-source projects that developers actually use.",
     },
     href: "/projects",
   },
   {
-    title: { en: "Products", es: "Productos", pt: "Produtos" },
+    title: { en: "Skills", es: "Skills", pt: "Skills" },
     body: {
-      en: "Community infrastructure, open-source tools, research projects, writing surfaces, design systems, and code search products built in public.",
-      es: "Infraestructura de comunidad, herramientas de codigo abierto, investigacion, escritura, sistemas de diseno y busqueda de codigo construidos en publico.",
-      pt: "Infraestrutura de comunidade, ferramentas de codigo aberto, pesquisa, escrita, sistemas de design e busca de codigo construidos em publico.",
+      en: "Python, TypeScript, JavaScript, React, Next.js, FastAPI, PostgreSQL, AI APIs, and more.",
+      es: "Python, TypeScript, JavaScript, React, Next.js, FastAPI, PostgreSQL, AI APIs, and more.",
+      pt: "Python, TypeScript, JavaScript, React, Next.js, FastAPI, PostgreSQL, AI APIs, and more.",
     },
-    href: "/projects",
+    href: "/team",
   },
 ] as const
 
@@ -115,58 +122,40 @@ export function getEcosystem(locale: Locale = defaultLocale) {
 
 export const services = [
   {
-    title: { en: "LatAm growth partner", es: "Partner de crecimiento en LatAm", pt: "Parceiro de crescimento no LatAm" },
+    title: { en: "AI Products", es: "AI Products", pt: "AI Products" },
     body: {
-      en: "For devtools and startups that want to earn trust in LatAm through events, community, content, product collaboration, and high-signal builder access.",
-      es: "Para devtools y startups que quieren ganar confianza en LatAm con eventos, comunidad, contenido, colaboracion de producto y acceso a builders de alta senal.",
-      pt: "Para devtools e startups que querem ganhar confianca no LatAm com eventos, comunidade, conteudo, colaboracao de produto e acesso a builders de alto sinal.",
+      en: "Streaming LLM UIs, agents, evals, and inference infrastructure. Building with the latest models and patterns that hold up in production.",
+      es: "Streaming LLM UIs, agents, evals, and inference infrastructure. Building with the latest models and patterns that hold up in production.",
+      pt: "Streaming LLM UIs, agents, evals, and inference infrastructure. Building with the latest models and patterns that hold up in production.",
     },
-    href: "/team/work-with-us",
+    href: "/projects",
   },
   {
-    title: { en: "Hackathon & event activation", es: "Activacion en hackathons y eventos", pt: "Ativacao em hackathons e eventos" },
+    title: { en: "Full Stack Engineering", es: "Full Stack Engineering", pt: "Full Stack Engineering" },
     body: {
-      en: "We design and run activations that put your product in the hands of engineers, designers, product people, and shippers who can actually use it.",
-      es: "Disenamos y operamos activaciones que ponen tu producto en manos de ingenieros, disenadores, producto y shippers que pueden usarlo de verdad.",
-      pt: "Desenhamos e operamos ativacoes que colocam seu produto nas maos de engenheiros, designers, produto e shippers que podem usa-lo de verdade.",
+      en: "End-to-end web products built on Next.js and the React ecosystem with PostgreSQL or MongoDB backends.",
+      es: "End-to-end web products built on Next.js and the React ecosystem with PostgreSQL or MongoDB backends.",
+      pt: "End-to-end web products built on Next.js and the React ecosystem with PostgreSQL or MongoDB backends.",
     },
-    href: "/events/sponsors",
+    href: "/projects",
   },
   {
-    title: { en: "Product engineering", es: "Ingenieria de producto", pt: "Engenharia de produto" },
+    title: { en: "Civic Tech", es: "Civic Tech", pt: "Civic Tech" },
     body: {
-      en: "End-to-end web products built on Next.js and the React ecosystem. From zero-to-one to scaling to millions of pages, we ship without half measures.",
-      es: "Productos web end-to-end sobre Next.js y el ecosistema React. De cero-a-uno a escalar millones de paginas, construimos sin medias tintas.",
-      pt: "Produtos web end-to-end sobre Next.js e o ecossistema React. De zero-a-um ate escalar milhoes de paginas, construimos sem meias medidas.",
+      en: "Building technology that solves real problems — from sustainability to civic engagement through data and AI.",
+      es: "Building technology that solves real problems — from sustainability to civic engagement through data and AI.",
+      pt: "Building technology that solves real problems — from sustainability to civic engagement through data and AI.",
     },
-    href: "/team/work-with-us",
+    href: "/research",
   },
   {
-    title: { en: "AI products", es: "Productos con IA", pt: "Produtos com IA" },
+    title: { en: "Developer Experience", es: "Developer Experience", pt: "Developer Experience" },
     body: {
-      en: "Streaming LLM UIs, agents, evals, and inference infra. We build with the latest models and the patterns that hold up in production.",
-      es: "UIs con streaming de LLMs, agentes, evaluaciones e infraestructura de inferencia. Construimos con modelos recientes y patrones que aguantan produccion.",
-      pt: "UIs com streaming de LLMs, agentes, avaliacoes e infraestrutura de inferencia. Construimos com modelos recentes e padroes que aguentam producao.",
+      en: "Designing tools, APIs, and workflows that engineers love to use — from local dev to production deployments.",
+      es: "Designing tools, APIs, and workflows that engineers love to use — from local dev to production deployments.",
+      pt: "Designing tools, APIs, and workflows that engineers love to use — from local dev to production deployments.",
     },
-    href: "/team/work-with-us",
-  },
-  {
-    title: { en: "Design systems", es: "Sistemas de diseno", pt: "Sistemas de design" },
-    body: {
-      en: "Component libraries and tokens that scale across surfaces. We treat the design system as a product, with rigor in versioning and DX.",
-      es: "Librerias de componentes y tokens que escalan entre superficies. Tratamos el sistema de diseno como producto, con rigor en versionado y DX.",
-      pt: "Bibliotecas de componentes e tokens que escalam entre superficies. Tratamos o sistema de design como produto, com rigor em versionamento e DX.",
-    },
-    href: "/team/work-with-us",
-  },
-  {
-    title: { en: "Backend & APIs", es: "Backend y APIs", pt: "Backend e APIs" },
-    body: {
-      en: "Postgres, edge runtimes, queues, and the data plumbing your product actually depends on. Built to scale, instrumented from day one.",
-      es: "Postgres, runtimes edge, colas y la capa de datos de la que tu producto depende. Construido para escalar e instrumentado desde el dia uno.",
-      pt: "Postgres, runtimes edge, filas e a camada de dados da qual seu produto depende. Construido para escalar e instrumentado desde o dia um.",
-    },
-    href: "/team/work-with-us",
+    href: "/projects",
   },
 ] as const
 
@@ -179,11 +168,11 @@ export function getServices(locale: Locale = defaultLocale) {
 }
 
 export const communityOffers = [
-  { en: "Join the WhatsApp community at crafters.chat", es: "Unete a la comunidad de WhatsApp en crafters.chat", pt: "Entre na comunidade do WhatsApp em crafters.chat" },
-  { en: "Attend Code Brews, hackathons, meetups, and launch nights", es: "Asiste a Code Brews, hackathons, meetups y noches de lanzamiento", pt: "Participe de Code Brews, hackathons, meetups e noites de lancamento" },
-  { en: "Get mentoring and career advice from active builders", es: "Recibe mentoria y consejo de carrera de builders activos", pt: "Receba mentoria e conselho de carreira de builders ativos" },
-  { en: "Ship in public with people who celebrate finished work", es: "Construye en publico con personas que celebran el trabajo terminado", pt: "Construa em publico com pessoas que celebram trabalho finalizado" },
-  { en: "Discover and showcase exceptional LatAm tech talent", es: "Descubre y muestra talento tech excepcional de LatAm", pt: "Descubra e mostre talento tech excepcional do LatAm" },
+  { en: "I share my journey building AI-powered applications, full-stack products, and learning in public.", es: "I share my journey building AI-powered applications, full-stack products, and learning in public.", pt: "I share my journey building AI-powered applications, full-stack products, and learning in public." },
+  { en: "I actively participate in hackathons, GDG events, and the startup ecosystem in Tamil Nadu.", es: "I actively participate in hackathons, GDG events, and the startup ecosystem in Tamil Nadu.", pt: "I actively participate in hackathons, GDG events, and the startup ecosystem in Tamil Nadu." },
+  { en: "Open to collaborating on innovative ideas and contributing to open source projects.", es: "Open to collaborating on innovative ideas and contributing to open source projects.", pt: "Open to collaborating on innovative ideas and contributing to open source projects." },
+  { en: "I build in public — sharing progress, lessons, and finished work along the way.", es: "I build in public — sharing progress, lessons, and finished work along the way.", pt: "I build in public — sharing progress, lessons, and finished work along the way." },
+  { en: "Building technology that is simple, accessible, and solves genuine human problems.", es: "Building technology that is simple, accessible, and solves genuine human problems.", pt: "Building technology that is simple, accessible, and solves genuine human problems." },
 ] as const
 
 export function getCommunityOffers(locale: Locale = defaultLocale) {
@@ -192,166 +181,100 @@ export function getCommunityOffers(locale: Locale = defaultLocale) {
 
 export const products = [
   {
-    slug: "hack0",
-    title: "hack0",
-    tagline: { en: "The live LATAM builder index", es: "El indice vivo de builders en LATAM", pt: "O indice vivo de builders no LATAM" },
+    slug: "thadam-ai",
+    title: "THADAM AI",
+    tagline: { en: "AI-powered sustainability platform", es: "AI-powered sustainability platform", pt: "AI-powered sustainability platform" },
     description: {
-      en: "A public directory for LATAM builders: events, communities, hackathons, labs, grants, and hosts maintained from open community calendars.",
-      es: "Un directorio publico para builders de LATAM: eventos, comunidades, hackathons, labs, grants y hosts mantenidos desde calendarios abiertos de la comunidad.",
-      pt: "Um diretorio publico para builders do LATAM: eventos, comunidades, hackathons, labs, grants e hosts mantidos a partir de calendarios abertos da comunidade.",
+      en: "An AI-powered sustainability platform that helps users understand, track, and reduce their carbon footprint through intelligent insights and eco-friendly recommendations.",
+      es: "An AI-powered sustainability platform that helps users understand, track, and reduce their carbon footprint through intelligent insights and eco-friendly recommendations.",
+      pt: "An AI-powered sustainability platform that helps users understand, track, and reduce their carbon footprint through intelligent insights and eco-friendly recommendations.",
     },
-    metrics: ["186 events", "84 communities", "20 countries"],
-    technologies: ["LATAM", "Events", "Community"],
-    url: "https://hack0.dev",
-    sourceUrl: "https://github.com/crafter-station/hack0",
+    metrics: ["Open source"],
+    technologies: ["AI", "Sustainability", "Full Stack"],
+    url: "https://github.com/sanjay-offl/thadam-ai",
+    sourceUrl: "https://github.com/sanjay-offl/thadam-ai",
     openSource: true,
     accent: "from-lime-300 via-emerald-500 to-teal-700",
   },
   {
-    slug: "petdex",
-    title: "Petdex",
-    tagline: { en: "The Codex pet index", es: "El indice de mascotas para Codex", pt: "O indice de pets para Codex" },
+    slug: "civicbrain",
+    title: "CivicBrain",
+    tagline: { en: "AI-powered civic technology", es: "AI-powered civic technology", pt: "AI-powered civic technology" },
     description: {
-      en: "A public gallery of animated companions for Codex. Browse thousands of open-source pets, preview their states, and install one with a single command.",
-      es: "Una galeria publica de companeros animados para Codex. Explora miles de mascotas open source, previsualiza sus estados e instala una con un solo comando.",
-      pt: "Uma galeria publica de companheiros animados para Codex. Explore milhares de pets open source, visualize seus estados e instale um com um unico comando.",
+      en: "An AI-powered civic technology platform that transforms citizen grievances and public data into actionable municipal insights for stronger institutions.",
+      es: "An AI-powered civic technology platform that transforms citizen grievances and public data into actionable municipal insights for stronger institutions.",
+      pt: "An AI-powered civic technology platform that transforms citizen grievances and public data into actionable municipal insights for stronger institutions.",
     },
-    metrics: ["3,114+ pets", "1-command install", "open source"],
-    technologies: ["Codex", "Desktop", "Gallery"],
-    url: "https://petdex.dev",
-    sourceUrl: "https://github.com/crafter-station/petdex",
+    metrics: ["Open source"],
+    technologies: ["Civic Tech", "AI", "Next.js"],
+    url: "https://github.com/sanjay-offl/civicbrain",
+    sourceUrl: "https://github.com/sanjay-offl/civicbrain",
     openSource: true,
     accent: "from-pink-300 via-fuchsia-500 to-purple-700",
   },
   {
-    slug: "legalize-pe",
-    title: "Legalize PE",
-    tagline: { en: "Peruvian law as a git repo", es: "Legislacion peruana como repo git", pt: "Legislacao peruana como repo git" },
+    slug: "cybershield-ai",
+    title: "CyberShield AI",
+    tagline: { en: "Intelligent cybersecurity platform", es: "Intelligent cybersecurity platform", pt: "Intelligent cybersecurity platform" },
     description: {
-      en: "A community-maintained corpus of Peruvian legal norms as Markdown files, where every reform is a commit dated to the real publication date.",
-      es: "Un corpus comunitario de normas legales peruanas como archivos Markdown, donde cada reforma es un commit con la fecha real de publicacion.",
-      pt: "Um corpus comunitario de normas legais peruanas como arquivos Markdown, onde cada reforma e um commit com a data real de publicacao.",
+      en: "An intelligent cybersecurity platform focused on threat awareness, security analysis, and digital protection.",
+      es: "An intelligent cybersecurity platform focused on threat awareness, security analysis, and digital protection.",
+      pt: "An intelligent cybersecurity platform focused on threat awareness, security analysis, and digital protection.",
     },
-    metrics: ["21,244 norms", "26/26 jurisdictions", "10,199 regional"],
-    technologies: ["Law", "Markdown", "Git"],
-    url: "https://legalize-pe.crafter.ing/",
-    sourceUrl: "https://github.com/crafter-research/legalize-pe",
+    metrics: ["Open source"],
+    technologies: ["Cybersecurity", "AI", "React"],
+    url: "https://github.com/sanjay-offl/cybershield-ai",
+    sourceUrl: "https://github.com/sanjay-offl/cybershield-ai",
     openSource: true,
     accent: "from-slate-200 via-blue-500 to-indigo-800",
   },
   {
-    slug: "maca",
-    title: "Maca",
-    tagline: { en: "Voice-to-text blazing fast", es: "Voz a texto a velocidad brutal", pt: "Voz para texto em alta velocidade" },
+    slug: "epsalipm",
+    title: "Epsalipm",
+    tagline: { en: "Interactive philosophical journal", es: "Interactive philosophical journal", pt: "Interactive philosophical journal" },
     description: {
-      en: "A Mac voice interface that works across every app. Hold one hotkey, speak naturally, and Maca pastes polished text where your cursor is.",
-      es: "Una interfaz de voz para Mac que funciona en cualquier app. Mantienes un hotkey, hablas natural y Maca pega texto pulido donde esta tu cursor.",
-      pt: "Uma interface de voz para Mac que funciona em qualquer app. Segure uma tecla, fale naturalmente e o Maca cola texto polido onde esta o cursor.",
+      en: "An interactive philosophical journal inspired by the eight Greek forms of love, combining storytelling, reflection, and personal memories into a unique reading experience.",
+      es: "An interactive philosophical journal inspired by the eight Greek forms of love, combining storytelling, reflection, and personal memories into a unique reading experience.",
+      pt: "An interactive philosophical journal inspired by the eight Greek forms of love, combining storytelling, reflection, and personal memories into a unique reading experience.",
     },
-    metrics: ["5x faster", "<50ms latency", "one hotkey"],
-    technologies: ["Voice", "Mac", "Productivity"],
-    url: "https://maca.sh/",
+    metrics: ["Open source"],
+    technologies: ["Full Stack", "UI/UX", "Storytelling"],
+    url: "https://github.com/sanjay-offl/epsalipm",
+    sourceUrl: "https://github.com/sanjay-offl/epsalipm",
+    openSource: true,
     accent: "from-stone-200 via-neutral-500 to-black",
   },
   {
-    slug: "visagente",
-    title: "Visagente",
-    tagline: { en: "Advance your U.S. visa appointment", es: "Adelanta tu cita de visa americana", pt: "Antecipe sua entrevista de visto americano" },
+    slug: "pleco-ai",
+    title: "Pleco AI",
+    tagline: { en: "AI workflow automation assistant", es: "AI workflow automation assistant", pt: "AI workflow automation assistant" },
     description: {
-      en: "A visa appointment assistant that monitors availability and helps travelers move their U.S. visa interview earlier by up to 10 months.",
-      es: "Un asistente de citas de visa que monitorea disponibilidad y ayuda a viajeros a adelantar su entrevista de visa americana hasta 10 meses.",
-      pt: "Um assistente de agendamento de visto que monitora disponibilidade e ajuda viajantes a antecipar a entrevista do visto americano em ate 10 meses.",
+      en: "An AI assistant designed to simplify workflows and improve productivity through intelligent automation.",
+      es: "An AI assistant designed to simplify workflows and improve productivity through intelligent automation.",
+      pt: "An AI assistant designed to simplify workflows and improve productivity through intelligent automation.",
     },
-    metrics: ["up to 10 months", "U.S. visa", "appointment alerts"],
-    technologies: ["Travel", "Automation", "Visa"],
-    url: "https://visagente.com/",
+    metrics: ["Open source"],
+    technologies: ["AI", "Productivity", "Automation"],
+    url: "https://github.com/sanjay-offl/pleco-ai",
+    sourceUrl: "https://github.com/sanjay-offl/pleco-ai",
+    openSource: true,
     accent: "from-blue-300 via-cyan-500 to-emerald-600",
   },
   {
-    slug: "shipping-bible",
-    title: "Shipping Bible",
-    tagline: { en: "Our playbook for shipping consistently", es: "Nuestro playbook para construir con consistencia", pt: "Nosso playbook para construir com consistencia" },
+    slug: "faynex",
+    title: "FAYNEX",
+    tagline: { en: "Modern digital product", es: "Modern digital product", pt: "Modern digital product" },
     description: {
-      en: "A living philosophy on shipping, building in public, time-boxing work, telling better stories, and growing as a builder in LatAm.",
-      es: "Una filosofia viva para construir en publico, trabajar con limites de tiempo, contar mejores historias y crecer como builder en LatAm.",
-      pt: "Uma filosofia viva para construir em publico, trabalhar com limites de tempo, contar historias melhores e crescer como builder no LatAm.",
+      en: "A modern digital product focused on solving practical challenges with scalable technology and clean user experiences.",
+      es: "A modern digital product focused on solving practical challenges with scalable technology and clean user experiences.",
+      pt: "A modern digital product focused on solving practical challenges with scalable technology and clean user experiences.",
     },
-    technologies: ["Playbook", "Community", "Shipping"],
-    url: "https://theshippingbible.com/",
+    metrics: ["Open source"],
+    technologies: ["Product", "Full Stack", "TypeScript"],
+    url: "https://github.com/sanjay-offl/faynex",
+    sourceUrl: "https://github.com/sanjay-offl/faynex",
+    openSource: true,
     accent: "from-zinc-200 via-zinc-500 to-zinc-900",
-  },
-  {
-    slug: "research",
-    title: "research",
-    tagline: { en: "AI-first engineering research from Crafter Station", es: "Investigacion de ingenieria AI-first de Crafter Station", pt: "Pesquisa de engenharia AI-first da Crafter Station" },
-    description: {
-      en: "A research unit exploring agents, AI workflows, developer experience, codebase context, and the future of software teams.",
-      es: "Una unidad de investigacion sobre agentes, flujos de trabajo con IA, experiencia de desarrollo, contexto de codebases y el futuro de los equipos de software.",
-      pt: "Uma unidade de pesquisa sobre agentes, fluxos de trabalho com IA, experiencia de desenvolvimento, contexto de codebases e o futuro dos times de software.",
-    },
-    technologies: ["AI", "Agents", "DX"],
-    url: "https://research.crafter.ing/",
-    accent: "from-violet-300 via-indigo-500 to-blue-700",
-  },
-  {
-    slug: "tinte",
-    title: "tinte",
-    tagline: { en: "AI theme generator for VS Code, Shadcn, and beyond", es: "Generador de temas con IA para VS Code, Shadcn y mas", pt: "Gerador de temas com IA para VS Code, Shadcn e mais" },
-    description: {
-      en: "Generate, remix, and ship beautiful themes across editors and design systems. Used by thousands of developers to make their environment feel like home.",
-      es: "Genera, remezcla y publica temas visuales para editores y sistemas de diseno. Miles de developers lo usan para hacer que su entorno se sienta propio.",
-      pt: "Gere, remix e publique temas visuais para editores e sistemas de design. Milhares de developers usam para deixar o ambiente com a propria cara.",
-    },
-    technologies: ["Next.js", "AI SDK", "Postgres", "Vercel"],
-    url: "https://tinte.dev",
-    sourceUrl: "https://github.com/Railly/tinte",
-    openSource: true,
-    accent: "from-amber-300 via-orange-400 to-rose-500",
-  },
-  {
-    slug: "lupa",
-    title: "lupa",
-    tagline: { en: "Search that actually understands your codebase", es: "Busqueda que entiende tu codebase de verdad", pt: "Busca que entende sua codebase de verdade" },
-    description: {
-      en: "Semantic and structural search for engineering teams. Index, ask, and navigate code at the speed of thought.",
-      es: "Busqueda semantica y estructural para equipos de ingenieria. Indexa, pregunta y navega codigo a la velocidad del pensamiento.",
-      pt: "Busca semantica e estrutural para times de engenharia. Indexe, pergunte e navegue codigo na velocidade do pensamento.",
-    },
-    technologies: ["Bun", "Postgres", "pgvector", "Next.js"],
-    url: "https://lupa.dev",
-    sourceUrl: "https://github.com/crafter-station/lupa",
-    openSource: true,
-    accent: "from-cyan-300 via-sky-500 to-indigo-600",
-  },
-  {
-    slug: "elements",
-    title: "elements",
-    tagline: { en: "A registry of production-ready UI elements", es: "Un registry de elementos UI listos para produccion", pt: "Um registry de elementos UI prontos para producao" },
-    description: {
-      en: "Drop-in components and integrations for the apps you actually ship: Clerk, Stripe, Uploadthing, theming, and more. shadcn-compatible.",
-      es: "Componentes e integraciones listos para produccion para las apps que realmente construyes: Clerk, Stripe, Uploadthing, theming y mas. Compatible con shadcn.",
-      pt: "Componentes e integracoes prontos para producao para os apps que voce realmente constroi: Clerk, Stripe, Uploadthing, theming e mais. Compativel com shadcn.",
-    },
-    technologies: ["React", "Tailwind", "shadcn", "Registry"],
-    url: "https://tryelements.dev",
-    sourceUrl: "https://github.com/crafter-station/elements",
-    openSource: true,
-    accent: "from-emerald-300 via-teal-500 to-cyan-600",
-  },
-  {
-    slug: "text0",
-    title: "text0",
-    tagline: { en: "The editor we wished we had", es: "El editor que queriamos tener", pt: "O editor que queriamos ter" },
-    description: {
-      en: "An opinionated, AI-native writing surface for technical teams. Focused, fast, and designed to disappear.",
-      es: "Una superficie de escritura opinionada y nativa de IA para equipos tecnicos. Enfocada, rapida y disenada para desaparecer.",
-      pt: "Uma superficie de escrita opinativa e nativa de IA para times tecnicos. Focada, rapida e desenhada para desaparecer.",
-    },
-    technologies: ["Next.js", "AI SDK", "Tiptap"],
-    url: "https://text0.dev",
-    sourceUrl: "https://github.com/crafter-station/text0",
-    openSource: true,
-    accent: "from-fuchsia-300 via-purple-500 to-indigo-700",
   },
 ] as const
 
@@ -365,48 +288,25 @@ export function getProducts(locale: Locale = defaultLocale) {
 
 export const collaborations = [
   { name: "OpenAI", logo: "/collaborations/openai.svg", href: "https://openai.com" },
-  { name: "Codex", logo: "/collaborations/codex-dark.png", href: "https://openai.com/codex", preserveLogoColors: true },
-  { name: "v0", logo: "/collaborations/v0.png", href: "https://v0.app" },
   { name: "Vercel", logo: "/collaborations/vercel.svg", href: "https://vercel.com" },
   { name: "Supabase", logo: "/collaborations/supabase.svg", href: "https://supabase.com" },
-  { name: "Firecrawl", logo: "/collaborations/firecrawl.svg", href: "https://www.firecrawl.dev", preserveLogoColors: true },
-  { name: "Cursor", logo: "/collaborations/cursor.svg", href: "https://cursor.com" },
-  { name: "Wallbit", logo: "/collaborations/wallbit.png", href: "https://www.wallbit.io/en" },
-  { name: "Sezzle", logo: "/collaborations/sezzle.png", href: "https://sezzle.com" },
-  { name: "Portal", logo: "/collaborations/portal.svg", href: "https://useportal.co" },
 ] as const
 
 export const events = [
   {
-    title: { en: "Code Brew", es: "Code Brew", pt: "Code Brew" },
-    body: {
-      en: "Intimate meetups for shippers to share demos, lessons, and honest stories from the workbench.",
-      es: "Meetups intimos para que shippers compartan demos, aprendizajes e historias honestas del trabajo.",
-      pt: "Meetups intimos para shippers compartilharem demos, aprendizados e historias honestas do trabalho.",
-    },
-  },
-  {
     title: { en: "Hackathons", es: "Hackathons", pt: "Hackathons" },
     body: {
-      en: "High-energy build sprints where devtools become part of the workflow, not just a sponsor logo.",
-      es: "Sprints de construccion con energia alta donde los devtools son parte del flujo, no solo un logo de sponsor.",
-      pt: "Sprints de construcao com energia alta onde devtools viram parte do fluxo, nao so um logo de sponsor.",
+      en: "High-energy build sprints where ideas turn into working products. I actively participate in hackathons across Tamil Nadu.",
+      es: "High-energy build sprints where ideas turn into working products. I actively participate in hackathons across Tamil Nadu.",
+      pt: "High-energy build sprints where ideas turn into working products. I actively participate in hackathons across Tamil Nadu.",
     },
   },
   {
-    title: { en: "Product launches", es: "Lanzamientos", pt: "Lancamentos" },
+    title: { en: "Community", es: "Community", pt: "Community" },
     body: {
-      en: "Community launch moments for tools, open-source projects, and startup collaborations.",
-      es: "Momentos de lanzamiento con comunidad para herramientas, proyectos de codigo abierto y colaboraciones con startups.",
-      pt: "Momentos de lancamento com comunidade para ferramentas, projetos de codigo aberto e colaboracoes com startups.",
-    },
-  },
-  {
-    title: { en: "Workshops", es: "Workshops", pt: "Workshops" },
-    body: {
-      en: "Hands-on sessions around AI, product engineering, design systems, growth, and developer tools.",
-      es: "Sesiones practicas sobre IA, ingenieria de producto, sistemas de diseno, growth y herramientas para developers.",
-      pt: "Sessoes praticas sobre IA, engenharia de produto, sistemas de design, growth e ferramentas para developers.",
+      en: "I am part of the Entrepreneurship Cell at PPGIT, leading NEC team initiatives that foster student innovation and startup culture.",
+      es: "I am part of the Entrepreneurship Cell at PPGIT, leading NEC team initiatives that foster student innovation and startup culture.",
+      pt: "I am part of the Entrepreneurship Cell at PPGIT, leading NEC team initiatives that foster student innovation and startup culture.",
     },
   },
 ] as const
@@ -420,22 +320,22 @@ export function getEvents(locale: Locale = defaultLocale) {
 
 export const researchLinks = [
   {
-    title: "Crafter Research",
+    title: "Sanjay S Research",
     body: {
-      en: "Research notes, essays, experiments, and technical writing from the unit.",
-      es: "Notas de investigacion, ensayos, experimentos y escritura tecnica de la unidad.",
-      pt: "Notas de pesquisa, ensaios, experimentos e escrita tecnica da unidade.",
+      en: "Research notes, essays, experiments, and technical writing on AI, civic technology, and software engineering.",
+      es: "Research notes, essays, experiments, and technical writing on AI, civic technology, and software engineering.",
+      pt: "Research notes, essays, experiments, and technical writing on AI, civic technology, and software engineering.",
     },
-    href: "https://research.crafter.ing/",
+    href: "https://research.sanjay.dev",
   },
   {
-    title: "crafter-research GitHub",
+    title: "sanjay-offl GitHub",
     body: {
-      en: "Open research repositories, experiments, and technical artifacts.",
-      es: "Repositorios abiertos de investigacion, experimentos y artefactos tecnicos.",
-      pt: "Repositorios abertos de pesquisa, experimentos e artefatos tecnicos.",
+      en: "Open-source projects, experiments, and technical artifacts.",
+      es: "Open-source projects, experiments, and technical artifacts.",
+      pt: "Open-source projects, experiments, and technical artifacts.",
     },
-    href: "https://github.com/crafter-research",
+    href: "https://github.com/sanjay-offl",
   },
 ] as const
 
@@ -447,30 +347,21 @@ export const team = teamMembers
 
 export const testimonials = [
   {
-    name: "Founder, AI startup",
-    role: "Series A, North America",
+    name: "Peer",
+    role: "Hackathon teammate",
     quote: {
-      en: "They moved faster than our internal team and shipped quality we had not seen from outside collaborators. The product feels native, not contracted.",
-      es: "Se movieron mas rapido que nuestro equipo interno y entregaron una calidad que no habiamos visto en colaboradores externos. El producto se siente nativo, no contratado.",
-      pt: "Eles se moveram mais rapido que nosso time interno e entregaram uma qualidade que nao tinhamos visto em colaboradores externos. O produto parece nativo, nao terceirizado.",
+      en: "Sanjay is one of those rare builders who actually ships — fast, focused, and with real attention to detail. Watching him turn an idea into a working product in 24 hours is something else.",
+      es: "Sanjay is one of those rare builders who actually ships — fast, focused, and with real attention to detail. Watching him turn an idea into a working product in 24 hours is something else.",
+      pt: "Sanjay is one of those rare builders who actually ships — fast, focused, and with real attention to detail. Watching him turn an idea into a working product in 24 hours is something else.",
     },
   },
   {
-    name: "Head of Product",
-    role: "Devtools, EU",
+    name: "Mentor",
+    role: "College faculty",
     quote: {
-      en: "Crafter Station joined late and still pulled the launch forward. Strong opinions, no hand-holding required, and the polish is real.",
-      es: "Crafter Station entro tarde e igual adelanto el lanzamiento. Opiniones fuertes, cero hand-holding y el polish es real.",
-      pt: "Crafter Station entrou tarde e ainda assim adiantou o lancamento. Opinioes fortes, zero hand-holding e o polish e real.",
-    },
-  },
-  {
-    name: "CTO",
-    role: "Marketplace, LATAM",
-    quote: {
-      en: "We've worked with a lot of product teams. None of them understood our stack the way these folks did on day one.",
-      es: "Trabajamos con muchos equipos de producto. Ninguno entendio nuestro stack como ellos desde el dia uno.",
-      pt: "Trabalhamos com muitos times de produto. Nenhum entendeu nosso stack como eles desde o dia um.",
+      en: "Sanjay brings curiosity and rigor to everything he touches. He is building, learning, and contributing back to the ecosystem — exactly the kind of student we want to support.",
+      es: "Sanjay brings curiosity and rigor to everything he touches. He is building, learning, and contributing back to the ecosystem — exactly the kind of student we want to support.",
+      pt: "Sanjay brings curiosity and rigor to everything he touches. He is building, learning, and contributing back to the ecosystem — exactly the kind of student we want to support.",
     },
   },
 ] as const
@@ -488,12 +379,7 @@ export const stackLogos = [
 ] as const
 
 export const socials = [
-  { label: "GitHub", href: "https://github.com/crafter-station" },
-  { label: "X", href: "https://x.com/CrafterStation" },
-  { label: "Instagram", href: "https://instagram.com/crafter.station/" },
-  { label: "YouTube", href: "https://www.youtube.com/@crafterstation" },
-  { label: "Discord", href: "https://discord.gg/crafterstation" },
-  { label: "WhatsApp", href: "https://crafters.chat" },
-  { label: "Luma", href: "https://luma.com/hack0" },
-  { label: "Research", href: "https://research.crafter.ing/" },
+  { label: "GitHub", href: "https://github.com/sanjay-offl" },
+  { label: "X", href: "https://twitter.com/sanjay_offl" },
+  { label: "LinkedIn", href: "https://linkedin.com/in/sanjayoffl" },
 ] as const

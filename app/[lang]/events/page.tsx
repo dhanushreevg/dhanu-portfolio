@@ -6,7 +6,7 @@ import { Container, SectionGap } from "@/components/grid-container";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { isLocale, withLocale } from "@/lib/i18n";
-import { fetchCrafterStationEvents, formatEventDate } from "@/lib/luma";
+import { fetchSanjaySEvents, formatEventDate } from "@/lib/luma";
 import { pageMetadata } from "@/lib/seo";
 
 export const revalidate = 21600;
@@ -34,7 +34,7 @@ export default async function Page({
     namespace: "pages.events-sponsors",
   });
   const common = await getTranslations({ locale: lang, namespace: "common" });
-  const { upcoming, past, filterTags } = await fetchCrafterStationEvents();
+  const { upcoming, past, filterTags } = await fetchSanjaySEvents();
 
   const toListItem = (event: (typeof upcoming)[number]): EventListItem => ({
     id: event.id,
