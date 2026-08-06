@@ -9,6 +9,7 @@ const buildLinks = [
   { label: "Timeline", href: "/timeline" },
   { label: "About", href: "/about" },
   { label: "Achievements", href: "/achievements" },
+  { label: "Certificates", href: "/certificates" },
 ]
 
 const projectLinks = [

@@ -17,7 +17,7 @@ export const books = [
     availability: "Coming soon",
     cover: "/epsalipm.jpeg",
     description:
-      "[TODO] Add your own description of what EPSALIPM is about — memory, identity, ideas, and the themes you are exploring.",
+      "A work in progress exploring memory, identity, and the ideas that shape who we become. Building on the philosophical voice of A Mayfly's Memory, it asks what it means to remember — and what is lost and found when we look back.",
     link: "https://instagram.com/sanjay.hq/",
     cta: "Follow for updates",
   },

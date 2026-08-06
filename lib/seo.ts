@@ -15,6 +15,7 @@ export const indexablePaths = [
   "/books",
   "/about",
   "/achievements",
+  "/certificates",
 ] as const
 
 const ogLocales: Record<Locale, string> = {

@@ -107,8 +107,13 @@ export default async function Page({
             </div>
             <div className="p-8 md:p-10">
               <p className="max-w-3xl text-sm leading-relaxed text-muted-foreground">
-                [TODO] Add your author note — why you write, what drives the work,
-                and what readers can expect from your books.
+                I write because stories are how I make sense of the world — the
+                quiet questions about memory, identity, and what it means to live
+                fully. A Mayfly's Memory came from asking how much of life we
+                truly get to experience, and whether a short life lived fully
+                beats a long one lived half-awake. My hope is that these books
+                leave you thinking — and maybe looking at your own life a little
+                differently.
               </p>
               <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">
                 Follow along at{" "}

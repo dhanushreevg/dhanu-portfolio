@@ -11,6 +11,7 @@ const navLabels: Record<string, string> = {
   about: "About",
   books: "Books",
   timeline: "Timeline",
+  certificates: "Certificates",
   contact: "Contact",
 }
 
@@ -38,7 +39,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
               <Link
                 key={item.href}
                 href={withLocale(item.href, locale)}
-                className="inline-flex h-16 items-center gap-1 px-5 text-sm font-medium text-foreground transition-colors hover:bg-accent/10 hover:text-foreground"
+                className="inline-flex h-16 items-center gap-1 px-4 text-sm font-medium text-foreground transition-colors hover:bg-accent/10 hover:text-foreground lg:px-3.5 xl:px-5"
               >
                 {navLabels[item.key]}
               </Link>
@@ -49,7 +50,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
               href="https://github.com/sanjay-offl"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex h-full items-center gap-2 px-6 text-sm font-medium text-foreground transition-colors hover:bg-accent/10"
+              className="group inline-flex h-full items-center gap-2 px-4 text-sm font-medium text-foreground transition-colors hover:bg-accent/10 lg:px-4 xl:px-6"
             >
               Follow along
               <PixelArrow />

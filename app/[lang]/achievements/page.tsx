@@ -42,7 +42,7 @@ const certificates = [
   },
   {
     name: "Design Thinking and Creativity Workshop",
-    issuer: "[TODO] Organizer name",
+    issuer: "",
     date: "2025",
     description: "Workshop participation certificate for design thinking and creativity.",
     pdf: null,
@@ -57,7 +57,7 @@ const certificates = [
   },
   {
     name: "ODFE Hackathon Completion",
-    issuer: "[TODO] Organizer name",
+    issuer: "",
     date: "2025",
     description:
       "Completed a 24-hour hackathon build with a full-stack Cafe POS system.",
@@ -74,16 +74,15 @@ const certificates = [
   {
     name: "Online certifications",
     issuer: "Coursera / NPTEL / Google Cloud / others",
-    date: "[TODO]",
-    description: "[TODO] Add any online certifications you have earned.",
+    date: "",
+    description: "",
     pdf: null,
   },
   {
     name: "College certificates",
     issuer: "College",
-    date: "[TODO]",
-    description:
-      "[TODO] Add any merit certificates or department recognitions you have earned.",
+    date: "",
+    description: "",
     pdf: null,
   },
 ]

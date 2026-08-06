@@ -298,6 +298,11 @@
       "title": "Certificates & recognitions.",
       "description": "MSME registration, TN-EDII innovation voucher, IIT Bombay E-Summit finalist, 61st national rank in the Odoo Hackathon, and hackathon certificates."
     },
+    "certificates": {
+      "eyebrow": "Certificates",
+      "title": "Certified by the names behind the tools.",
+      "description": "Certificates from Claude, Deloitte, Google, NASA, Odoo, and TCS — with original files linked on Google Drive."
+    },
     "next": {
       "eyebrow": "/projects/next",
       "title": "Vote on the next thing I should build.",
