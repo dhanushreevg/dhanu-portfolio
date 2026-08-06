@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { ArrowLink } from "@/components/arrow-link"
@@ -56,14 +57,23 @@ export default async function Page({
                   (i > 0 ? "border-t border-line md:border-l md:border-t-0" : "")
                 }
               >
-                <div className="flex aspect-[3/4] max-w-sm flex-col justify-between border border-line bg-secondary/10 p-8">
-                  <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+                <div className="max-w-sm">
+                  <div className="relative aspect-[3/4] overflow-hidden border border-line bg-secondary/10">
+                    <Image
+                      src={book.cover}
+                      alt={`${book.title} book cover`}
+                      fill
+                      sizes="(min-width: 768px) 25vw, 90vw"
+                      className="object-cover"
+                    />
+                  </div>
+                  <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
                     {book.status}
                   </p>
-                  <h2 className="font-serif text-3xl leading-tight tracking-[-0.01em]">
+                  <h2 className="mt-2 font-serif text-3xl leading-tight tracking-[-0.01em]">
                     {book.title}
                   </h2>
-                  <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">
+                  <p className="mt-2 font-mono text-xs uppercase tracking-[0.2em] text-accent">
                     {book.availability}
                   </p>
                 </div>

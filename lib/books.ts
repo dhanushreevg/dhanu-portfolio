@@ -4,8 +4,9 @@ export const books = [
     title: "A Mayfly's Memory",
     status: "Published",
     availability: "Available on Amazon India",
+    cover: "/a-mayflys-memory.jpeg",
     description:
-      "[TODO] Add your own description of A Mayfly's Memory — genre, what it's about, why you wrote it, and when it was published.",
+      "A philosophical short novel about a blind mayfly named Susanth who spends years surviving in the dark depths of a lake. When he finally rises to the surface and learns to fly, he experiences freedom, love, and loss within the brief span of his life. Through his journey, the story explores themes of patience, resilience, connection, and the beauty of living fully even when life is short.",
     link: "https://amzn.in/d/01BTpnYV",
     cta: "Buy on Amazon",
   },
@@ -14,6 +15,7 @@ export const books = [
     title: "EPSALIPM",
     status: "Writing in progress",
     availability: "Coming soon",
+    cover: "/epsalipm.jpeg",
     description:
       "[TODO] Add your own description of what EPSALIPM is about — memory, identity, ideas, and the themes you are exploring.",
     link: "https://instagram.com/sanjay.hq/",
