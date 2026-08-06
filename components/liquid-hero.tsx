@@ -266,9 +266,11 @@ export function LiquidHero({
       let logoY: number
 
       if (useRightAlign) {
-        // Desktop: fill the right ~46% of the canvas, vertically centered
-        const availW = w * 0.46
-        const availH = h * 0.92
+        // Desktop: keep the portrait in its own right-hand column (~40% of
+        // the canvas, a ~13% reduction) and nudge it down slightly so the
+        // face clears the headline band instead of sitting under it.
+        const availW = w * 0.4
+        const availH = h * 0.94
         if (imageAspect > availW / availH) {
           logoW = availW
           logoH = logoW / imageAspect
@@ -277,7 +279,7 @@ export function LiquidHero({
           logoW = logoH * imageAspect
         }
         logoX = w - logoW
-        logoY = (h - logoH) / 2
+        logoY = (h - logoH) / 2 + h * 0.02
       } else {
         // Mobile / center: use fillFactor, centered
         const canvasAspect = w / h

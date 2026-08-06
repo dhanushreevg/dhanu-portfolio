@@ -44,14 +44,15 @@ export async function AboutSnippet({ locale }: { locale: Locale }) {
             About
           </p>
           <h2 className="mt-3 text-3xl tracking-tight md:text-4xl">
-            Builder, founder, author.
+            Aspiring designer, builder, author.
           </h2>
         </div>
         <div className="flex flex-col justify-center gap-6 p-8 md:p-10">
           <p className="max-w-2xl text-base leading-relaxed text-foreground/85">
-            Third-year CSE student. CTO at GreenSprout, frontend intern at NexGenAds.
-            I build AI-first products, lead student communities, compete in
-            hackathons, and write books.
+            Aspiring Web Designer and B.E. Computer Science & Engineering
+            student passionate about designing intuitive, user-centered digital
+            experiences — from UI/UX design and frontend development to AI
+            products and entrepreneurship.
           </p>
           <LocalizedLink href="/about" locale={locale} className="group w-fit">
             <ArrowLink>More about me</ArrowLink>

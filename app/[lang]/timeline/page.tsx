@@ -21,13 +21,13 @@ const milestones = [
   {
     year: "2023",
     items: [
-      "Started B.Tech CSE",
       "Started learning React and Next.js",
     ],
   },
   {
     year: "2024",
     items: [
+      "Started B.E. CSE at PPG Institute of Technology",
       "Started building first full-stack projects",
       "Founded Codera student community",
       "Applied to the NexGenAds internship (React / Next.js / UI-UX track)",
@@ -55,7 +55,12 @@ const milestones = [
       "Ranked 61st nationally in the Odoo Hackathon",
       "Evaluating Eureka! 2026 (IIT Bombay) with EcoReboot",
       "Writing second book: EPSALIPM",
-      "Expected graduation: B.Tech CSE",
+    ],
+  },
+  {
+    year: "2028",
+    items: [
+      "Expected graduation: B.E. CSE",
     ],
   },
 ]

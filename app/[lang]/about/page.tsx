@@ -17,91 +17,60 @@ export function generateMetadata({ params }: { params: Promise<{ lang: string }>
   return pageMetadata({ params, path: "/about", namespace: "pages.about" })
 }
 
-const roles = [
+const skills = [
+  "User Interface (UI) Design",
+  "User Experience (UX) Research",
+  "Responsive Web Design",
+  "Wireframing & Prototyping",
+  "Design Systems & Component Libraries",
+  "Landing Page Design",
+  "Visual Hierarchy & Typography",
+  "No-Code Website Development",
+]
+
+const education = [
   {
-    role: "Frontend Developer Intern",
-    org: "NexGenAds Technologies, Coimbatore",
+    degree: "Bachelor of Engineering in Computer Science & Engineering",
+    school: "PPG Institute of Technology, Coimbatore",
+    period: "2024 – Present",
+    detail: "Currently pursuing Second Year.",
   },
   {
-    role: "CTO",
-    org: "GreenSprout (agritech)",
-  },
-  {
-    role: "Founder",
-    org: "EcoReboot (e-waste)",
-  },
-  {
-    role: "Community builder",
-    org: "Codera",
-  },
-  {
-    role: "Freelancer",
-    org: "Webro",
-  },
-  {
-    role: "Author",
-    org: "A Mayfly's Memory (published) · EPSALIPM (writing)",
+    degree: "Higher Secondary Education",
+    school: "Metro School, Mettupalayam",
+    period: "2010 – 2024",
   },
 ]
 
-const skillGroups = [
-  {
-    name: "Frontend",
-    skills: ["React", "Next.js 14", "Tailwind CSS", "Vite", "Framer Motion"],
-  },
-  {
-    name: "Backend",
-    skills: ["Node.js", "FastAPI", "Spring Boot", "Spring Security", "JWT"],
-  },
-  {
-    name: "Database",
-    skills: ["PostgreSQL", "Prisma", "Redis"],
-  },
-  {
-    name: "Languages",
-    skills: ["Python", "TypeScript", "JavaScript", "Java"],
-  },
-  {
-    name: "AI",
-    skills: ["Gemini 1.5 Flash", "Google AI APIs"],
-  },
-  {
-    name: "Infrastructure",
-    skills: ["Vercel", "Netlify", "Docker (basic)"],
-  },
-  {
-    name: "Tools",
-    skills: ["Git", "GitHub", "Figma", "Canva"],
-  },
+const interests = [
+  "Authoring",
+  "Innovation",
+  "Entrepreneurship",
+  "Community Building",
+  "Pedagogy",
+  "Ideation",
+  "Product Building",
+  "Education",
+  "Exploration",
+  "Networking",
+  "Creative Design",
+  "Mentoring",
+  "Storytelling",
+  "Prototyping",
+  "Teaching",
 ]
 
-const building = [
-  {
-    title: "AI civic tech products",
-    body: "AI-powered citizen grievance intelligence for real civic impact — UrbanMind.",
-    href: "",
-  },
-  {
-    title: "Sustainable farming technology",
-    body: "GreenSprout's AGRISOLARBOT™ — solar-powered automation for agriculture.",
-    href: "https://greensprouts-offl.netlify.app/",
-  },
-  {
-    title: "E-waste solutions",
-    body: "Upcycling discarded devices into affordable, repairable computing — EcoReboot.",
-    href: "",
-  },
-  {
-    title: "A student builder community",
-    body: "Codera — practical learning, hackathons, and startup culture.",
-    href: "",
-  },
-  {
-    title: "Books that make people think",
-    body: "A Mayfly's Memory and the next book in progress, EPSALIPM.",
-    href: "/books",
-  },
-]
+const experience = {
+  role: "Web Design Intern",
+  org: "Zidio Development",
+  period: "2025 – Present",
+  points: [
+    "Designing responsive and user-friendly web interfaces.",
+    "Creating wireframes, prototypes, and landing pages.",
+    "Collaborating on modern web design projects.",
+    "Improving user experience through design thinking and usability principles.",
+  ],
+}
 
 export default async function Page({
   params,
@@ -124,10 +93,13 @@ export default async function Page({
               Who I am.
             </h1>
             <p className="mt-6 max-w-2xl text-balance text-lg leading-8 text-muted-foreground">
-              Third-year Computer Science student, Coimbatore. I build AI products,
-              lead startup communities, compete in hackathons, and write books. My
-              work sits at the intersection of technology, civic purpose, and human
-              stories.
+              Aspiring Web Designer and B.E. Computer Science & Engineering student
+              passionate about designing intuitive, user-centered digital
+              experiences. I enjoy transforming ideas into meaningful products
+              through thoughtful design, modern web technologies, and creative
+              problem solving. My interests span UI/UX design, frontend
+              development, AI products, and entrepreneurship, with a focus on
+              building impactful digital solutions.
             </p>
           </div>
         </Container>
@@ -138,24 +110,41 @@ export default async function Page({
           <section className="border-y border-line">
             <div className="border-b border-line p-8 md:p-10">
               <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-                Roles
+                Experience
               </p>
               <h2 className="mt-3 text-3xl tracking-tight md:text-4xl">
-                What I do right now.
+                Where I design.
               </h2>
             </div>
             <div className="divide-y divide-line">
-              {roles.map((r) => (
-                <div
-                  key={r.role}
-                  className="flex flex-col gap-1 p-8 md:flex-row md:items-baseline md:gap-8 md:p-10"
-                >
-                  <p className="w-64 shrink-0 font-mono text-sm uppercase tracking-[0.2em] text-accent">
-                    {r.role}
+              <div className="flex flex-col gap-3 p-8 md:flex-row md:items-baseline md:gap-8 md:p-10">
+                <div className="w-64 shrink-0">
+                  <p className="font-mono text-sm uppercase tracking-[0.2em] text-accent">
+                    {experience.role}
                   </p>
-                  <p className="text-sm leading-relaxed text-foreground">{r.org}</p>
+                  <p className="mt-1 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
+                    {experience.period}
+                  </p>
                 </div>
-              ))}
+                <div className="max-w-xl flex-1">
+                  <p className="text-sm font-medium text-foreground">
+                    {experience.org}
+                  </p>
+                  <ul className="mt-4 space-y-2">
+                    {experience.points.map((point) => (
+                      <li
+                        key={point}
+                        className="flex gap-3 text-sm leading-relaxed text-muted-foreground"
+                      >
+                        <span aria-hidden className="text-accent">
+                          —
+                        </span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
           </section>
         </Container>
@@ -169,33 +158,61 @@ export default async function Page({
                 Skills
               </p>
               <h2 className="mt-3 text-3xl tracking-tight md:text-4xl">
-                The stack I build with.
+                What I design with.
               </h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-              {skillGroups.map((group, i) => (
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              {skills.map((skill, i) => (
                 <div
-                  key={group.name}
+                  key={skill}
                   className={
                     "p-8 md:p-10 " +
                     (i % 2 ? "md:border-l md:border-line " : "") +
-                    (i >= 2 ? "border-t border-line xl:border-t-0 " : "") +
-                    (i % 3 ? "xl:border-l xl:border-line " : "") +
-                    (i > 0 ? "border-t border-line md:border-t-0" : "")
+                    (i >= 2 ? "border-t border-line" : "")
                   }
                 >
-                  <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-                    {group.name}
+                  <p className="text-sm leading-relaxed text-foreground">
+                    {skill}
                   </p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {group.skills.map((skill) => (
-                      <span
-                        key={skill}
-                        className="border border-line px-3 py-1.5 font-mono text-xs text-foreground/80"
-                      >
-                        {skill}
-                      </span>
-                    ))}
+                </div>
+              ))}
+            </div>
+          </section>
+        </Container>
+
+        <SectionGap />
+
+        <Container>
+          <section className="border-y border-line">
+            <div className="border-b border-line p-8 md:p-10">
+              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+                Education
+              </p>
+              <h2 className="mt-3 text-3xl tracking-tight md:text-4xl">
+                Where I learned.
+              </h2>
+            </div>
+            <div className="divide-y divide-line">
+              {education.map((entry) => (
+                <div
+                  key={entry.degree}
+                  className="flex flex-col gap-3 p-8 md:flex-row md:items-baseline md:gap-8 md:p-10"
+                >
+                  <p className="w-64 shrink-0 font-mono text-sm uppercase tracking-[0.2em] text-accent">
+                    {entry.period}
+                  </p>
+                  <div className="max-w-xl flex-1">
+                    <p className="text-sm font-medium text-foreground">
+                      {entry.degree}
+                    </p>
+                    <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                      {entry.school}
+                    </p>
+                    {entry.detail ? (
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                        {entry.detail}
+                      </p>
+                    ) : null}
                   </div>
                 </div>
               ))}
@@ -209,41 +226,20 @@ export default async function Page({
           <section className="border-y border-line">
             <div className="border-b border-line p-8 md:p-10">
               <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-                What I am building
+                Interests
               </p>
               <h2 className="mt-3 text-3xl tracking-tight md:text-4xl">
-                Work in motion.
+                What I am curious about.
               </h2>
             </div>
-            <div className="divide-y divide-line">
-              {building.map((item) => (
-                <div
-                  key={item.title}
-                  className="group flex flex-col gap-3 p-8 transition-colors hover:bg-accent/5 md:flex-row md:items-baseline md:gap-8 md:p-10"
+            <div className="flex flex-wrap gap-2 p-8 md:p-10">
+              {interests.map((interest) => (
+                <span
+                  key={interest}
+                  className="border border-line px-3 py-1.5 font-mono text-xs text-foreground/80"
                 >
-                  <p className="w-72 shrink-0 text-sm font-medium text-foreground">
-                    {item.title}
-                  </p>
-                  <p className="max-w-xl flex-1 text-sm leading-relaxed text-muted-foreground">
-                    {item.body}
-                  </p>
-                  {item.href ? (
-                    <Link
-                      href={item.href}
-                      target={
-                        item.href.startsWith("http") ? "_blank" : undefined
-                      }
-                      rel={
-                        item.href.startsWith("http")
-                          ? "noopener noreferrer"
-                          : undefined
-                      }
-                      className="group mt-1"
-                    >
-                      <ArrowLink>Open</ArrowLink>
-                    </Link>
-                  ) : null}
-                </div>
+                  {interest}
+                </span>
               ))}
             </div>
           </section>

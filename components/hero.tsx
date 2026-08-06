@@ -43,7 +43,7 @@ export function HeroContent({
 
         <div className="pointer-events-none relative z-10 flex flex-col md:absolute md:inset-0 md:flex-col">
           <div className="mx-auto flex w-full max-w-[1380px] flex-col justify-between px-4 pt-8 sm:px-6 md:h-full md:gap-14 md:px-10 md:py-11">
-            <div>
+            <div className="md:max-w-[55%]">
               <p className="mb-3 font-mono text-[10px] uppercase tracking-[0.4em] text-accent md:mb-5">
                 {eyebrow}
               </p>

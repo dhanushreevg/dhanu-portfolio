@@ -56,7 +56,7 @@ export const stats = [
   { value: "8+", label: { en: "Projects Shipped", es: "Projects Shipped", pt: "Projects Shipped" } },
   { value: "3+", label: { en: "Hackathons", es: "Hackathons", pt: "Hackathons" } },
   { value: "2", label: { en: "Books (1 published, 1 writing)", es: "Books (1 published, 1 writing)", pt: "Books (1 published, 1 writing)" } },
-  { value: "2026", label: { en: "B.Tech CSE Graduation", es: "B.Tech CSE Graduation", pt: "B.Tech CSE Graduation" } },
+  { value: "2028", label: { en: "B.E. CSE Graduation", es: "B.E. CSE Graduation", pt: "B.E. CSE Graduation" } },
 ] as const
 
 export function getStats(locale: Locale = defaultLocale) {
