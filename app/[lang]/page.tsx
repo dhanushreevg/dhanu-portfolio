@@ -1,47 +1,31 @@
 import { notFound } from "next/navigation"
 import { getTranslations } from "next-intl/server"
-import { Capabilities } from "@/components/capabilities"
-import { CTA, type CtaCopy } from "@/components/cta"
-import { FeaturedProducts } from "@/components/featured-products"
+import { FeaturedProjects } from "@/components/featured-products"
 import { SectionGap } from "@/components/grid-container"
 import { HeroContent } from "@/components/hero"
 import {
-  CommunityPreview,
-  CommunityQrCode,
-  EventsResearchPreview,
+  AboutSnippet,
+  BooksPreview,
+  ContactCta,
+  HackathonsPreview,
   InstagramFollow,
-  OpenCalendars,
   ProofStats,
+  SkillsSection,
 } from "@/components/home-sections"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
-import { isLocale, withLocale } from "@/lib/i18n"
+import { isLocale } from "@/lib/i18n"
 import { pageMetadata } from "@/lib/seo"
 
 export const dynamicParams = false
 
 export function generateStaticParams() {
-  return [[{ lang: "en" }]]
+  return [{ lang: "en" }]
 }
 
 export function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
   return pageMetadata({ params, path: "/", namespace: "home" })
 }
-
-const ctaKeys = [
-  "eyebrow",
-  "title",
-  "description",
-  "emailLabel",
-  "emailPlaceholder",
-  "submit",
-  "sending",
-  "successTitle",
-  "successDescription",
-  "invalidEmail",
-  "genericError",
-  "networkError",
-] as const
 
 export default async function Page({
   params,
@@ -51,10 +35,6 @@ export default async function Page({
   const { lang } = await params
   if (!isLocale(lang)) notFound()
   const t = await getTranslations({ locale: lang, namespace: "home" })
-  const tCta = await getTranslations({ locale: lang, namespace: "cta" })
-  const ctaCopy = Object.fromEntries(
-    ctaKeys.map((key) => [key, tCta(key)]),
-  ) as CtaCopy
 
   return (
     <>
@@ -64,27 +44,27 @@ export default async function Page({
           eyebrow={t("eyebrow")}
           lines={[t("line1"), t("line2"), t("line3")]}
           description={t("description")}
-          eventsCta={t("eventsCta")}
-          eventsHref={withLocale("/events", lang)}
+          primaryCta={t("projectsCta")}
+          primaryHref="/projects"
+          secondaryCta={t("booksCta")}
+          secondaryHref="/books"
         />
         <SectionGap />
         <ProofStats locale={lang} />
         <SectionGap />
-        <CommunityPreview locale={lang} />
+        <AboutSnippet locale={lang} />
         <SectionGap />
-        <OpenCalendars locale={lang} />
+        <FeaturedProjects />
         <SectionGap />
-        <Capabilities locale={lang} />
+        <BooksPreview locale={lang} />
         <SectionGap />
-        <FeaturedProducts locale={lang} />
+        <HackathonsPreview locale={lang} />
         <SectionGap />
-        <EventsResearchPreview locale={lang} />
+        <SkillsSection locale={lang} />
         <SectionGap />
-        <CTA copy={ctaCopy} />
+        <ContactCta locale={lang} />
         <SectionGap />
         <InstagramFollow locale={lang} />
-        <SectionGap />
-        <CommunityQrCode locale={lang} />
       </main>
       <SiteFooter locale={lang} />
     </>

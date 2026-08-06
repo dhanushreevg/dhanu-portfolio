@@ -71,10 +71,17 @@ export function HeroContent({
 
             <div className="pointer-events-auto mt-8 inline-grid w-full grid-cols-1 gap-4 sm:w-fit md:mt-0">
               <Link
-                href={eventsHref}
+                href={primaryHref}
                 className="group flex items-center justify-between gap-3 border border-foreground/20 bg-background/20 px-6 py-3 text-foreground/85 backdrop-blur-[2px] transition-colors hover:border-foreground/50 hover:bg-background/40"
               >
-                {eventsCta}
+                {primaryCta}
+                <PixelArrow />
+              </Link>
+              <Link
+                href={secondaryHref}
+                className="group flex items-center justify-between gap-3 border border-foreground/20 bg-background/20 px-6 py-3 text-foreground/85 backdrop-blur-[2px] transition-colors hover:border-foreground/50 hover:bg-background/40"
+              >
+                {secondaryCta}
                 <PixelArrow />
               </Link>
             </div>

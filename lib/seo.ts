@@ -8,22 +8,13 @@ export const baseUrl = siteConfig.url
 
 export const indexablePaths = [
   "/",
-  "/claude-code",
-  "/events",
-  "/events/sponsors",
-  "/n8n",
-  "/opencode",
-  "/timeline",
   "/projects",
   "/projects/next",
-  "/impact/petdex",
-  "/research",
-  "/team",
-  "/team/work-with-us",
-  "/workshops/questions",
-  "/blog",
-  "/brand",
+  "/timeline",
   "/contact",
+  "/books",
+  "/about",
+  "/achievements",
 ] as const
 
 const ogLocales: Record<Locale, string> = {

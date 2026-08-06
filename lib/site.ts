@@ -1,4 +1,3 @@
-import { teamMembers } from "@/lib/team"
 import { defaultLocale, type Locale } from "@/lib/i18n"
 
 type LocalizedString = Record<Locale, string>
@@ -22,10 +21,8 @@ export const siteConfig = {
   },
   url: "https://tbhsanjay.vercel.app",
   author: "Sanjay S",
-  email: "sanjayoffl24@gmail.com",
   github: "https://github.com/sanjay-offl",
-  twitter: "https://twitter.com/sanjay_offl",
-  linkedin: "https://linkedin.com/in/sanjayoffl",
+  linkedin: "https://linkedin.com/in/sanjayoffl24",
   location: "Coimbatore, India",
   ogImage: {
     alt: "Sanjay S — AI Builder & Product Developer",
@@ -50,9 +47,8 @@ export const navItems = [
 
 export const socials = [
   { label: "GitHub", href: "https://github.com/sanjay-offl" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/sanjayoffl" },
-  { label: "Instagram", href: "https://instagram.com/sanjay_offl/" },
-  { label: "X", href: "https://twitter.com/sanjay_offl" },
+  { label: "LinkedIn", href: "https://linkedin.com/in/sanjayoffl24" },
+  { label: "Instagram", href: "https://instagram.com/sanjay.hq/" },
   { label: "YouTube", href: "https://www.youtube.com/@sanjayoffl" },
 ] as const
 
@@ -307,9 +303,9 @@ export const events = [
   {
     title: { en: "Community", es: "Community", pt: "Community" },
     body: {
-      en: "I am part of the Entrepreneurship Cell at PPGIT, leading NEC team initiatives that foster student innovation and startup culture.",
-      es: "I am part of the Entrepreneurship Cell at PPGIT, leading NEC team initiatives that foster student innovation and startup culture.",
-      pt: "I am part of the Entrepreneurship Cell at PPGIT, leading NEC team initiatives that foster student innovation and startup culture.",
+      en: "I founded Codera at PPGIT — a student community focused on practical learning, hackathons, and startup culture.",
+      es: "I founded Codera at PPGIT — a student community focused on practical learning, hackathons, and startup culture.",
+      pt: "I founded Codera at PPGIT — a student community focused on practical learning, hackathons, and startup culture.",
     },
   },
 ] as const
@@ -329,7 +325,7 @@ export const researchLinks = [
       es: "Research notes, essays, experiments, and technical writing on AI, civic technology, and software engineering.",
       pt: "Research notes, essays, experiments, and technical writing on AI, civic technology, and software engineering.",
     },
-    href: "https://research.sanjay.dev",
+    href: "https://github.com/sanjay-offl",
   },
   {
     title: "sanjay-offl GitHub",
@@ -346,10 +342,7 @@ export function getResearchLinks(locale: Locale = defaultLocale) {
   return researchLinks.map((item) => ({ ...item, body: localized(item.body, locale) }))
 }
 
-export const team = teamMembers
-
-export const testimonials = [
-  {
+export const testimonials = [  {
     name: "Peer",
     role: "Hackathon teammate",
     quote: {

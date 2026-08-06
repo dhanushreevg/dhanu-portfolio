@@ -22,8 +22,8 @@ const featured = [
     description:
       "AI-powered citizen grievance intelligence portal that lets citizens submit, track, and resolve civic complaints using AI categorization, priority scoring, and department routing.",
     technologies: ["Next.js 14", "FastAPI", "PostgreSQL", "Gemini 1.5 Flash"],
-    href: "https://github.com/sanjay-offl",
-    cta: "View UrbanMind",
+    href: "/projects",
+    cta: "See it on projects",
   },
   {
     title: "DIVYAM",
@@ -32,8 +32,8 @@ const featured = [
     description:
       "Accessible learning platform for visually impaired students using AI, speech recognition, emotion analysis, recorded lectures, teacher dashboard, and full voice navigation.",
     technologies: ["React", "Spring Boot", "PostgreSQL", "Framer Motion"],
-    href: "https://github.com/sanjay-offl",
-    cta: "View DIVYAM",
+    href: "https://github.com/sanjay-offl/VYAM",
+    cta: "View on GitHub",
   },
 ]
 
@@ -78,8 +78,10 @@ export function FeaturedProjects() {
               </p>
               <Link
                 href={p.href}
-                target="_blank"
-                rel="noopener noreferrer"
+                target={p.href.startsWith("http") ? "_blank" : undefined}
+                rel={
+                  p.href.startsWith("http") ? "noopener noreferrer" : undefined
+                }
                 className="group mt-8 inline-block"
               >
                 <ArrowLink>{p.cta}</ArrowLink>

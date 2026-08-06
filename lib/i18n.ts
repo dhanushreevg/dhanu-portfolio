@@ -4,7 +4,7 @@ export type Locale = "en" | "es" | "pt"
 export const defaultLocale: Locale = "en"
 
 export function isLocale(value: string): value is Locale {
-  return locales.includes(value as Locale)
+  return (locales as readonly string[]).includes(value)
 }
 
 export function stripLocale(pathname: string) {

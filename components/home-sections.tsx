@@ -4,7 +4,7 @@ import { Container } from "@/components/grid-container"
 import { LocalizedLink } from "@/components/localized-link"
 import { books } from "@/lib/books"
 import { type Locale } from "@/lib/i18n"
-import { getStats, siteConfig } from "@/lib/site"
+import { getStats } from "@/lib/site"
 
 export async function ProofStats({ locale }: { locale: Locale }) {
   const stats = getStats(locale)
@@ -49,9 +49,9 @@ export async function AboutSnippet({ locale }: { locale: Locale }) {
         </div>
         <div className="flex flex-col justify-center gap-6 p-8 md:p-10">
           <p className="max-w-2xl text-base leading-relaxed text-foreground/85">
-            Third-year CSE student at PPGIT Coimbatore. NEC Team Lead at the college
-            Entrepreneurship Cell. Frontend intern at NexGenAds. I build AI-first
-            products, lead student communities, compete in hackathons, and write books.
+            Third-year CSE student at PPGIT Coimbatore. Frontend intern at NexGenAds.
+            I build AI-first products, lead student communities, compete in
+            hackathons, and write books.
           </p>
           <LocalizedLink href="/about" locale={locale} className="group w-fit">
             <ArrowLink>More about me</ArrowLink>
@@ -115,22 +115,18 @@ const hackathons = [
   {
     title: "GDG Coimbatore Hackathon 2026",
     detail: "Aug 8–9 · Built UrbanMind, an AI citizen grievance intelligence portal.",
-    link: "https://github.com/sanjay-offl",
   },
   {
     title: "IIT Bombay E-Summit 2025",
     detail: "I-Hack Finalist · Google AdMob Track.",
-    link: "https://github.com/sanjay-offl",
   },
   {
     title: "ODFE Hackathon",
     detail: "24-hour build · full-stack Cafe POS system.",
-    link: "https://github.com/sanjay-offl",
   },
   {
     title: "GDG Coimbatore community events",
     detail: "Regular participant in community meetups and build sessions.",
-    link: "https://github.com/sanjay-offl",
   },
 ]
 
@@ -244,8 +240,8 @@ export async function SkillsSection({ locale }: { locale: Locale }) {
 
 export async function ContactCta({ locale }: { locale: Locale }) {
   const contactLinks = [
-    { label: "Email me", href: `mailto:${siteConfig.email}` },
-    { label: "Connect on LinkedIn", href: "https://linkedin.com/in/sanjayoffl" },
+    { label: "Connect on LinkedIn", href: "https://linkedin.com/in/sanjayoffl24" },
+    { label: "Follow on Instagram", href: "https://instagram.com/sanjay.hq/" },
     { label: "Follow on GitHub", href: "https://github.com/sanjay-offl" },
   ]
 
@@ -293,12 +289,12 @@ export async function InstagramFollow({ locale }: { locale: Locale }) {
           </div>
           <div className="flex flex-col justify-center p-8 md:p-10">
             <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">
-              Follow @sanjay_offl on Instagram and my YouTube channel for project
+              Follow @sanjay.hq on Instagram and my YouTube channel for project
               demos, hackathon recaps, and build-in-public updates.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
-                href="https://instagram.com/sanjay_offl/"
+                href="https://instagram.com/sanjay.hq/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group"

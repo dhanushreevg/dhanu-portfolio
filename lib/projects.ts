@@ -14,6 +14,8 @@ export interface Project {
   github?: string
   live?: string
   caseStudy?: string
+  email?: string
+  report?: string
 }
 
 export const projects: Project[] = [
@@ -46,7 +48,6 @@ export const projects: Project[] = [
     awards: ["MSME Registered", "TN-EDII Innovation Voucher"],
     timeline: "2025–2026 · 8-month development cycle",
     live: "https://greensprouts-offl.netlify.app/",
-    github: "https://github.com/sanjay-offl",
     caseStudy: "https://greensprouts-offl.netlify.app/solution",
   },
   {
@@ -79,7 +80,7 @@ export const projects: Project[] = [
       "Authentication",
     ],
     timeline: "2025 · Full-stack accessibility prototype",
-    github: "https://github.com/sanjay-offl",
+    github: "https://github.com/sanjay-offl/VYAM",
   },
   {
     id: "xgrova",
@@ -105,7 +106,6 @@ export const projects: Project[] = [
       "NGO Distribution",
     ],
     timeline: "2026 · E-waste upcycling concept",
-    github: "https://github.com/sanjay-offl",
   },
   {
     id: "codera",
@@ -134,7 +134,6 @@ export const projects: Project[] = [
       "Innovation",
     ],
     timeline: "2025–2026 · Student-led community",
-    github: "https://github.com/sanjay-offl",
   },
   {
     id: "webro",
@@ -160,7 +159,7 @@ export const projects: Project[] = [
       "Responsive Design",
     ],
     timeline: "Ongoing · Freelance brand",
-    github: "https://github.com/sanjay-offl",
+    email: "builtwithwebro@gmail.com",
   },
   {
     id: "iitb-esummit",
@@ -187,10 +186,17 @@ export const projects: Project[] = [
     ],
     awards: ["I-Hack Finalist · Google AdMob Track"],
     timeline: "December 2025 · 4-day summit",
-    github: "https://github.com/sanjay-offl",
+    report:
+      "https://drive.google.com/file/d/1OJUiFUtlnjJ3wGbXnEwuNQJEGAC9jPb-/view?usp=sharing",
   },
 ]
 
 export function getOpenHref(project: Project) {
-  return project.live ?? project.github ?? project.caseStudy ?? "#"
+  return (
+    project.live ??
+    project.email ??
+    project.github ??
+    project.caseStudy ??
+    project.report
+  )
 }

@@ -38,7 +38,7 @@ const certificates = [
     date: "December 2025",
     description:
       "Finalist in the Google AdMob I-Hack competition at IIT Bombay E-Summit 2025.",
-    pdf: null,
+    pdf: "https://drive.google.com/file/d/1OJUiFUtlnjJ3wGbXnEwuNQJEGAC9jPb-/view?usp=sharing",
   },
   {
     name: "Design Thinking and Creativity Workshop",

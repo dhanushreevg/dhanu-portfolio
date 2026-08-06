@@ -43,10 +43,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
     default: "Sanjay S | Portfolio",
-    template: "%s | Sanjay S",
+    template: "%s",
   },
-  description:
-    "AI Builder • Product Developer • Open Source Contributor. Building technology that solves real-world problems through AI, full-stack development, and innovative digital experiences.",
+  description: siteConfig.description.en,
   authors: [{ name: "Sanjay S" }],
   keywords: [
     "Sanjay S",

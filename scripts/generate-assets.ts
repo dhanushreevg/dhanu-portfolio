@@ -62,7 +62,7 @@ async function generateOG(
       letter-spacing="6" fill="${FG_DIM}" text-anchor="middle"
       text-transform="uppercase">BY SANJAY S</text>
 
-    <!-- "sanjay.dev" title -->
+    <!-- "Sanjay S" title -->
     <text x="${width / 2}" y="${height / 2 + 50}"
       font-family="sans-serif" font-size="72" font-weight="700"
       letter-spacing="-3" fill="${FG}" text-anchor="middle">sanjay<tspan fill="${ACCENT}">.</tspan>dev</text>

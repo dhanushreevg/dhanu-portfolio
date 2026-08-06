@@ -19,20 +19,20 @@ export function generateMetadata({ params }: { params: Promise<{ lang: string }>
 
 const roles = [
   {
-    role: "NEC Team Lead",
-    org: "Entrepreneurship Cell, PPGIT (Boss Builder E-Cell)",
-  },
-  {
     role: "Frontend Developer Intern",
     org: "NexGenAds Technologies, Coimbatore",
   },
   {
     role: "Founder",
-    org: "GreenSprout, EcoReboot, Codera, Webro",
+    org: "GreenSprout (agritech) · EcoReboot (e-waste)",
+  },
+  {
+    role: "Community builder",
+    org: "Codera (PPGIT) · Webro",
   },
   {
     role: "Author",
-    org: "One May Fly's Memory (published) · EPSALIPM (writing)",
+    org: "A Mayfly's Memory (published) · EPSALIPM (writing)",
   },
 ]
 
@@ -71,7 +71,7 @@ const building = [
   {
     title: "AI civic tech products",
     body: "AI-powered citizen grievance intelligence for real civic impact — UrbanMind.",
-    href: "https://github.com/sanjay-offl",
+    href: "",
   },
   {
     title: "Sustainable farming technology",
@@ -81,16 +81,16 @@ const building = [
   {
     title: "E-waste solutions",
     body: "Upcycling discarded devices into affordable, repairable computing — EcoReboot.",
-    href: "https://github.com/sanjay-offl",
+    href: "",
   },
   {
     title: "A student builder community",
     body: "Codera at PPGIT — practical learning, hackathons, and startup culture.",
-    href: "https://github.com/sanjay-offl",
+    href: "",
   },
   {
     title: "Books that make people think",
-    body: "One May Fly's Memory and the next book in progress, EPSALIPM.",
+    body: "A Mayfly's Memory and the next book in progress, EPSALIPM.",
     href: "/books",
   },
 ]
@@ -219,18 +219,22 @@ export default async function Page({
                   <p className="max-w-xl flex-1 text-sm leading-relaxed text-muted-foreground">
                     {item.body}
                   </p>
-                  <Link
-                    href={item.href}
-                    target={item.href.startsWith("http") ? "_blank" : undefined}
-                    rel={
-                      item.href.startsWith("http")
-                        ? "noopener noreferrer"
-                        : undefined
-                    }
-                    className="group mt-1"
-                  >
-                    <ArrowLink>Open</ArrowLink>
-                  </Link>
+                  {item.href ? (
+                    <Link
+                      href={item.href}
+                      target={
+                        item.href.startsWith("http") ? "_blank" : undefined
+                      }
+                      rel={
+                        item.href.startsWith("http")
+                          ? "noopener noreferrer"
+                          : undefined
+                      }
+                      className="group mt-1"
+                    >
+                      <ArrowLink>Open</ArrowLink>
+                    </Link>
+                  ) : null}
                 </div>
               ))}
             </div>

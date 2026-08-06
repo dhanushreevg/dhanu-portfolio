@@ -5,14 +5,13 @@
     "openCta": "Open"
   },
   "home": {
-    "eyebrow": "Sanjay S · India",
+    "eyebrow": "Sanjay S · Coimbatore, India",
     "line1": "I am",
-    "line2": "a builder solving",
-    "line3": "real problems.",
-    "description": "CS student, AI builder, and product developer building technology that solves real problems.",
-    "workCta": "Get in touch",
-    "communityCta": "Follow along",
-    "eventsCta": "See events",
+    "line2": "a builder, author",
+    "line3": "founder & developer.",
+    "description": "CS student building AI products, leading startup communities, and writing books that make people think.",
+    "projectsCta": "See my projects",
+    "booksCta": "Read my books",
     "workPreview": {
       "section": "How I can help",
       "eyebrow": "For startups and teams",
@@ -51,7 +50,7 @@
     "instagram": {
       "eyebrow": "Follow along",
       "title": "See the demos, builds, and behind-the-scenes.",
-      "description": "Follow @sanjay_offl on Instagram and my YouTube channel for project demos, hackathon recaps, and build-in-public updates.",
+      "description": "Follow @sanjay.hq on Instagram and my YouTube channel for project demos, hackathon recaps, and build-in-public updates.",
       "instagramCta": "Follow me on Instagram",
       "youtubeCta": "Watch on YouTube"
     },
@@ -148,9 +147,9 @@
       "nextCta": "Open next projects"
     },
     "timeline": {
-      "eyebrow": "Open-source activity",
-      "title": "A year of building in public.",
-      "description": "Explore public projects from Sanjay S. See when each project moved forward and how active it was week by week.",
+      "eyebrow": "Timeline",
+      "title": "Building, leading, and writing — year by year.",
+      "description": "From my first React components to shipped startups and a published book — Sanjay S's journey from 2023 to 2026.",
       "exploreCta": "Explore the activity",
       "githubCta": "Open GitHub",
       "signalLabel": "Sanjay's commits by week",
@@ -281,10 +280,23 @@
     },
     "contact": {
       "eyebrow": "Contact",
-      "title": "Start with the right path.",
-      "description": "Tell me what you want to build, collaborate on, or discuss.",
-      "section": "What are you trying to do?",
-      "sectionDescription": "Pick the kind of conversation and I'll reply with the fastest way to start."
+      "title": "Let's build, collaborate, or just talk.",
+      "description": "Hackathon team-ups, AI and civic tech collaborations, startup partnerships, internship discussions, books, or mentorship — reach out."
+    },
+    "books": {
+      "eyebrow": "Books",
+      "title": "Writing books that make people think.",
+      "description": "Sanjay S is a published author — One May Fly's Memory is available on Amazon India, and the second book, EPSALIPM, is in progress."
+    },
+    "about": {
+      "eyebrow": "About",
+      "title": "Who I am.",
+      "description": "Third-year CSE student at PPGIT Coimbatore. Frontend intern at NexGenAds, founder of GreenSprout and EcoReboot, community builder behind Codera and Webro, and author."
+    },
+    "achievements": {
+      "eyebrow": "Achievements",
+      "title": "Certificates & recognitions.",
+      "description": "MSME registration, TN-EDII innovation voucher, IIT Bombay E-Summit finalist, and hackathon certificates."
     },
     "next": {
       "eyebrow": "/projects/next",

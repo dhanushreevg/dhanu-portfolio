@@ -103,12 +103,12 @@ export default async function Page({
               <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">
                 Follow along at{" "}
                 <Link
-                  href="https://instagram.com/sanjay_offl/"
+                  href="https://instagram.com/sanjay.hq/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-foreground underline decoration-accent underline-offset-4"
                 >
-                  @sanjay_offl
+                  @sanjay.hq
                 </Link>{" "}
                 on Instagram for updates.
               </p>

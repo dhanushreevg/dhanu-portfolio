@@ -13,16 +13,16 @@ const buildLinks = [
 
 const projectLinks = [
   { label: "GreenSprout", href: "https://greensprouts-offl.netlify.app/" },
-  { label: "UrbanMind", href: "https://github.com/sanjay-offl" },
-  { label: "DIVYAM", href: "https://github.com/sanjay-offl" },
-  { label: "EcoReboot", href: "https://github.com/sanjay-offl" },
-  { label: "ODFE", href: "https://github.com/sanjay-offl" },
-]
+  { label: "UrbanMind", href: "/projects" },
+  { label: "DIVYAM", href: "https://github.com/sanjay-offl/VYAM" },
+  { label: "EcoReboot", href: "/projects" },
+  { label: "ODFE", href: "/projects" },
+] as const
 
 const bookLinks = [
-  { label: "One May Fly's Memory", href: "https://amzn.in/d/01BTpnYV" },
+  { label: "A Mayfly's Memory", href: "https://amzn.in/d/01BTpnYV" },
   { label: "EPSALIPM", href: "/books" },
-]
+] as const
 
 export function SiteFooter({ locale }: { locale: Locale }) {
   return (
@@ -61,14 +61,24 @@ export function SiteFooter({ locale }: { locale: Locale }) {
           <ul className="space-y-3 text-sm">
             {projectLinks.map((l) => (
               <li key={l.label}>
-                <Link
-                  href={l.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-foreground transition-colors hover:text-muted-foreground"
-                >
-                  {l.label}
-                </Link>
+                {l.href.startsWith("/") ? (
+                  <LocalizedLink
+                    href={l.href}
+                    locale={locale}
+                    className="text-foreground transition-colors hover:text-muted-foreground"
+                  >
+                    {l.label}
+                  </LocalizedLink>
+                ) : (
+                  <Link
+                    href={l.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-foreground transition-colors hover:text-muted-foreground"
+                  >
+                    {l.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
@@ -79,25 +89,28 @@ export function SiteFooter({ locale }: { locale: Locale }) {
             Books
           </p>
           <ul className="space-y-3 text-sm">
-            <li>
-              <Link
-                href="https://amzn.in/d/01BTpnYV"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground transition-colors hover:text-muted-foreground"
-              >
-                One May Fly's Memory
-              </Link>
-            </li>
-            <li>
-              <LocalizedLink
-                href="/books"
-                locale={locale}
-                className="text-foreground transition-colors hover:text-muted-foreground"
-              >
-                EPSALIPM (coming soon)
-              </LocalizedLink>
-            </li>
+            {bookLinks.map((l) => (
+              <li key={l.label}>
+                {l.href.startsWith("/") ? (
+                  <LocalizedLink
+                    href={l.href}
+                    locale={locale}
+                    className="text-foreground transition-colors hover:text-muted-foreground"
+                  >
+                    {l.label} (coming soon)
+                  </LocalizedLink>
+                ) : (
+                  <Link
+                    href={l.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-foreground transition-colors hover:text-muted-foreground"
+                  >
+                    {l.label}
+                  </Link>
+                )}
+              </li>
+            ))}
           </ul>
         </div>
 

@@ -8,6 +8,7 @@ import {
   FileText,
   Github,
   Globe,
+  Mail,
   Trophy,
 } from "lucide-react"
 import { motion, useReducedMotion } from "framer-motion"
@@ -228,6 +229,13 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             icon={<Github className="size-3.5" />}
           />
         ) : null}
+        {project.email ? (
+          <SecondaryAction
+            href={`mailto:${project.email}`}
+            label="Email"
+            icon={<Mail className="size-3.5" />}
+          />
+        ) : null}
         {project.caseStudy ? (
           <SecondaryAction
             href={project.caseStudy}
@@ -235,7 +243,14 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             icon={<FileText className="size-3.5" />}
           />
         ) : null}
-        <PrimaryOpen href={openHref} />
+        {project.report ? (
+          <SecondaryAction
+            href={project.report}
+            label="Report"
+            icon={<FileText className="size-3.5" />}
+          />
+        ) : null}
+        {openHref ? <PrimaryOpen href={openHref} /> : null}
       </footer>
     </motion.article>
   )
