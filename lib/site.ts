@@ -22,7 +22,7 @@ export const siteConfig = {
   },
   url: "https://tbhsanjay.vercel.app",
   author: "Sanjay S",
-  email: "sanjay@sanjay.dev",
+  email: "sanjayoffl24@gmail.com",
   github: "https://github.com/sanjay-offl",
   twitter: "https://twitter.com/sanjay_offl",
   linkedin: "https://linkedin.com/in/sanjayoffl",
@@ -42,22 +42,25 @@ export function getSiteConfig(locale: Locale = defaultLocale) {
 
 export const navItems = [
   { key: "projects", href: "/projects" },
-  { key: "research", href: "/research" },
-  { key: "team", href: "/team" },
+  { key: "about", href: "/about" },
+  { key: "books", href: "/books" },
   { key: "timeline", href: "/timeline" },
-  { key: "impact", href: "/impact/petdex" },
+  { key: "contact", href: "/contact" },
 ] as const
 
-export const languageLinks = [
-  { label: "EN", href: "/" },
-  { label: "ES", href: "/es" },
-  { label: "PT", href: "/pt" },
+export const socials = [
+  { label: "GitHub", href: "https://github.com/sanjay-offl" },
+  { label: "LinkedIn", href: "https://linkedin.com/in/sanjayoffl" },
+  { label: "Instagram", href: "https://instagram.com/sanjay_offl/" },
+  { label: "X", href: "https://twitter.com/sanjay_offl" },
+  { label: "YouTube", href: "https://www.youtube.com/@sanjayoffl" },
 ] as const
 
 export const stats = [
-  { value: "6+", label: { en: "Projects Shipped", es: "Projects Shipped", pt: "Projects Shipped" } },
+  { value: "8+", label: { en: "Projects Shipped", es: "Projects Shipped", pt: "Projects Shipped" } },
   { value: "3+", label: { en: "Hackathons", es: "Hackathons", pt: "Hackathons" } },
-  { value: "2026", label: { en: "B.Tech CSE", es: "B.Tech CSE", pt: "B.Tech CSE" } },
+  { value: "2", label: { en: "Books (1 published, 1 writing)", es: "Books (1 published, 1 writing)", pt: "Books (1 published, 1 writing)" } },
+  { value: "2026", label: { en: "B.Tech CSE Graduation", es: "B.Tech CSE Graduation", pt: "B.Tech CSE Graduation" } },
 ] as const
 
 export function getStats(locale: Locale = defaultLocale) {
@@ -376,10 +379,4 @@ export const stackLogos = [
   { name: "Vercel" },
   { name: "Drizzle" },
   { name: "Postgres" },
-] as const
-
-export const socials = [
-  { label: "GitHub", href: "https://github.com/sanjay-offl" },
-  { label: "X", href: "https://twitter.com/sanjay_offl" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/sanjayoffl" },
 ] as const

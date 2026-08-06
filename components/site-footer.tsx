@@ -1,73 +1,53 @@
 import Link from "next/link"
-import { getTranslations } from "next-intl/server"
 import { LocalizedLink } from "@/components/localized-link"
 import { SiteWordmark } from "@/components/site-wordmark"
 import { type Locale } from "@/lib/i18n"
-import { getProducts, socials } from "@/lib/site"
-
-const companyLinks = [
-  { key: "events", href: "/events" },
-  { key: "sponsorEvents", href: "/events/sponsors" },
-  { key: "projects", href: "/projects" },
-  { key: "team", href: "/team" },
-  { key: "workWithUs", href: "/team/work-with-us" },
-  { key: "contact", href: "/contact" },
-]
+import { socials } from "@/lib/site"
 
 const buildLinks = [
-  { key: "projects", href: "/projects" },
-  { key: "timeline", href: "/timeline" },
-  { key: "research", href: "/research" },
-  { key: "next", href: "/projects/next" },
-  { key: "brand", href: "/brand" },
+  { label: "Projects", href: "/projects" },
+  { label: "Timeline", href: "/timeline" },
+  { label: "About", href: "/about" },
+  { label: "Achievements", href: "/achievements" },
 ]
 
-const communityLinks = [
-  { key: "joinCommunity", href: "https://sanjay-offl.github.io" },
-  { key: "lumaEvents", href: "https://research.sanjay.dev" },
-  { key: "hack0", href: "https://instagram.com/sanjay_offl/" },
-  { key: "shippingBible", href: "https://www.youtube.com/@sanjayoffl" },
+const projectLinks = [
+  { label: "GreenSprout", href: "https://greensprouts-offl.netlify.app/" },
+  { label: "UrbanMind", href: "https://github.com/sanjay-offl" },
+  { label: "DIVYAM", href: "https://github.com/sanjay-offl" },
+  { label: "EcoReboot", href: "https://github.com/sanjay-offl" },
+  { label: "ODFE", href: "https://github.com/sanjay-offl" },
 ]
 
-export async function SiteFooter({ locale }: { locale: Locale }) {
-  const t = await getTranslations({ locale, namespace: "footer" })
-  const products = getProducts(locale)
+const bookLinks = [
+  { label: "One May Fly's Memory", href: "https://amzn.in/d/01BTpnYV" },
+  { label: "EPSALIPM", href: "/books" },
+]
 
+export function SiteFooter({ locale }: { locale: Locale }) {
   return (
     <footer className="border-t border-line bg-background">
       <div className="grid gap-12 px-8 py-16 md:grid-cols-3 xl:grid-cols-5">
         <div>
-          <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-            {t("company")}
+          <SiteWordmark />
+          <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+            Builder. Founder. Author.
           </p>
-          <ul className="space-y-3 text-sm">
-            {companyLinks.map((l) => (
-              <li key={l.key}>
-                <LocalizedLink
-                  href={l.href}
-                  locale={locale}
-                  className="text-foreground transition-colors hover:text-muted-foreground"
-                >
-                  {t(`companyLinks.${l.key}`)}
-                </LocalizedLink>
-              </li>
-            ))}
-          </ul>
         </div>
 
         <div>
           <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-            {t("build")}
+            Build
           </p>
           <ul className="space-y-3 text-sm">
             {buildLinks.map((l) => (
-              <li key={l.key}>
+              <li key={l.href}>
                 <LocalizedLink
                   href={l.href}
                   locale={locale}
                   className="text-foreground transition-colors hover:text-muted-foreground"
                 >
-                  {t(`buildLinks.${l.key}`)}
+                  {l.label}
                 </LocalizedLink>
               </li>
             ))}
@@ -76,38 +56,18 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
 
         <div>
           <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-            {t("productLab")}
+            Projects
           </p>
           <ul className="space-y-3 text-sm">
-            {products.slice(0, 6).map((p) => (
-              <li key={p.slug}>
-                <Link
-                  href={p.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-foreground transition-colors hover:text-muted-foreground"
-                >
-                  {p.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-            {t("community")}
-          </p>
-          <ul className="space-y-3 text-sm">
-            {communityLinks.map((l) => (
-              <li key={l.key}>
+            {projectLinks.map((l) => (
+              <li key={l.label}>
                 <Link
                   href={l.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-foreground transition-colors hover:text-muted-foreground"
                 >
-                  {t(`communityLinks.${l.key}`)}
+                  {l.label}
                 </Link>
               </li>
             ))}
@@ -116,7 +76,34 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
 
         <div>
           <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-            {t("social")}
+            Books
+          </p>
+          <ul className="space-y-3 text-sm">
+            <li>
+              <Link
+                href="https://amzn.in/d/01BTpnYV"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground transition-colors hover:text-muted-foreground"
+              >
+                One May Fly's Memory
+              </Link>
+            </li>
+            <li>
+              <LocalizedLink
+                href="/books"
+                locale={locale}
+                className="text-foreground transition-colors hover:text-muted-foreground"
+              >
+                EPSALIPM (coming soon)
+              </LocalizedLink>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+            Elsewhere
           </p>
           <ul className="space-y-3 text-sm">
             {socials.map((s) => (
@@ -136,9 +123,8 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
       </div>
       <div className="border-t border-line">
         <div className="flex flex-col items-start justify-between gap-3 px-8 py-6 md:flex-row md:items-center">
-          <SiteWordmark />
           <p className="font-mono text-[10px] tracking-wider text-muted-foreground">
-            {t("copyright", { year: new Date().getFullYear() })}
+            © {new Date().getFullYear()} Sanjay S
           </p>
         </div>
       </div>

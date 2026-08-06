@@ -14,7 +14,7 @@ export const revalidate = 21600;
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return ["en", "es", "pt"].map((lang) => ({ lang }));
+  return ["en"].map((lang) => ({ lang }));
 }
 
 export function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {

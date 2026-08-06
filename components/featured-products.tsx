@@ -2,19 +2,42 @@ import Link from "next/link"
 import { ArrowLink } from "@/components/arrow-link"
 import { Badge } from "@/components/ui/badge"
 import { Container } from "@/components/grid-container"
-import type { Locale } from "@/lib/i18n"
-import { getProducts } from "@/lib/site"
 import { cn } from "@/lib/utils"
 
-const featuredProductSlugs = ["hack0", "petdex", "legalize-pe", "maca"] as const
+const featured = [
+  {
+    title: "GreenSprout",
+    category: "Agritech",
+    status: "MSME Registered · TN-EDII Funded",
+    description:
+      "AI-powered smart agriculture platform with AGRISOLARBOT™ — a solar-powered multi-function farming vehicle that automates agricultural operations, reduces cost, and improves sustainability.",
+    technologies: ["Next.js", "IoT", "ESP32", "Solar Tech", "AI"],
+    href: "https://greensprouts-offl.netlify.app/",
+    cta: "Visit GreenSprout",
+  },
+  {
+    title: "UrbanMind",
+    category: "Civic Tech",
+    status: "GDG Coimbatore Hackathon 2026",
+    description:
+      "AI-powered citizen grievance intelligence portal that lets citizens submit, track, and resolve civic complaints using AI categorization, priority scoring, and department routing.",
+    technologies: ["Next.js 14", "FastAPI", "PostgreSQL", "Gemini 1.5 Flash"],
+    href: "https://github.com/sanjay-offl",
+    cta: "View UrbanMind",
+  },
+  {
+    title: "DIVYAM",
+    category: "Accessibility",
+    status: "Prototype",
+    description:
+      "Accessible learning platform for visually impaired students using AI, speech recognition, emotion analysis, recorded lectures, teacher dashboard, and full voice navigation.",
+    technologies: ["React", "Spring Boot", "PostgreSQL", "Framer Motion"],
+    href: "https://github.com/sanjay-offl",
+    cta: "View DIVYAM",
+  },
+]
 
-export function FeaturedProducts({ locale }: { locale: Locale }) {
-  const products = getProducts(locale).filter((product) =>
-    featuredProductSlugs.includes(
-      product.slug as (typeof featuredProductSlugs)[number],
-    ),
-  )
-
+export function FeaturedProjects() {
   return (
     <div id="work">
       <Container innerClassName="border-b py-6">
@@ -24,40 +47,26 @@ export function FeaturedProducts({ locale }: { locale: Locale }) {
       </Container>
       <hr className="border-line" />
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-2">
-          {products.map((p, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+          {featured.map((p, i) => (
             <article
-              key={p.slug}
+              key={p.title}
               className={cn(
                 "relative min-h-80 border-line p-8 md:p-10",
                 i > 0 ? "border-t md:border-t-0" : "",
                 i % 2 ? "md:border-l" : "",
-                i >= 2 ? "md:border-t" : "",
+                i >= 2 ? "md:border-t xl:border-t-0" : "",
+                i % 3 ? "xl:border-l" : "",
               )}
             >
-              <div
-                className={cn(
-                  "absolute inset-x-0 top-0 h-1 bg-gradient-to-r",
-                  p.accent,
-                )}
-              />
               <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-                {p.slug}
+                {p.category}
               </p>
-              <h3 className="mt-4 text-3xl tracking-tight md:text-4xl">
-                {p.title}
-              </h3>
-              <p className="mt-4 text-sm font-medium text-foreground">
-                {p.tagline}
+              <h3 className="mt-4 text-3xl tracking-tight md:text-4xl">{p.title}</h3>
+              <p className="mt-3 font-mono text-xs uppercase tracking-[0.2em] text-accent">
+                {p.status}
               </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {"metrics" in p
-                  ? p.metrics.map((metric) => (
-                      <Badge key={metric} variant="secondary">
-                        {metric}
-                      </Badge>
-                    ))
-                  : null}
+              <div className="mt-5 flex flex-wrap gap-2">
                 {p.technologies.map((t) => (
                   <Badge key={t} variant="outline">
                     {t}
@@ -68,12 +77,12 @@ export function FeaturedProducts({ locale }: { locale: Locale }) {
                 {p.description}
               </p>
               <Link
-                href={p.url}
+                href={p.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group mt-8 inline-block"
               >
-                <ArrowLink>Visit {p.title}</ArrowLink>
+                <ArrowLink>{p.cta}</ArrowLink>
               </Link>
             </article>
           ))}

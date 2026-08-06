@@ -111,7 +111,7 @@ const sanjayImpact = {
 } as const
 
 export function generateStaticParams() {
-  return ["en", "es", "pt"].flatMap((lang) =>
+  return ["en"].flatMap((lang) =>
     teamMembers.map((member) => ({ lang, member: member.username })),
   )
 }

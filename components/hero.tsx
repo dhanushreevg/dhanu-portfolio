@@ -8,17 +8,21 @@ export function Hero() {
 }
 
 export function HeroContent({
-  eyebrow = "Sanjay S · India",
-  lines = ["I build", "AI-powered", "products."],
-  description = "CS student, AI builder, and product developer building technology that solves real problems.",
-  eventsCta = "See events",
-  eventsHref = "/events",
+  eyebrow = "Sanjay S · Coimbatore, India",
+  lines = ["I am", "a builder, author", "founder & developer."],
+  description = "CS student building AI products, leading startup communities, and writing books that make people think.",
+  primaryCta = "See my projects",
+  primaryHref = "/projects",
+  secondaryCta = "Read my books",
+  secondaryHref = "/books",
 }: {
   eyebrow?: string
   lines?: [string, string, string]
   description?: string
-  eventsCta?: string
-  eventsHref?: string
+  primaryCta?: string
+  primaryHref?: string
+  secondaryCta?: string
+  secondaryHref?: string
 }) {
   return (
     <Container innerClassName="overflow-hidden bg-background">

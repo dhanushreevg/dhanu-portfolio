@@ -1,17 +1,10 @@
 import Link from "next/link"
-import { getTranslations } from "next-intl/server"
 import { ArrowLink } from "@/components/arrow-link"
 import { Container } from "@/components/grid-container"
 import { LocalizedLink } from "@/components/localized-link"
-import {
-  collaborations,
-  getCommunityOffers,
-  getEvents,
-  getResearchLinks,
-  getServices,
-  getStats,
-} from "@/lib/site"
+import { books } from "@/lib/books"
 import { type Locale } from "@/lib/i18n"
+import { getStats, siteConfig } from "@/lib/site"
 
 export async function ProofStats({ locale }: { locale: Locale }) {
   const stats = getStats(locale)
@@ -42,150 +35,74 @@ export async function ProofStats({ locale }: { locale: Locale }) {
   )
 }
 
-export async function WorkWithUsPreview({ locale }: { locale: Locale }) {
-  const t = await getTranslations({ locale, namespace: "home.workPreview" })
-  const services = getServices(locale)
-
+export async function AboutSnippet({ locale }: { locale: Locale }) {
   return (
-    <div id="work">
-      <Container innerClassName="border-b py-6">
-        <h2 className="text-center font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-          {t("section")}
-        </h2>
-      </Container>
-      <hr className="border-line" />
-      <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1.9fr]">
-          <div className="border-b border-line p-8 lg:border-b-0 lg:border-r">
-            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-              {t("eyebrow")}
-            </p>
-            <h2 className="mt-4 max-w-lg text-3xl tracking-tight md:text-4xl">
-              {t("title")}
-            </h2>
-            <p className="mt-5 max-w-xl text-sm leading-relaxed text-muted-foreground">
-              {t("description")}
-            </p>
-            <LocalizedLink href="/team/work-with-us" locale={locale} className="group mt-8 inline-block">
-              <ArrowLink>{t("cta")}</ArrowLink>
-            </LocalizedLink>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-            {services.slice(0, 6).map((service, i) => (
-              <LocalizedLink
-                key={service.title}
-                href={service.href}
-                locale={locale}
-                className={
-                  "group flex min-h-56 flex-col justify-between p-8 transition-colors hover:bg-accent/10 " +
-                  (i % 2 ? "md:border-l md:border-line " : "") +
-                  (i >= 2 ? "md:border-t md:border-line xl:border-t-0 " : "") +
-                  (i % 3 ? "xl:border-l xl:border-line " : "") +
-                  (i > 0 ? "border-t border-line md:border-t-0" : "")
-                }
-              >
-                <div>
-                  <h3 className="text-lg tracking-tight">{service.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                    {service.body}
-                  </p>
-                </div>
-                <ArrowLink className="mt-8">{t("cardCta")}</ArrowLink>
-              </LocalizedLink>
-            ))}
-          </div>
-        </div>
-      </Container>
-    </div>
-  )
-}
-
-export async function CollaborationStrip({ locale }: { locale: Locale }) {
-  const t = await getTranslations({ locale, namespace: "home.collaborations" })
-
-  return (
-    <Container innerClassName="overflow-hidden">
-      <div className="grid grid-cols-1 border-b border-line lg:grid-cols-[360px_1fr]">
-        <div className="border-b border-line p-8 lg:border-b-0 lg:border-r">
+    <Container>
+      <div className="grid grid-cols-1 border-y border-line lg:grid-cols-[0.7fr_1.3fr]">
+        <div className="border-b border-line p-8 md:p-10 lg:border-b-0 lg:border-r">
           <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-            {t("eyebrow")}
+            About
           </p>
-          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-            {t("description")}
-          </p>
+          <h2 className="mt-3 text-3xl tracking-tight md:text-4xl">
+            Builder, founder, author.
+          </h2>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
-          {collaborations.map((item, i) => (
-            <a
-              key={item.name}
-              href={item.href}
-              target="_blank"
-              rel="noreferrer"
-              className={
-                "group flex h-28 items-center justify-center gap-3 p-5 transition-colors hover:bg-foreground/[0.03] " +
-                (i % 2 ? "border-l border-line sm:border-l-0 " : "") +
-                (i % 3 ? "sm:border-l sm:border-line lg:border-l-0 " : "") +
-                (i % 5 ? "lg:border-l lg:border-line " : "") +
-                (i >= 2 ? "border-t border-line sm:border-t-0 " : "") +
-                (i >= 3 ? "sm:border-t sm:border-line lg:border-t-0 " : "") +
-                (i >= 5 ? "lg:border-t lg:border-line" : "")
-              }
-            >
-              {item.logo ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={item.logo}
-                  alt=""
-                  className={
-                    "h-5 max-w-8 object-contain opacity-80 transition-opacity group-hover:opacity-100 " +
-                    ("preserveLogoColors" in item && item.preserveLogoColors
-                      ? ""
-                      : "brightness-0 invert")
-                  }
-                />
-              ) : null}
-              <span className="font-mono text-xs uppercase tracking-[0.22em] text-foreground/80 transition-colors group-hover:text-foreground">
-                {item.name}
-              </span>
-            </a>
-          ))}
+        <div className="flex flex-col justify-center gap-6 p-8 md:p-10">
+          <p className="max-w-2xl text-base leading-relaxed text-foreground/85">
+            Third-year CSE student at PPGIT Coimbatore. NEC Team Lead at the college
+            Entrepreneurship Cell. Frontend intern at NexGenAds. I build AI-first
+            products, lead student communities, compete in hackathons, and write books.
+          </p>
+          <LocalizedLink href="/about" locale={locale} className="group w-fit">
+            <ArrowLink>More about me</ArrowLink>
+          </LocalizedLink>
         </div>
       </div>
     </Container>
   )
 }
 
-export async function CommunityPreview({ locale }: { locale: Locale }) {
-  const t = await getTranslations({ locale, namespace: "home.communityPreview" })
-  const communityOffers = getCommunityOffers(locale)
-
+export async function BooksPreview({ locale }: { locale: Locale }) {
   return (
     <Container>
-      <div className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr]">
-        <div className="border-b border-line p-8 md:border-b-0 md:border-r">
+      <div className="border-y border-line">
+        <div className="border-b border-line p-8 md:p-10">
           <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-            {t("eyebrow")}
+            Books
           </p>
-          <h2 className="mt-4 text-3xl tracking-tight md:text-4xl">
-            {t("title")}
+          <h2 className="mt-3 max-w-2xl font-serif text-3xl tracking-tight md:text-4xl">
+            I also write books.
           </h2>
-          <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-            {t("description")}
+          <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
+            Writing at the intersection of memory, identity, and ideas.
           </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="https://sanjay-offl.github.io" className="group" target="_blank" rel="noopener noreferrer">
-              <ArrowLink>{t("communityCta")}</ArrowLink>
-            </Link>
-            <LocalizedLink href="/events" locale={locale} className="group">
-              <ArrowLink>{t("eventsCta")}</ArrowLink>
-            </LocalizedLink>
-          </div>
         </div>
-        <div className="divide-y divide-line">
-          {communityOffers.map((offer, i) => (
-            <div key={offer} className="flex items-start gap-5 p-6 md:p-8">
-              <span className="font-mono text-xs text-accent">[{i + 1}]</span>
-              <p className="text-sm leading-relaxed text-foreground">{offer}</p>
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          {books.map((book, i) => (
+            <div
+              key={book.slug}
+              className={
+                "p-8 md:p-10 " +
+                (i > 0 ? "border-t border-line md:border-l md:border-t-0" : "")
+              }
+            >
+              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
+                {book.status}
+              </p>
+              <h3 className="mt-3 font-serif text-2xl tracking-tight md:text-3xl">
+                {book.title}
+              </h3>
+              <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
+                {book.availability}
+              </p>
+              <Link
+                href={book.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group mt-6 inline-block"
+              >
+                <ArrowLink>{book.cta}</ArrowLink>
+              </Link>
             </div>
           ))}
         </div>
@@ -194,110 +111,166 @@ export async function CommunityPreview({ locale }: { locale: Locale }) {
   )
 }
 
-export async function EventsResearchPreview({ locale }: { locale: Locale }) {
-  const t = await getTranslations({ locale, namespace: "home.eventsResearch" })
-  const events = getEvents(locale)
-  const researchLinks = getResearchLinks(locale)
+const hackathons = [
+  {
+    title: "GDG Coimbatore Hackathon 2026",
+    detail: "Aug 8–9 · Built UrbanMind, an AI citizen grievance intelligence portal.",
+    link: "https://github.com/sanjay-offl",
+  },
+  {
+    title: "IIT Bombay E-Summit 2025",
+    detail: "I-Hack Finalist · Google AdMob Track.",
+    link: "https://github.com/sanjay-offl",
+  },
+  {
+    title: "ODFE Hackathon",
+    detail: "24-hour build · full-stack Cafe POS system.",
+    link: "https://github.com/sanjay-offl",
+  },
+  {
+    title: "GDG Coimbatore community events",
+    detail: "Regular participant in community meetups and build sessions.",
+    link: "https://github.com/sanjay-offl",
+  },
+]
 
+export async function HackathonsPreview({ locale }: { locale: Locale }) {
   return (
     <Container>
-      <div className="grid grid-cols-1 lg:grid-cols-2">
-        <div className="border-b border-line lg:border-b-0 lg:border-r">
-          <div className="border-b border-line p-8">
-            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-              {t("eventsEyebrow")}
-            </p>
-            <h2 className="mt-3 text-3xl tracking-tight">{t("eventsTitle")}</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2">
-            {events.map((event, i) => (
-              <LocalizedLink
-                key={event.title}
-                href="/events"
-                locale={locale}
-                className={
-                  "group min-h-48 p-8 transition-colors hover:bg-accent/10 " +
-                  (i % 2 ? "sm:border-l sm:border-line " : "") +
-                  (i >= 2 ? "border-t border-line" : "")
-                }
-              >
-                <h3 className="text-lg tracking-tight">{event.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {event.body}
-                </p>
-              </LocalizedLink>
-            ))}
-          </div>
+      <div className="border-y border-line">
+        <div className="border-b border-line p-8 md:p-10">
+          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+            Hackathons & events
+          </p>
+          <h2 className="mt-3 text-3xl tracking-tight md:text-4xl">
+            Where I build.
+          </h2>
         </div>
-        <div>
-          <div className="border-b border-line p-8">
-            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-              {t("researchEyebrow")}
-            </p>
-            <h2 className="mt-3 text-3xl tracking-tight">{t("researchTitle")}</h2>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-              {t("researchDescription")}
-            </p>
-            <LocalizedLink href="/events/sponsors" locale={locale} className="group mt-6 inline-block">
-              <ArrowLink>{t("partnerCta")}</ArrowLink>
-            </LocalizedLink>
-          </div>
-          <div className="divide-y divide-line">
-            {researchLinks.map((link) => (
-              <Link
-                key={link.title}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block p-8 transition-colors hover:bg-accent/10"
-              >
-                <h3 className="text-lg tracking-tight">{link.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {link.body}
-                </p>
-                <ArrowLink className="mt-8">{t("openCta")}</ArrowLink>
-              </Link>
-            ))}
-          </div>
+        <div className="divide-y divide-line">
+          {hackathons.map((event) => (
+            <div
+              key={event.title}
+              className="flex flex-col gap-1 p-8 md:flex-row md:items-baseline md:gap-8 md:p-10"
+            >
+              <h3 className="w-80 shrink-0 text-lg tracking-tight">{event.title}</h3>
+              <p className="max-w-xl flex-1 text-sm leading-relaxed text-muted-foreground">
+                {event.detail}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </Container>
   )
 }
 
-export async function CommunityQrCode({ locale }: { locale: Locale }) {
-  const t = await getTranslations({ locale, namespace: "home.communityQr" })
+const skillGroups = [
+  {
+    name: "Languages",
+    skills: ["Python", "TypeScript", "JavaScript", "Java"],
+  },
+  {
+    name: "Frontend",
+    skills: ["React", "Next.js 14", "Tailwind CSS", "Framer Motion", "Vite"],
+  },
+  {
+    name: "Backend",
+    skills: ["Node.js", "FastAPI", "Spring Boot", "Spring Security", "JWT"],
+  },
+  {
+    name: "Database",
+    skills: ["PostgreSQL", "Prisma ORM", "Redis"],
+  },
+  {
+    name: "AI / APIs",
+    skills: ["Gemini 1.5 Flash", "Google AI APIs", "REST APIs"],
+  },
+  {
+    name: "Infrastructure",
+    skills: ["Vercel", "Netlify", "Docker (basic)"],
+  },
+  {
+    name: "Hardware / IoT",
+    skills: ["ESP32", "Arduino", "Solar Tech"],
+  },
+  {
+    name: "Tools & other",
+    skills: ["Git", "GitHub", "Figma", "Canva", "VS Code", "RBAC", "CI/CD basics"],
+  },
+]
+
+export async function SkillsSection({ locale }: { locale: Locale }) {
+  return (
+    <Container>
+      <div className="border-y border-line">
+        <div className="border-b border-line p-8 md:p-10">
+          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+            Skills
+          </p>
+          <h2 className="mt-3 text-3xl tracking-tight md:text-4xl">
+            The stack I build with.
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          {skillGroups.map((group, i) => (
+            <div
+              key={group.name}
+              className={
+                "p-8 md:p-10 " +
+                (i % 2 ? "md:border-l md:border-line " : "") +
+                (i >= 2 ? "border-t border-line" : "")
+              }
+            >
+              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+                {group.name}
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {group.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="border border-line px-3 py-1.5 font-mono text-xs text-foreground/80"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </Container>
+  )
+}
+
+export async function ContactCta({ locale }: { locale: Locale }) {
+  const contactLinks = [
+    { label: "Email me", href: `mailto:${siteConfig.email}` },
+    { label: "Connect on LinkedIn", href: "https://linkedin.com/in/sanjayoffl" },
+    { label: "Follow on GitHub", href: "https://github.com/sanjay-offl" },
+  ]
 
   return (
     <Container>
-      <div className="grid grid-cols-1 border-t border-line md:grid-cols-[1fr_280px]">
-        <div className="flex flex-col justify-center p-8 md:p-10">
+      <div className="border-y border-line">
+        <div className="p-8 text-center md:p-14">
           <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-            {t("eyebrow")}
+            Contact
           </p>
-          <h2 className="mt-3 max-w-2xl text-3xl tracking-tight md:text-4xl">
-            {t("title")}
+          <h2 className="mt-3 text-3xl tracking-tight md:text-4xl">
+            Let's build something.
           </h2>
-          <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
-            {t("description")}
-          </p>
-            <Link
-            href="https://sanjay-offl.github.io"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group mt-8 inline-block"
-          >
-            <ArrowLink>{t("cta")}</ArrowLink>
-          </Link>
-        </div>
-        <div className="flex items-center justify-center border-t border-line p-8 md:border-l md:border-t-0 md:p-10">
-          <div className="bg-white p-4">
-            <img
-              src="/crafters-chat-qr.svg"
-              alt={t("alt")}
-              className="size-48"
-              loading="lazy"
-            />
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+            {contactLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                target={link.href.startsWith("mailto") ? undefined : "_blank"}
+                rel={link.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
+                className="inline-flex items-center border border-foreground/20 px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-accent/10"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
@@ -306,32 +279,31 @@ export async function CommunityQrCode({ locale }: { locale: Locale }) {
 }
 
 export async function InstagramFollow({ locale }: { locale: Locale }) {
-  const t = await getTranslations({ locale, namespace: "home.instagram" })
-
   return (
     <Container>
       <div className="border-t border-line">
         <div className="grid grid-cols-1 md:grid-cols-[0.85fr_1.15fr]">
           <div className="border-b border-line p-8 md:border-b-0 md:border-r md:p-10">
             <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-              {t("eyebrow")}
+              Follow along
             </p>
             <h2 className="mt-3 max-w-xl text-3xl tracking-tight md:text-4xl">
-              {t("title")}
+              See the demos, builds, and behind-the-scenes.
             </h2>
           </div>
           <div className="flex flex-col justify-center p-8 md:p-10">
             <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">
-              {t("description")}
+              Follow @sanjay_offl on Instagram and my YouTube channel for project
+              demos, hackathon recaps, and build-in-public updates.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
-            href="https://instagram.com/sanjay_offl/"
-            target="_blank"
+                href="https://instagram.com/sanjay_offl/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="group"
               >
-                <ArrowLink>{t("instagramCta")}</ArrowLink>
+                <ArrowLink>Follow me on Instagram</ArrowLink>
               </Link>
               <Link
                 href="https://www.youtube.com/@sanjayoffl"
@@ -339,40 +311,10 @@ export async function InstagramFollow({ locale }: { locale: Locale }) {
                 rel="noopener noreferrer"
                 className="group"
               >
-                <ArrowLink>{t("youtubeCta")}</ArrowLink>
+                <ArrowLink>Watch on YouTube</ArrowLink>
               </Link>
             </div>
           </div>
-        </div>
-      </div>
-    </Container>
-  )
-}
-
-export async function OpenCalendars({ locale }: { locale: Locale }) {
-  const t = await getTranslations({ locale, namespace: "home.openCalendars" })
-
-  return (
-    <Container>
-      <div className="grid grid-cols-1 border-t border-line md:grid-cols-[0.9fr_1.1fr]">
-        <div className="border-b border-line p-8 md:border-b-0 md:border-r md:p-10">
-          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-            {t("eyebrow")}
-          </p>
-          <h2 className="mt-3 max-w-xl text-3xl tracking-tight md:text-4xl">
-            {t("title")}
-          </h2>
-        </div>
-        <div className="p-8 md:p-10">
-          <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">
-            {t("description")}
-          </p>
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-            {t("instructions")}
-          </p>
-          <LocalizedLink href="/team" locale={locale} className="group mt-8 inline-block">
-            <ArrowLink>{t("cta")}</ArrowLink>
-          </LocalizedLink>
         </div>
       </div>
     </Container>

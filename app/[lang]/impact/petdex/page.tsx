@@ -64,7 +64,7 @@ const sources = [
 ] as const
 
 export function generateStaticParams() {
-  return ["en", "es", "pt"].map((lang) => ({ lang }))
+  return ["en"].map((lang) => ({ lang }))
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
