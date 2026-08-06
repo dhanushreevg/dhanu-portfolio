@@ -108,12 +108,12 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           transition={buttonSpring}
           className="shrink-0"
         >
-          <div className="flex size-[72px] items-center justify-center overflow-hidden rounded-[20px] border border-white/10 bg-[#000000] p-2.5">
+          <div className="flex size-[88px] shrink-0 items-center justify-center overflow-hidden rounded-[22px] border border-white/10 bg-[#0a0a0a]">
             <Image
               src={project.logo}
               alt={project.logoAlt}
-              width={72}
-              height={72}
+              width={88}
+              height={88}
               className="size-full object-contain object-center"
             />
           </div>

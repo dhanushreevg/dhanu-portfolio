@@ -2,21 +2,23 @@ import sharp from 'sharp'
 import { mkdir } from 'node:fs/promises'
 
 const logos = [
+  { id: 'webro', file: "public/PROJECT LOGO'S/webro-logo.png", contentFrac: 0.97 },
   { id: 'greensprout', file: "public/PROJECT LOGO'S/greensprouts.webp" },
   { id: 'divyam', file: "public/PROJECT LOGO'S/divyam.png" },
   { id: 'xgrova', file: "public/PROJECT LOGO'S/xgrova.jpeg" },
   { id: 'codera', file: "public/PROJECT LOGO'S/codera.jpeg" },
-  { id: 'webro', file: "public/PROJECT LOGO'S/webro-logo.png" },
   { id: 'iitb', file: "public/PROJECT LOGO'S/IITB.png" },
 ]
 
 const CANVAS = 1024
 const CONTENT_FRAC = 0.74
+const perLogo = {}
+
 const FUZZ = 42
 
 await mkdir('public/logos', { recursive: true })
 
-for (const { id, file } of logos) {
+for (const { id, file, contentFrac = CONTENT_FRAC } of logos) {
   const meta = await sharp(file).metadata()
   const { data, info } = await sharp(file).ensureAlpha().raw().toBuffer({ resolveWithObject: true })
   const w = info.width, h = info.height
@@ -31,7 +33,7 @@ for (const { id, file } of logos) {
   const median = (arr, k) => arr.map((c) => c[k]).sort((a, b) => a - b)[1]
   const bg = [median(cornerColors, 0), median(cornerColors, 1), median(cornerColors, 2)]
 
-  const alpha = new Uint8ClampedArray(w * h)
+  const alpha = new Uint8ClampedArray(w * h).fill(1)
   const visited = new Uint8Array(w * h)
   const matchesBg = (i) => {
     const r = data[i], g = data[i + 1], b = data[i + 2], a = data[i + 3]
@@ -80,7 +82,7 @@ for (const { id, file } of logos) {
   }
 
   const cw = extract.width, ch = extract.height
-  const scale = Math.min((CANVAS * CONTENT_FRAC) / cw, (CANVAS * CONTENT_FRAC) / ch)
+  const scale = Math.min((CANVAS * contentFrac) / cw, (CANVAS * contentFrac) / ch)
   const outW = Math.max(1, Math.round(cw * scale))
   const outH = Math.max(1, Math.round(ch * scale))
 

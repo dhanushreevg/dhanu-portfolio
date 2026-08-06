@@ -22,7 +22,7 @@ export const projects: Project[] = [
   {
     id: "greensprout",
     title: "GreenSprout",
-    logo: "/PROJECT LOGO'S/greensprouts.webp",
+    logo: "/logos/greensprout.png",
     logoAlt: "GreenSprout logo",
     category: "Agritech",
     status: "MSME Registered",
@@ -53,7 +53,7 @@ export const projects: Project[] = [
   {
     id: "divyam",
     title: "DIVYAM",
-    logo: "/PROJECT LOGO'S/divyam.png",
+    logo: "/logos/divyam.png",
     logoAlt: "DIVYAM logo",
     category: "Accessibility",
     status: "Prototype",
@@ -85,7 +85,7 @@ export const projects: Project[] = [
   {
     id: "xgrova",
     title: "XGROVA",
-    logo: "/PROJECT LOGO'S/xgrova.jpeg",
+    logo: "/logos/xgrova.png",
     logoAlt: "XGROVA logo",
     category: "Sustainability",
     status: "Concept",
@@ -110,7 +110,7 @@ export const projects: Project[] = [
   {
     id: "codera",
     title: "Codera",
-    logo: "/PROJECT LOGO'S/codera.jpeg",
+    logo: "/logos/codera.png",
     logoAlt: "Codera logo",
     category: "Community",
     status: "Active",
@@ -138,7 +138,7 @@ export const projects: Project[] = [
   {
     id: "webro",
     title: "Webro",
-    logo: "/PROJECT LOGO'S/webro-logo.png",
+    logo: "/logos/webro.png",
     logoAlt: "Webro logo",
     category: "Freelancing",
     status: "Ongoing",
@@ -164,7 +164,7 @@ export const projects: Project[] = [
   {
     id: "iitb-esummit",
     title: "IIT Bombay E-Summit",
-    logo: "/PROJECT LOGO'S/IITB.png",
+    logo: "/logos/iitb.png",
     logoAlt: "IIT Bombay E-Summit logo",
     category: "Achievement",
     status: "Finalist",
