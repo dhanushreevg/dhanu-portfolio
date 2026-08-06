@@ -49,7 +49,7 @@ export async function AboutSnippet({ locale }: { locale: Locale }) {
         </div>
         <div className="flex flex-col justify-center gap-6 p-8 md:p-10">
           <p className="max-w-2xl text-base leading-relaxed text-foreground/85">
-            Third-year CSE student at PPGIT Coimbatore. Frontend intern at NexGenAds.
+            Third-year CSE student. CTO at GreenSprout, frontend intern at NexGenAds.
             I build AI-first products, lead student communities, compete in
             hackathons, and write books.
           </p>
@@ -123,6 +123,10 @@ const hackathons = [
   {
     title: "ODFE Hackathon",
     detail: "24-hour build · full-stack Cafe POS system.",
+  },
+  {
+    title: "Odoo Hackathon",
+    detail: "Ranked 61st nationally.",
   },
   {
     title: "GDG Coimbatore community events",

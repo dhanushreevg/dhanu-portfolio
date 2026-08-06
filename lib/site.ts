@@ -303,9 +303,9 @@ export const events = [
   {
     title: { en: "Community", es: "Community", pt: "Community" },
     body: {
-      en: "I founded Codera at PPGIT — a student community focused on practical learning, hackathons, and startup culture.",
-      es: "I founded Codera at PPGIT — a student community focused on practical learning, hackathons, and startup culture.",
-      pt: "I founded Codera at PPGIT — a student community focused on practical learning, hackathons, and startup culture.",
+      en: "I founded Codera — a student community focused on practical learning, hackathons, and startup culture.",
+      es: "I founded Codera — a student community focused on practical learning, hackathons, and startup culture.",
+      pt: "I founded Codera — a student community focused on practical learning, hackathons, and startup culture.",
     },
   },
 ] as const

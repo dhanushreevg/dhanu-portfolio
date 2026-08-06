@@ -64,6 +64,14 @@ const certificates = [
     pdf: null,
   },
   {
+    name: "Odoo Hackathon",
+    issuer: "Odoo",
+    date: "2026",
+    description:
+      "Ranked 61st nationally in the Odoo Hackathon.",
+    pdf: null,
+  },
+  {
     name: "Online certifications",
     issuer: "Coursera / NPTEL / Google Cloud / others",
     date: "[TODO]",
@@ -72,10 +80,10 @@ const certificates = [
   },
   {
     name: "College certificates",
-    issuer: "PPG Institute of Technology",
+    issuer: "College",
     date: "[TODO]",
     description:
-      "[TODO] Add any merit certificates or department recognitions from PPGIT.",
+      "[TODO] Add any merit certificates or department recognitions you have earned.",
     pdf: null,
   },
 ]

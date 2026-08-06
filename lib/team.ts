@@ -40,9 +40,9 @@ export const teamMembers: TeamMember[] = [
     timezone: "Asia/Kolkata",
     image: "/team/sanjay.webp",
     bio: {
-      en: "Third-year B.Tech CSE student at PPGIT, Coimbatore. Building AI-powered applications, full-stack products, and contributing to the startup and civic tech ecosystem. NEC Team Lead at the college Entrepreneurship Cell.",
-      es: "Third-year B.Tech CSE student at PPGIT, Coimbatore. Building AI-powered applications, full-stack products, and contributing to the startup and civic tech ecosystem. NEC Team Lead at the college Entrepreneurship Cell.",
-      pt: "Third-year B.Tech CSE student at PPGIT, Coimbatore. Building AI-powered applications, full-stack products, and contributing to the startup and civic tech ecosystem. NEC Team Lead at the college Entrepreneurship Cell.",
+      en: "Third-year B.Tech CSE student, Coimbatore. Building AI-powered applications, full-stack products, and contributing to the startup and civic tech ecosystem. NEC Team Lead at the college Entrepreneurship Cell.",
+      es: "Third-year B.Tech CSE student, Coimbatore. Building AI-powered applications, full-stack products, and contributing to the startup and civic tech ecosystem. NEC Team Lead at the college Entrepreneurship Cell.",
+      pt: "Third-year B.Tech CSE student, Coimbatore. Building AI-powered applications, full-stack products, and contributing to the startup and civic tech ecosystem. NEC Team Lead at the college Entrepreneurship Cell.",
     },
     skills: [
       "Python", "TypeScript", "JavaScript", "Java",

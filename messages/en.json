@@ -291,12 +291,12 @@
     "about": {
       "eyebrow": "About",
       "title": "Who I am.",
-      "description": "Third-year CSE student at PPGIT Coimbatore. Frontend intern at NexGenAds, founder of GreenSprout and EcoReboot, community builder behind Codera and Webro, and author."
+      "description": "Third-year CSE student. Frontend intern at NexGenAds, CTO of GreenSprout, founder of EcoReboot, community builder behind Codera, freelancer at Webro, and author."
     },
     "achievements": {
       "eyebrow": "Achievements",
       "title": "Certificates & recognitions.",
-      "description": "MSME registration, TN-EDII innovation voucher, IIT Bombay E-Summit finalist, and hackathon certificates."
+      "description": "MSME registration, TN-EDII innovation voucher, IIT Bombay E-Summit finalist, 61st national rank in the Odoo Hackathon, and hackathon certificates."
     },
     "next": {
       "eyebrow": "/projects/next",

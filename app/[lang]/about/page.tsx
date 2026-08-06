@@ -23,12 +23,20 @@ const roles = [
     org: "NexGenAds Technologies, Coimbatore",
   },
   {
+    role: "CTO",
+    org: "GreenSprout (agritech)",
+  },
+  {
     role: "Founder",
-    org: "GreenSprout (agritech) · EcoReboot (e-waste)",
+    org: "EcoReboot (e-waste)",
   },
   {
     role: "Community builder",
-    org: "Codera (PPGIT) · Webro",
+    org: "Codera",
+  },
+  {
+    role: "Freelancer",
+    org: "Webro",
   },
   {
     role: "Author",
@@ -85,7 +93,7 @@ const building = [
   },
   {
     title: "A student builder community",
-    body: "Codera at PPGIT — practical learning, hackathons, and startup culture.",
+    body: "Codera — practical learning, hackathons, and startup culture.",
     href: "",
   },
   {
@@ -116,10 +124,10 @@ export default async function Page({
               Who I am.
             </h1>
             <p className="mt-6 max-w-2xl text-balance text-lg leading-8 text-muted-foreground">
-              Third-year Computer Science student at PPG Institute of Technology,
-              Coimbatore. I build AI products, lead startup communities, compete in
-              hackathons, and write books. My work sits at the intersection of
-              technology, civic purpose, and human stories.
+              Third-year Computer Science student, Coimbatore. I build AI products,
+              lead startup communities, compete in hackathons, and write books. My
+              work sits at the intersection of technology, civic purpose, and human
+              stories.
             </p>
           </div>
         </Container>

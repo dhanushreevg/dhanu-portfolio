@@ -21,7 +21,7 @@ const milestones = [
   {
     year: "2023",
     items: [
-      "Joined PPGIT, B.Tech CSE",
+      "Started B.Tech CSE",
       "Started learning React and Next.js",
     ],
   },
@@ -29,7 +29,7 @@ const milestones = [
     year: "2024",
     items: [
       "Started building first full-stack projects",
-      "Founded Codera student community at PPGIT",
+      "Founded Codera student community",
       "Applied to the NexGenAds internship (React / Next.js / UI-UX track)",
     ],
   },
@@ -52,6 +52,7 @@ const milestones = [
     year: "2026",
     items: [
       "GDG Coimbatore Hackathon (Aug 8–9) — built UrbanMind",
+      "Ranked 61st nationally in the Odoo Hackathon",
       "Evaluating Eureka! 2026 (IIT Bombay) with EcoReboot",
       "Writing second book: EPSALIPM",
       "Expected graduation: B.Tech CSE",
@@ -126,8 +127,8 @@ export default async function Page({
               </h2>
               <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
                 Shipping AI products, growing GreenSprout and EcoReboot, building
-                the Codera and Webro communities, and writing my second book. The
-                projects page shows the current work in detail.
+                the Codera community, taking on clients through Webro, and writing
+                my second book. The projects page shows the current work in detail.
               </p>
             </div>
             <div className="flex items-center p-8 md:p-10">
