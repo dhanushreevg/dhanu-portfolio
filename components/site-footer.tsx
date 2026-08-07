@@ -14,10 +14,8 @@ const buildLinks = [
 
 const projectLinks = [
   { label: "GreenSprout", href: "https://greensprouts-offl.netlify.app/" },
-  { label: "UrbanMind", href: "/projects" },
+  { label: "UrbanMind", href: "https://github.com/sanjay-offl/UrbanMind" },
   { label: "DIVYAM", href: "https://github.com/sanjay-offl/VYAM" },
-  { label: "EcoReboot", href: "/projects" },
-  { label: "ODFE", href: "/projects" },
 ] as const
 
 const bookLinks = [
