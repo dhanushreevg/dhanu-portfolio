@@ -41,4 +41,10 @@ export const certificates = [
     logo: "/cert-logos/tcs.jpeg",
     link: "https://drive.google.com/file/d/1-D3PrYs4oPoXK3IZBgoxEwgyhMmji9iS/view?usp=drive_link",
   },
+  {
+    name: "AI Research",
+    description: "AI Research & Technology",
+    logo: "/cert-logos/openai.png",
+    link: "https://drive.google.com/file/d/1k74-cdUxcb7RwrEA3YZBsd_zbilIIQzt/view",
+  },
 ] as const
