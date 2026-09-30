@@ -1,14 +1,7 @@
 import sharp from 'sharp'
 import { mkdir } from 'node:fs/promises'
 
-const logos = [
-  { id: 'webro', file: "public/PROJECT LOGO'S/webro-logo.png", contentFrac: 0.97 },
-  { id: 'greensprout', file: "public/PROJECT LOGO'S/greensprouts.webp" },
-  { id: 'divyam', file: "public/PROJECT LOGO'S/divyam.png" },
-  { id: 'xgrova', file: "public/PROJECT LOGO'S/xgrova.jpeg" },
-  { id: 'codera', file: "public/PROJECT LOGO'S/codera.jpeg" },
-  { id: 'iitb', file: "public/PROJECT LOGO'S/IITB.png" },
-]
+const logos = []
 
 const CANVAS = 1024
 const CONTENT_FRAC = 0.74

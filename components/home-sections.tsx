@@ -2,32 +2,17 @@ import Link from "next/link"
 import { ArrowLink } from "@/components/arrow-link"
 import { Container } from "@/components/grid-container"
 import { LocalizedLink } from "@/components/localized-link"
-import { books } from "@/lib/books"
 import { type Locale } from "@/lib/i18n"
-import { getStats } from "@/lib/site"
+import { getStats, siteConfig } from "@/lib/site"
 
 export async function ProofStats({ locale }: { locale: Locale }) {
-  const stats = getStats(locale)
-
   return (
     <Container>
-      <div className="grid grid-cols-2 md:grid-cols-4">
-        {stats.map((stat, i) => (
-          <div
-            key={stat.label}
-            className={
-              "p-6 md:p-8 " +
-              (i % 2 ? "border-l border-line " : "") +
-              (i >= 2 ? "border-t border-line md:border-t-0 " : "") +
-              (i > 0 ? "md:border-l md:border-line" : "")
-            }
-          >
-            <p className="font-mono text-3xl tracking-tight text-accent md:text-4xl">
-              {stat.value}
-            </p>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              {stat.label}
-            </p>
+      <div className="grid grid-cols-2 border-y border-line md:grid-cols-4 md:border-y-0">
+        {getStats(locale).map((stat, index) => (
+          <div key={stat.label} className={`p-6 md:p-8 ${index > 0 ? "border-l border-line" : ""} ${index > 1 ? "border-t border-line md:border-t-0" : ""}`}>
+            <p className="font-mono text-3xl tracking-tight text-accent md:text-4xl">{stat.value}</p>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{stat.label}</p>
           </div>
         ))}
       </div>
@@ -38,286 +23,105 @@ export async function ProofStats({ locale }: { locale: Locale }) {
 export async function AboutSnippet({ locale }: { locale: Locale }) {
   return (
     <Container>
-      <div className="grid grid-cols-1 border-y border-line lg:grid-cols-[0.7fr_1.3fr]">
+      <section className="grid grid-cols-1 border-y border-line lg:grid-cols-[0.7fr_1.3fr]">
         <div className="border-b border-line p-8 md:p-10 lg:border-b-0 lg:border-r">
-          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-            About
-          </p>
-          <h2 className="mt-3 text-3xl tracking-tight md:text-4xl">
-            Aspiring designer, builder, author.
-          </h2>
+          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">About me</p>
+          <h2 className="mt-3 text-3xl tracking-tight md:text-4xl">Learning by building useful things.</h2>
         </div>
         <div className="flex flex-col justify-center gap-6 p-8 md:p-10">
-          <p className="max-w-2xl text-base leading-relaxed text-foreground/85">
-            Aspiring Web Designer and B.E. Computer Science & Engineering
-            student passionate about designing intuitive, user-centered digital
-            experiences — from UI/UX design and frontend development to AI
-            products and entrepreneurship.
-          </p>
-          <LocalizedLink href="/about" locale={locale} className="group w-fit">
-            <ArrowLink>More about me</ArrowLink>
-          </LocalizedLink>
+          <p className="max-w-2xl text-base leading-relaxed text-foreground/85">I’m Dhanu Shree, a third-year Computer Science and Engineering student at PPG Institute of Technology, Coimbatore. I’m passionate about Artificial Intelligence, Machine Learning, Computer Vision and modern web development.</p>
+          <LocalizedLink href="/about" locale={locale} className="group w-fit"><ArrowLink>More about me</ArrowLink></LocalizedLink>
         </div>
-      </div>
-    </Container>
-  )
-}
-
-export async function BooksPreview({ locale }: { locale: Locale }) {
-  return (
-    <Container>
-      <div className="border-y border-line">
-        <div className="border-b border-line p-8 md:p-10">
-          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-            Books
-          </p>
-          <h2 className="mt-3 max-w-2xl font-serif text-3xl tracking-tight md:text-4xl">
-            I also write books.
-          </h2>
-          <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
-            Writing at the intersection of memory, identity, and ideas.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2">
-          {books.map((book, i) => (
-            <div
-              key={book.slug}
-              className={
-                "p-8 md:p-10 " +
-                (i > 0 ? "border-t border-line md:border-l md:border-t-0" : "")
-              }
-            >
-              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
-                {book.status}
-              </p>
-              <h3 className="mt-3 font-serif text-2xl tracking-tight md:text-3xl">
-                {book.title}
-              </h3>
-              <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
-                {book.availability}
-              </p>
-              <Link
-                href={book.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group mt-6 inline-block"
-              >
-                <ArrowLink>{book.cta}</ArrowLink>
-              </Link>
-            </div>
-          ))}
-        </div>
-      </div>
-    </Container>
-  )
-}
-
-const hackathons = [
-  {
-    title: "GDG Coimbatore Hackathon 2026",
-    detail: "Aug 8–9 · Built UrbanMind, an AI citizen grievance intelligence portal.",
-  },
-  {
-    title: "IIT Bombay E-Summit 2025",
-    detail: "I-Hack Finalist · Google AdMob Track.",
-  },
-  {
-    title: "ODFE Hackathon",
-    detail: "24-hour build · full-stack Cafe POS system.",
-  },
-  {
-    title: "Odoo Hackathon",
-    detail: "Ranked 61st nationally.",
-  },
-  {
-    title: "GDG Coimbatore community events",
-    detail: "Regular participant in community meetups and build sessions.",
-  },
-]
-
-export async function HackathonsPreview({ locale }: { locale: Locale }) {
-  return (
-    <Container>
-      <div className="border-y border-line">
-        <div className="border-b border-line p-8 md:p-10">
-          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-            Hackathons & events
-          </p>
-          <h2 className="mt-3 text-3xl tracking-tight md:text-4xl">
-            Where I build.
-          </h2>
-        </div>
-        <div className="divide-y divide-line">
-          {hackathons.map((event) => (
-            <div
-              key={event.title}
-              className="flex flex-col gap-1 p-8 md:flex-row md:items-baseline md:gap-8 md:p-10"
-            >
-              <h3 className="w-80 shrink-0 text-lg tracking-tight">{event.title}</h3>
-              <p className="max-w-xl flex-1 text-sm leading-relaxed text-muted-foreground">
-                {event.detail}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
+      </section>
     </Container>
   )
 }
 
 const skillGroups = [
-  {
-    name: "Languages",
-    skills: ["Python", "TypeScript", "JavaScript", "Java"],
-  },
-  {
-    name: "Frontend",
-    skills: ["React", "Next.js 14", "Tailwind CSS", "Framer Motion", "Vite"],
-  },
-  {
-    name: "Backend",
-    skills: ["Node.js", "FastAPI", "Spring Boot", "Spring Security", "JWT"],
-  },
-  {
-    name: "Database",
-    skills: ["PostgreSQL", "Prisma ORM", "Redis"],
-  },
-  {
-    name: "AI / APIs",
-    skills: ["Gemini 1.5 Flash", "Google AI APIs", "REST APIs"],
-  },
-  {
-    name: "Infrastructure",
-    skills: ["Vercel", "Netlify", "Docker (basic)"],
-  },
-  {
-    name: "Hardware / IoT",
-    skills: ["ESP32", "Arduino", "Solar Tech"],
-  },
-  {
-    name: "Tools & other",
-    skills: ["Git", "GitHub", "Figma", "Canva", "VS Code", "RBAC", "CI/CD basics"],
-  },
+  { name: "Programming", skills: ["Python", "JavaScript", "HTML", "CSS"] },
+  { name: "AI / ML", skills: ["Machine Learning", "Computer Vision", "OpenCV", "NumPy", "Pandas", "Data Preprocessing", "Face Recognition"] },
+  { name: "Web", skills: ["React", "Next.js", "Tailwind CSS", "Responsive Web Development", "API Basics"] },
+  { name: "Tools & strengths", skills: ["Git", "GitHub", "VS Code", "Problem Solving", "Communication", "Teamwork", "Adaptability", "Continuous Learning"] },
 ]
 
-export async function SkillsSection({ locale }: { locale: Locale }) {
+export async function SkillsSection({ locale: _locale }: { locale: Locale }) {
   return (
     <Container>
-      <div className="border-y border-line">
+      <section id="skills" className="border-y border-line">
         <div className="border-b border-line p-8 md:p-10">
-          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-            Skills
-          </p>
-          <h2 className="mt-3 text-3xl tracking-tight md:text-4xl">
-            The stack I build with.
-          </h2>
+          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Technical skills</p>
+          <h2 className="mt-3 text-3xl tracking-tight md:text-4xl">A learning stack, always growing.</h2>
+          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">These are learning areas and working tools, not claims of expert-level mastery.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2">
-          {skillGroups.map((group, i) => (
-            <div
-              key={group.name}
-              className={
-                "p-8 md:p-10 " +
-                (i % 2 ? "md:border-l md:border-line " : "") +
-                (i >= 2 ? "border-t border-line" : "")
-              }
-            >
-              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-                {group.name}
-              </p>
+          {skillGroups.map((group, index) => (
+            <div key={group.name} className={`p-8 md:p-10 ${index % 2 ? "md:border-l md:border-line" : ""} ${index >= 2 ? "border-t border-line" : ""}`}>
+              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">{group.name}</p>
               <div className="mt-4 flex flex-wrap gap-2">
-                {group.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="border border-line px-3 py-1.5 font-mono text-xs text-foreground/80"
-                  >
-                    {skill}
-                  </span>
-                ))}
+                {group.skills.map((skill) => <span key={skill} className="border border-line bg-secondary/40 px-3 py-1.5 font-mono text-xs text-foreground/80">{skill}</span>)}
               </div>
             </div>
           ))}
         </div>
-      </div>
+      </section>
     </Container>
   )
 }
 
-export async function ContactCta({ locale }: { locale: Locale }) {
-  const contactLinks = [
-    { label: "Connect on LinkedIn", href: "https://linkedin.com/in/sanjayoffl24" },
-    { label: "Follow on Instagram", href: "https://instagram.com/sanjay.hq/" },
-    { label: "Follow on GitHub", href: "https://github.com/sanjay-offl" },
-  ]
-
+export async function EducationSnippet({ locale: _locale }: { locale: Locale }) {
   return (
     <Container>
-      <div className="border-y border-line">
+      <section id="education" className="border-y border-line">
+        <div className="border-b border-line p-8 md:p-10">
+          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Education</p>
+          <h2 className="mt-3 text-3xl tracking-tight md:text-4xl">Building a strong foundation.</h2>
+        </div>
+        <div className="flex flex-col gap-3 p-8 md:flex-row md:items-baseline md:gap-8 md:p-10">
+          <p className="w-64 shrink-0 font-mono text-sm uppercase tracking-[0.2em] text-accent">2024 – Present</p>
+          <div>
+            <p className="text-sm font-medium text-foreground">Bachelor of Engineering</p>
+            <p className="mt-1 text-sm text-muted-foreground">Computer Science and Engineering · PPG Institute of Technology, Coimbatore</p>
+            <p className="mt-2 text-sm text-muted-foreground">Current year: Third Year</p>
+          </div>
+        </div>
+      </section>
+    </Container>
+  )
+}
+
+export async function PracticalWorkSnippet({ locale: _locale }: { locale: Locale }) {
+  return (
+    <Container>
+      <section className="border-y border-line">
+        <div className="border-b border-line p-8 md:p-10">
+          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Experience & practical work</p>
+          <h2 className="mt-3 text-3xl tracking-tight md:text-4xl">Project experience, built while learning.</h2>
+        </div>
+        <div className="flex flex-col gap-3 p-8 md:flex-row md:items-start md:gap-8 md:p-10">
+          <p className="w-64 shrink-0 font-mono text-sm uppercase tracking-[0.2em] text-accent">AI/ML Project Developer</p>
+          <ul className="max-w-2xl space-y-2 text-sm leading-relaxed text-muted-foreground">
+            <li>Developed a Face Recognition Attendance System using Python and OpenCV.</li>
+            <li>Worked with image processing and computer vision concepts.</li>
+            <li>Built machine-learning-oriented academic projects and practiced debugging through development.</li>
+            <li>Used GitHub for project version control.</li>
+          </ul>
+        </div>
+      </section>
+    </Container>
+  )
+}
+
+export async function ContactCta({ locale: _locale }: { locale: Locale }) {
+  return (
+    <Container>
+      <section className="border-y border-line">
         <div className="p-8 text-center md:p-14">
-          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-            Contact
-          </p>
-          <h2 className="mt-3 text-3xl tracking-tight md:text-4xl">
-            Let's build something.
-          </h2>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            {contactLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                target={link.href.startsWith("mailto") ? undefined : "_blank"}
-                rel={link.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
-                className="inline-flex items-center border border-foreground/20 px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-accent/10"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
+          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Contact</p>
+          <h2 className="mt-3 text-3xl tracking-tight md:text-4xl">Let’s build and learn together.</h2>
+          <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">For project conversations, learning opportunities, or thoughtful collaboration, reach me at {siteConfig.email}.</p>
+          <Link href="/contact" className="group mt-8 inline-block"><ArrowLink>Contact Dhanu</ArrowLink></Link>
         </div>
-      </div>
-    </Container>
-  )
-}
-
-export async function InstagramFollow({ locale }: { locale: Locale }) {
-  return (
-    <Container>
-      <div className="border-t border-line">
-        <div className="grid grid-cols-1 md:grid-cols-[0.85fr_1.15fr]">
-          <div className="border-b border-line p-8 md:border-b-0 md:border-r md:p-10">
-            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-              Follow along
-            </p>
-            <h2 className="mt-3 max-w-xl text-3xl tracking-tight md:text-4xl">
-              See the demos, builds, and behind-the-scenes.
-            </h2>
-          </div>
-          <div className="flex flex-col justify-center p-8 md:p-10">
-            <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">
-              Follow @sanjay.hq on Instagram and my YouTube channel for project
-              demos, hackathon recaps, and build-in-public updates.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                href="https://instagram.com/sanjay.hq/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group"
-              >
-                <ArrowLink>Follow me on Instagram</ArrowLink>
-              </Link>
-              <Link
-                href="https://www.youtube.com/@sanjayoffl"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group"
-              >
-                <ArrowLink>Watch on YouTube</ArrowLink>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
     </Container>
   )
 }

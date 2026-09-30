@@ -5,7 +5,7 @@ import {
   type ProjectTimelineData,
 } from "@/lib/project-timeline"
 
-export const PROJECT_TIMELINE_CACHE_TAG = "sanjay-project-timeline"
+export const PROJECT_TIMELINE_CACHE_TAG = "dhanu-project-timeline"
 
 const getCachedLiveTimeline = unstable_cache(
   async () => {
@@ -13,7 +13,7 @@ const getCachedLiveTimeline = unstable_cache(
     if (!token) throw new Error("GITHUB_TOKEN is not configured")
     return fetchProjectTimeline(token)
   },
-  ["sanjay-project-timeline-v2"],
+  ["dhanu-project-timeline-v2"],
   {
     revalidate: 86400,
     tags: [PROJECT_TIMELINE_CACHE_TAG],

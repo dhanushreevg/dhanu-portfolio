@@ -27,7 +27,7 @@ const structuredData = [
     "@type": "Organization",
     name: siteConfig.name,
     url: baseUrl,
-    logo: `${baseUrl}/sanjay-logo.png`,
+    logo: `${baseUrl}/og-image.png`,
     sameAs: socials.map((social) => social.href),
   },
   {
@@ -42,33 +42,33 @@ const structuredData = [
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "Sanjay S | Portfolio",
+  default: "Dhanu Shree | Aspiring AI/ML Engineer & Front-End Developer",
     template: "%s",
   },
   description: siteConfig.description.en,
-  authors: [{ name: "Sanjay S" }],
+  authors: [{ name: "Dhanu Shree" }],
   keywords: [
-    "Sanjay S",
+    "Dhanu Shree",
     "Portfolio",
-    "Software Engineer",
+    "Aspiring AI/ML Engineer",
     "React",
     "Next.js",
     "AI",
-    "Spring Boot",
-    "Full Stack",
-    "Innovation",
+    "Computer Vision",
+    "Python",
+    "Front-End Developer",
     "Developer Portfolio",
   ],
   icons: {
-    icon: "/sanjay-logo.png",
-    shortcut: "/sanjay-logo.png",
-    apple: "/sanjay-logo.png",
+    icon: "/og-image.png",
+    shortcut: "/og-image.png",
+    apple: "/og-image.png",
   },
   manifest: "/manifest.webmanifest",
 }
 
 export const viewport: Viewport = {
-  themeColor: "#000000",
+  themeColor: "#F9F9F9",
 }
 
 export const dynamicParams = false
@@ -90,7 +90,7 @@ export default async function LocaleLayout({
   setRequestLocale(lang)
 
   return (
-    <html lang={lang} className="dark">
+    <html lang={lang}>
       <body
         className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} flex min-h-full flex-col bg-background font-sans text-foreground antialiased`}
       >

@@ -14,11 +14,11 @@ export function SiteWordmark({
         "inline-flex items-center gap-2 select-none",
         className,
       )}
-      aria-label="Sanjay S"
+      aria-label="Dhanu Shree"
     >
       {showIcon ? <BrandLogo className="h-6 w-auto" /> : null}
       <span className="wordmark-crafter text-sm tracking-[0.08em] text-foreground">
-        Sanjay S
+        Dhanu Shree
       </span>
     </span>
   )

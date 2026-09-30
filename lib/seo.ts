@@ -67,24 +67,23 @@ export function buildMetadata({
   const url = localizedUrl(path, locale)
   const fullTitle =
     title === siteConfig.name
-      ? "Sanjay S | Portfolio"
+      ? "Dhanu Shree | Aspiring AI/ML Engineer & Front-End Developer"
       : `${title} | ${siteConfig.name}`
 
   return {
     metadataBase: new URL(baseUrl),
     title: fullTitle,
     description,
-    authors: [{ name: "Sanjay S" }],
+    authors: [{ name: "Dhanu Shree" }],
     keywords: [
-      "Sanjay S",
+      "Dhanu Shree",
       "Portfolio",
-      "Software Engineer",
+      "Aspiring AI/ML Engineer",
       "React",
       "Next.js",
       "AI",
-      "Spring Boot",
-      "Full Stack",
-      "Innovation",
+      "Computer Vision",
+      "Python",
       "Developer Portfolio",
     ],
     alternates: {

@@ -1,371 +1,156 @@
 {
   "common": {
     "workCta": "Get in touch",
-    "communityCta": "Follow along",
+    "communityCta": "Explore my work",
     "openCta": "Open"
   },
   "home": {
-    "eyebrow": "Sanjay S · Coimbatore, India",
-    "line1": "I am",
-    "line2": "a builder, author",
-    "line3": "founder & developer.",
-    "description": "CS student building AI products, leading startup communities, and writing books that make people think.",
-    "projectsCta": "See my projects",
-    "booksCta": "Read my books",
-    "workPreview": {
-      "section": "How I can help",
-      "eyebrow": "For startups and teams",
-      "title": "AI products and full-stack apps built with care.",
-      "description": "I build AI-powered products and full-stack applications end to end — from problem framing to shipped, production-ready software.",
-      "cta": "Get in touch",
-      "cardCta": "Start a conversation"
-    },
-    "collaborations": {
-      "eyebrow": "Collaborations",
-      "description": "Collaborated with teams and ecosystems including devtools, AI labs, fintech startups, and infrastructure companies."
-    },
-    "communityPreview": {
-      "eyebrow": "Build in public",
-      "title": "I build in public, and I share what I learn.",
-      "description": "From AI-powered platforms to civic tech, every project is a chance to learn in public and solve real problems.",
-      "communityCta": "Follow my journey",
-      "eventsCta": "Explore events"
-    },
-    "eventsResearch": {
-      "eventsEyebrow": "Hackathons",
-      "eventsTitle": "Where I build.",
-      "researchEyebrow": "Sanjay S Research",
-      "researchTitle": "Research and writing.",
-      "researchDescription": "I research AI-first engineering, agents, developer experience, product workflows, and the systems that help teams ship with AI.",
-      "partnerCta": "Partner on events",
-      "openCta": "Open"
-    },
-    "communityQr": {
-      "eyebrow": "Let's connect",
-      "title": "Scan to follow my work.",
-      "description": "My GitHub is where my projects, experiments, and build-in-public work live. Scan the QR code to open my profile.",
-      "cta": "Open my GitHub",
-      "alt": "QR code for my GitHub profile"
-    },
-    "instagram": {
-      "eyebrow": "Follow along",
-      "title": "See the demos, builds, and behind-the-scenes.",
-      "description": "Follow @sanjay.hq on Instagram and my YouTube channel for project demos, hackathon recaps, and build-in-public updates.",
-      "instagramCta": "Follow me on Instagram",
-      "youtubeCta": "Watch on YouTube"
-    },
-    "openCalendars": {
-      "eyebrow": "Open calendar",
-      "title": "Book a free 30-minute call with me.",
-      "description": "You can book mentorship, career advice, product feedback, or a calm conversation about AI, engineering, or startups.",
-      "instructions": "Use the calendar below to pick a time that works for you.",
-      "cta": "Open calendar"
-    }
+    "eyebrow": "Dhanu Shree · Coimbatore, India",
+    "line1": "Aspiring AI/ML",
+    "line2": "Engineer",
+    "line3": "& Front-End Developer",
+    "description": "A third-year CSE student building practical AI, ML, computer vision and web projects.",
+    "projectsCta": "View projects",
+    "contactCta": "Contact me"
   },
   "nav": {
     "projects": "Projects",
-    "events": "Events",
-    "research": "Research",
-    "team": "Team",
-    "workCta": "Get in touch",
-    "communityCta": "Follow along",
+    "about": "About",
+    "skills": "Skills",
+    "education": "Education",
+    "contact": "Contact",
     "openMenu": "Open menu",
     "closeMenu": "Close menu"
   },
   "footer": {
-    "company": "Sanjay S",
-    "build": "Build",
+    "company": "Dhanu Shree",
+    "build": "Explore",
     "productLab": "Projects",
-    "community": "Elsewhere",
-    "social": "Social",
-    "companyLinks": {
-      "events": "Events",
-      "sponsorEvents": "Collaborate on events",
-      "projects": "Projects",
-      "team": "Team",
-      "workWithUs": "Get in touch",
-      "contact": "Contact"
-    },
-    "buildLinks": {
-      "projects": "Projects",
-      "timeline": "Project activity",
-      "research": "Research",
-      "next": "Next",
-      "brand": "Brand"
-    },
-    "communityLinks": {
-      "joinCommunity": "Build in public",
-      "lumaEvents": "Research",
-      "hack0": "Instagram",
-      "shippingBible": "YouTube"
-    },
-    "copyright": "© {year} Sanjay S. Built fast, built well."
+    "community": "Contact",
+    "social": "Contact",
+    "copyright": "© {year} Dhanu Shree. Learning by building."
   },
   "pages": {
-    "work-with-us": {
-      "eyebrow": "Work with Sanjay S.",
-      "title": "Work with Sanjay S.",
-      "description": "For companies and teams that want AI product engineering, full-stack execution, and hands-on collaboration from idea to shipped software.",
-      "section": "A direct, hands-on builder",
-      "sectionDescription": "Every collaboration is shaped around the problem, timeline, and product you are building."
-    },
-    "events": {
-      "eyebrow": "Events",
-      "title": "Hackathons, meetups, and workshops across India.",
-      "description": "Hackathons, meetups, and workshops I participate in and run — places where I build, learn, and meet collaborators.",
-      "section": "Built for participation, not passive attendance.",
-      "sectionDescription": "I take part in events where the work happens: building demos, solving problems, sharing lessons, and meeting collaborators.",
-      "all": "All",
-      "upcoming": "Upcoming",
-      "past": "Past events",
-      "register": "Register",
-      "noEvents": "[*] No events found. Check back soon.",
-      "noFilteredEvents": "No events match this filter."
-    },
-    "events-sponsors": {
-      "eyebrow": "Collaborate on events",
-      "title": "Collaborate on hackathons, meetups, and workshops.",
-      "description": "Partner with Sanjay S to support high-signal events where builders try products, build demos, meet collaborators, and remember the teams that showed up.",
-      "section": "For teams that want more than a logo.",
-      "sectionDescription": "Let's work together on hackathons, workshops, product launches, prizes, venue support, developer tools, and hands-on activations."
-    },
     "projects": {
       "eyebrow": "Portfolio",
-      "title": "Building products that solve real problems.",
-      "description": "A founder portfolio spanning agritech, accessibility, sustainability, community, freelancing, and entrepreneurship — every project shipped, funded, or live.",
-      "githubEyebrow": "GitHub",
-      "githubTitle": "I build in public when the work should be inspectable.",
-      "githubDescription": "My GitHub is where I publish open-source projects, experiments, and reusable engineering artifacts. Some projects are full products, some are prototypes, and some are the raw material behind the work.",
-      "githubCta": "Open my GitHub",
-      "timelineCta": "Explore project activity",
+      "title": "Practical projects, built while learning.",
+      "description": "A focused collection of AI/ML, systems, computer vision and front-end projects.",
+      "githubEyebrow": "Keep exploring",
+      "githubTitle": "Every project is a learning step.",
+      "githubDescription": "These projects reflect Dhanu’s current learning journey and growing interest in practical technology.",
+      "githubCta": "Contact Dhanu",
+      "timelineCta": "About Dhanu",
       "section": "Selected work",
-      "sectionTitle": "Six products. One builder.",
-      "sectionDescription": "Every card is a real project — its logo, stack, status, impact, and links. Hover for details.",
+      "sectionTitle": "Four projects. One growing practice.",
+      "sectionDescription": "Conservative descriptions reflect what is currently verified about each project.",
       "nextEyebrow": "Next projects",
-      "nextTitle": "Help choose what I should build next.",
-      "nextDescription": "A realtime, community-ranked project board for requests, experiments, and useful ideas. Submit an idea, vote on the queue, and watch priorities move live.",
-      "nextCta": "Open next projects"
+      "nextTitle": "More ideas are taking shape.",
+      "nextDescription": "Future work will continue exploring AI/ML, computer vision and useful web experiences.",
+      "nextCta": "Back to projects"
     },
-    "timeline": {
-      "eyebrow": "Timeline",
-      "title": "Building, leading, and writing — year by year.",
-      "description": "From my first React components to shipped startups and a published book — Sanjay S's journey from 2023 to 2026.",
-      "exploreCta": "Explore the activity",
-      "githubCta": "Open GitHub",
-      "signalLabel": "Sanjay's commits by week",
-      "oneYear": "Last 52 weeks",
-      "heroStats": {
-        "active": "Projects with commits",
-        "commits": "Sanjay's commits",
-        "stars": "GitHub stars"
-      },
-      "timelineEyebrow": "Public projects over time",
-      "timelineTitle": "What I have been building.",
-      "timelineDescription": "The main timeline counts only my commits. Each row is one public project, and brighter blocks mean more commits that week. Open a project to see every contributor and the full GitHub details.",
-      "timelineLabel": "Sanjay public project activity over time",
-      "searchPlaceholder": "Search projects",
-      "filterLabel": "Filter projects",
-      "filters": {
-        "active": "Active",
-        "all": "All",
-        "archived": "Archived"
-      },
-      "sortLabel": "Sort projects",
-      "sorts": {
-        "activity": "Most active",
-        "recent": "Recently updated",
-        "stars": "Most GitHub stars"
-      },
-      "rangeLabel": "Time period",
-      "ranges": {
-        "threeMonths": "3M",
-        "sixMonths": "6M",
-        "oneYear": "1Y"
-      },
-      "stats": {
-        "projects": "Projects shown",
-        "allCommits": "All commits",
-        "teamCommits": "Sanjay's commits",
-        "stars": "GitHub stars",
-        "contributors": "Contributors"
-      },
-      "allContributors": "See every contributor and their commits.",
-      "coreTeam": "Core",
-      "updated": "Updated",
-      "liveData": "Latest GitHub data",
-      "snapshotData": "Saved GitHub data",
-      "projectColumn": "Project",
-      "timelineColumn": "Weekly activity",
-      "today": "Today",
-      "showMore": "Show more",
-      "noResultsTitle": "No projects found",
-      "noResultsDescription": "Try another search, time period, person, or filter.",
-      "legend": "Sanjay's commits",
-      "less": "Less",
-      "more": "More",
-      "commits": "commits",
-      "commit": "commit",
-      "teamCommit": "commit",
-      "contributor": "contributor",
-      "noCommits": "No commits in this period",
-      "weekOf": "Week of",
-      "details": "Project details",
-      "openGithub": "Open on GitHub",
-      "openWebsite": "Visit project",
-      "created": "Created",
-      "lastPush": "Last updated",
-      "stars": "Stars",
-      "forks": "Forks",
-      "issues": "Open issues",
-      "license": "License",
-      "activity": "Commit activity",
-      "contributorBreakdown": "All contributors in this period",
-      "teamBadge": "Sanjay",
-      "archivedBadge": "Archived",
-      "incomplete": "Partial history",
-      "method": {
-        "barTitle": "Position shows activity",
-        "barDescription": "Each project runs from its first commit to its latest within the chosen period.",
-        "intensityTitle": "Brightness shows commit volume",
-        "intensityDescription": "Brighter blocks mean more commits that week. The scale keeps busy launches and steady progress easy to compare.",
-        "coreTitle": "Open a project for the full picture",
-        "coreDescription": "Project details include every commit and contributor, plus GitHub stars, forks, open issues, and other project information."
-      },
-      "catalogEyebrow": "Beyond the activity chart",
-      "catalogTitle": "Meet the products behind the projects.",
-      "catalogDescription": "Open the project lab for product stories, live links, technologies, and ideas I may build next.",
-      "catalogCta": "Open project lab"
-    },
-    "research": {
-      "eyebrow": "Research",
-      "title": "Researching the systems behind better building.",
-      "description": "My research explores AI-first engineering, agents, developer experience, and the practices that help modern teams build with more leverage.",
-      "section": "For now, research lives on its own domain.",
-      "sectionDescription": "This page links to my research site, essays, and open-source writing."
-    },
-    "team": {
-      "eyebrow": "Team",
-      "title": "The person behind the projects.",
-      "description": "Sanjay S is built by a CS student, AI builder, and product developer based in Coimbatore, India.",
-      "section": "One person, many projects.",
-      "sectionDescription": "The work combines product engineering, AI, full-stack development, design, and a constant drive to learn.",
-      "calendarEyebrow": "Open calendar",
-      "calendarTitle": "Book a free 30-minute call with me.",
-      "calendarDescription": "You can book mentorship, career advice, product feedback, or a calm conversation about AI, engineering, or startups.",
-      "calendarInstructions": "Use the calendar on my profile below.",
-      "calendarCta": "Open calendar"
-    },
-    "blog": {
-      "eyebrow": "Blog",
-      "title": "Stories about building, AI, and product craft.",
-      "description": "Essays and lessons from Sanjay S — research, open-source launches, hackathons, and product building.",
-      "section": "Start with the philosophy and research.",
-      "sectionDescription": "The full content migration can come next. For now, this page points to the most important writing surfaces."
-    },
-    "brand": {
-      "eyebrow": "Brand resources",
-      "title": "Made to be recognized.",
-      "description": "Download the official Sanjay S logo assets for articles, presentations, event pages, and partner materials.",
-      "assets": "Assets",
-      "iconTitle": "Logo icon",
-      "iconDescription": "Use the standalone mark when space is limited or the Sanjay S name already appears nearby.",
-      "wordmarkTitle": "Logo + wordmark",
-      "wordmarkDescription": "Use the complete lockup when introducing the brand or when extra context is useful.",
-      "standaloneTitle": "Wordmark",
-      "standaloneDescription": "Use the standalone wordmark when the Sanjay S name needs to lead without the icon.",
-      "lightMode": "Light mode",
-      "darkMode": "Dark mode",
-      "usageTitle": "A small request",
-      "usageDescription": "Keep the logo legible, give it room to breathe, and do not stretch, rotate, recolor, or alter the relationship between the mark and wordmark."
-    },
-    "contact": {
-      "eyebrow": "Contact",
-      "title": "Let's build, collaborate, or just talk.",
-      "description": "Hackathon team-ups, AI and civic tech collaborations, startup partnerships, internship discussions, books, or mentorship — reach out."
-    },
-    "books": {
-      "eyebrow": "Books",
-      "title": "Writing books that make people think.",
-      "description": "Sanjay S is a published author — One May Fly's Memory is available on Amazon India, and the second book, EPSALIPM, is in progress."
+    "next": {
+      "eyebrow": "Project ideas",
+      "title": "What I may build next.",
+      "description": "A space for future project ideas and experiments."
     },
     "about": {
       "eyebrow": "About",
-      "title": "Who I am.",
-      "description": "Third-year CSE student. Frontend intern at NexGenAds, CTO of GreenSprout, founder of EcoReboot, community builder behind Codera, freelancer at Webro, and author."
+      "title": "Curious about intelligent, useful technology.",
+      "description": "Third-year Computer Science and Engineering student focused on AI/ML, computer vision and front-end development."
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Let’s build, learn, and solve problems together.",
+      "description": "Project conversations, learning opportunities and thoughtful collaboration are welcome."
+    },
+    "books": {
+      "eyebrow": "Learning notes",
+      "title": "A place for future writing.",
+      "description": "Notes on AI/ML, computer vision, front-end development and project learning."
+    },
+    "timeline": {
+      "eyebrow": "Learning timeline",
+      "title": "Learning through projects, year by year.",
+      "description": "A simple record of Dhanu’s academic and project development journey.",
+      "exploreCta": "Explore the timeline",
+      "githubCta": "Contact Dhanu"
     },
     "achievements": {
-      "eyebrow": "Achievements",
-      "title": "Certificates & recognitions.",
-      "description": "MSME registration, TN-EDII innovation voucher, IIT Bombay E-Summit finalist, 61st national rank in the Odoo Hackathon, and hackathon certificates."
+      "eyebrow": "Activities",
+      "title": "Learning through participation.",
+      "description": "Academic project work, technical activities and practical learning experiences."
     },
     "certificates": {
       "eyebrow": "Certificates",
-      "title": "Certified by the names behind the tools.",
-      "description": "Certificates from Claude, Deloitte, Google, NASA, Odoo, and TCS — with original files linked on Google Drive."
+      "title": "Learning milestones.",
+      "description": "A place for verified certificates and learning records."
     },
-    "next": {
-      "eyebrow": "/projects/next",
-      "title": "Vote on the next thing I should build.",
-      "description": "A live, community-ranked queue for project ideas. Submit anonymously, leave an alias if you want, and move the best ideas up in realtime."
+    "team": {
+      "eyebrow": "About Dhanu",
+      "title": "The person behind the projects.",
+      "description": "Dhanu Shree is a third-year CSE student based in Coimbatore, exploring AI/ML, computer vision and front-end development."
+    },
+    "research": {
+      "eyebrow": "Learning",
+      "title": "Exploring the systems behind useful technology.",
+      "description": "Current interests include AI/ML, computer vision, data processing and modern web development."
+    },
+    "brand": {
+      "eyebrow": "Portfolio identity",
+      "title": "Dhanu Shree.",
+      "description": "A compact identity for project work and learning in public."
+    },
+    "events": {
+      "eyebrow": "Activities",
+      "title": "Learning by taking part.",
+      "description": "Technical activities and project experiences are added as they are verified."
+    },
+    "events-sponsors": {
+      "eyebrow": "Collaboration",
+      "title": "Build something thoughtful.",
+      "description": "A space for future collaboration around practical technology and learning."
+    },
+    "work-with-us": {
+      "eyebrow": "Work with Dhanu Shree",
+      "title": "Learn and build together.",
+      "description": "For project conversations, front-end work and AI/ML learning, start with the contact page."
+    },
+    "blog": {
+      "eyebrow": "Notes",
+      "title": "Learning in public.",
+      "description": "Future notes about AI/ML, computer vision and modern web development."
     },
     "workshopQuestions": {
-      "eyebrow": "/workshops/questions",
-      "title": "Ask the questions I should answer live.",
-      "description": "A realtime workshop queue where attendees submit validated questions, add their name, and vote the most useful topics to the top."
+      "eyebrow": "Questions",
+      "title": "Ask about building projects.",
+      "description": "A space for practical questions about technology and learning."
     },
     "opencodeQuestions": {
-      "eyebrow": "/opencode",
-      "title": "Ask Sanjay about building with OpenCode.",
-      "description": "Submit your OpenCode questions and vote on what Sanjay should answer live during the workshop."
+      "eyebrow": "Questions",
+      "title": "Ask about learning with code.",
+      "description": "Questions about practical project development and learning through code."
     },
     "n8nQuestions": {
-      "eyebrow": "/n8n",
-      "title": "Ask Sanjay about n8n MCP + Claude Code automations.",
-      "description": "Submit your questions about n8n, MCP servers, Claude Code, automation, and flows. Vote on what Sanjay should answer live during the presentation."
+      "eyebrow": "Questions",
+      "title": "Ask about project workflows.",
+      "description": "Questions about AI/ML projects, computer vision and modern web development."
     },
     "claudeCodeQuestions": {
-      "eyebrow": "/claude-code",
-      "title": "Ask Sanjay about building with Claude Code.",
-      "description": "Submit your Claude Code questions and vote on what Sanjay should answer live during the workshop."
+      "eyebrow": "Questions",
+      "title": "Ask about building projects.",
+      "description": "Questions about turning ideas into useful academic and personal projects."
     }
   },
-  "member": {
-    "back": "Back to team",
-    "skills": "Skills",
-    "connect": "Connect",
-    "projects": "Projects",
-    "joined": "Joined",
-    "calendar": "Book a meeting",
-    "calendarSub": "Schedule a mentoring session, career advice, product feedback, or a chill chat.",
-    "listening": "Currently listening",
-    "currently": "Currently",
-    "clubs": "Clubs",
-    "stack": "Dev stack",
-    "building": "Currently building",
-    "tabBuilding": "Building",
-    "tabProjects": "Projects",
-    "tabCurrently": "Currently",
-    "tabStack": "Stack",
-    "tabSoftware": "Software",
-    "tabHardware": "Hardware",
-    "tabListening": "Listening"
-  },
-  "teamWorkCallout": {
-    "eyebrow": "Let's talk",
-    "title": "Need Sanjay S?",
-    "description": "For product engineering, AI products, hackathons, or a collaboration, start here.",
-    "cta": "Get in touch"
-  },
   "cta": {
-    "eyebrow": "Let's build",
-    "title": "Let's build something meaningful",
-    "description": "Collaborate on a project, come to a hackathon, follow the work, or just say hello.",
+    "eyebrow": "Let’s connect",
+    "title": "Let’s build something meaningful.",
+    "description": "Reach out about projects, learning and collaboration.",
     "emailLabel": "Email address",
     "emailPlaceholder": "you@example.com",
     "submit": "Get in touch",
     "sending": "Sending",
     "successTitle": "Got it",
-    "successDescription": "We'll be in touch shortly. Thanks for reaching out.",
+    "successDescription": "Thanks for reaching out.",
     "invalidEmail": "Enter a valid email address",
     "genericError": "Something went wrong. Try again in a moment.",
     "networkError": "Network error. Try again in a moment."

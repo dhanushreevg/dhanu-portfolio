@@ -98,7 +98,7 @@ export function CTA({ copy }: { copy: CtaCopy }) {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="inline-flex h-12 items-center justify-center gap-2 border border-zinc-950 bg-zinc-950 px-6 text-sm font-medium text-zinc-50 transition-colors hover:bg-zinc-800 disabled:cursor-not-allowed disabled:opacity-60 dark:border-zinc-50 dark:bg-zinc-50 dark:text-zinc-950 dark:hover:bg-zinc-200"
+                  className="inline-flex h-12 items-center justify-center gap-2 border border-primary bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/85 disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   {submitting ? (
                     <>

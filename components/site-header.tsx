@@ -9,9 +9,8 @@ import { navItems } from "@/lib/site"
 const navLabels: Record<string, string> = {
   projects: "Projects",
   about: "About",
-  books: "Books",
-  timeline: "Timeline",
-  certificates: "Certificates",
+  skills: "Skills",
+  education: "Education",
   contact: "Contact",
 }
 
@@ -26,11 +25,11 @@ export function SiteHeader({ locale }: { locale: Locale }) {
             <Link
               href={withLocale("/", locale)}
               className="group inline-flex h-full items-center gap-3 px-4 transition-colors lg:hover:bg-primary/5"
-              aria-label="Sanjay S — Home"
+              aria-label="Dhanu Shree — Home"
             >
               <BrandLogo />
               <span className="font-mono text-xs font-medium uppercase tracking-[0.35em] text-foreground">
-                Sanjay
+                Dhanu
               </span>
             </Link>
           </div>
@@ -47,12 +46,10 @@ export function SiteHeader({ locale }: { locale: Locale }) {
           </div>
           <div className="hidden h-full items-center border-line lg:flex lg:border-l">
             <Link
-              href="https://github.com/sanjay-offl"
-              target="_blank"
-              rel="noopener noreferrer"
+              href={withLocale("/contact", locale)}
               className="group inline-flex h-full items-center gap-2 px-4 text-sm font-medium text-foreground transition-colors hover:bg-accent/10 lg:px-4 xl:px-6"
             >
-              Follow along
+              Contact me
               <PixelArrow />
             </Link>
           </div>
@@ -76,12 +73,10 @@ export function SiteHeader({ locale }: { locale: Locale }) {
                     </Link>
                   ))}
                   <Link
-                    href="https://github.com/sanjay-offl"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={withLocale("/contact", locale)}
                     className="mt-4 inline-flex items-center justify-between border border-foreground/20 px-4 py-3 text-sm font-medium"
                   >
-                    Follow along
+                    Contact me
                     <PixelArrow />
                   </Link>
                 </div>

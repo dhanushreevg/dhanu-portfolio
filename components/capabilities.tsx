@@ -55,9 +55,8 @@ export async function Capabilities({ locale }: { locale: Locale }) {
             What I build
           </p>
           <p className="relative mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-            Sanjay S is a builder solving real problems with AI, full-stack
-            engineering, and thoughtful product development. Building in public,
-            open source, and civic technology.
+            Dhanu Shree is an aspiring AI/ML engineer and front-end developer
+            learning by building practical, thoughtful technology.
           </p>
         </div>
         <IconCard letter="C" />

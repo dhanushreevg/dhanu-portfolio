@@ -5,22 +5,17 @@ import { type Locale } from "@/lib/i18n"
 import { socials } from "@/lib/site"
 
 const buildLinks = [
-  { label: "Projects", href: "/projects" },
-  { label: "Timeline", href: "/timeline" },
   { label: "About", href: "/about" },
-  { label: "Achievements", href: "/achievements" },
-  { label: "Certificates", href: "/certificates" },
+  { label: "Projects", href: "/projects" },
+  { label: "Skills", href: "/about#skills" },
+  { label: "Education", href: "/about#education" },
+  { label: "Contact", href: "/contact" },
 ]
 
 const projectLinks = [
-  { label: "GreenSprout", href: "https://greensprouts-offl.netlify.app/" },
-  { label: "UrbanMind", href: "https://github.com/sanjay-offl/UrbanMind" },
-  { label: "DIVYAM", href: "https://github.com/sanjay-offl/VYAM" },
-] as const
-
-const bookLinks = [
-  { label: "A Mayfly's Memory", href: "https://amzn.in/d/01BTpnYV" },
-  { label: "EPSALIPM", href: "/books" },
+  { label: "UrbanMind", href: "/projects#urbanmind" },
+  { label: "Goose OS Development", href: "/projects#goose-os" },
+  { label: "PPG Symposium Website", href: "/projects#ppg-symposium" },
 ] as const
 
 export function SiteFooter({ locale }: { locale: Locale }) {
@@ -30,7 +25,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
         <div>
           <SiteWordmark />
           <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-            Builder. Founder. Author.
+            Aspiring AI/ML Engineer · Front-End Developer · CSE Student
           </p>
         </div>
 
@@ -85,10 +80,10 @@ export function SiteFooter({ locale }: { locale: Locale }) {
 
         <div>
           <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-            Books
+            Explore
           </p>
           <ul className="space-y-3 text-sm">
-            {bookLinks.map((l) => (
+            {buildLinks.slice(0, 3).map((l) => (
               <li key={l.label}>
                 {l.href.startsWith("/") ? (
                   <LocalizedLink
@@ -96,7 +91,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
                     locale={locale}
                     className="text-foreground transition-colors hover:text-muted-foreground"
                   >
-                    {l.label} (coming soon)
+                    {l.label}
                   </LocalizedLink>
                 ) : (
                   <Link
@@ -118,7 +113,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
             Elsewhere
           </p>
           <ul className="space-y-3 text-sm">
-            {socials.map((s) => (
+            {(socials.length ? socials : [{ label: "Email", href: `mailto:${"dhanushreevg28@gmail.com"}` }]).map((s) => (
               <li key={s.label}>
                 <Link
                   href={s.href}
@@ -136,7 +131,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
       <div className="border-t border-line">
         <div className="flex flex-col items-start justify-between gap-3 px-8 py-6 md:flex-row md:items-center">
           <p className="font-mono text-[10px] tracking-wider text-muted-foreground">
-            © {new Date().getFullYear()} Sanjay S
+            © {new Date().getFullYear()} Dhanu Shree
           </p>
         </div>
       </div>

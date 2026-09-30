@@ -5,10 +5,9 @@ import { SectionGap } from "@/components/grid-container"
 import { HeroContent } from "@/components/hero"
 import {
   AboutSnippet,
-  BooksPreview,
   ContactCta,
-  HackathonsPreview,
-  InstagramFollow,
+  EducationSnippet,
+  PracticalWorkSnippet,
   ProofStats,
   SkillsSection,
 } from "@/components/home-sections"
@@ -46,8 +45,8 @@ export default async function Page({
           description={t("description")}
           primaryCta={t("projectsCta")}
           primaryHref="/projects"
-          secondaryCta={t("booksCta")}
-          secondaryHref="/books"
+          secondaryCta={t("contactCta")}
+          secondaryHref="/contact"
         />
         <SectionGap />
         <ProofStats locale={lang} />
@@ -56,15 +55,13 @@ export default async function Page({
         <SectionGap />
         <FeaturedProjects />
         <SectionGap />
-        <BooksPreview locale={lang} />
-        <SectionGap />
-        <HackathonsPreview locale={lang} />
-        <SectionGap />
         <SkillsSection locale={lang} />
         <SectionGap />
-        <ContactCta locale={lang} />
+        <EducationSnippet locale={lang} />
         <SectionGap />
-        <InstagramFollow locale={lang} />
+        <PracticalWorkSnippet locale={lang} />
+        <SectionGap />
+        <ContactCta locale={lang} />
       </main>
       <SiteFooter locale={lang} />
     </>

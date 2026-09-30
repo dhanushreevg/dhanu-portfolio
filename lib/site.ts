@@ -7,25 +7,27 @@ function localized(value: LocalizedString, locale: Locale) {
 }
 
 export const siteConfig = {
-  name: "Sanjay S",
-  domain: "tbhsanjay.vercel.app",
+  name: "Dhanu Shree",
+  domain: "localhost:3000",
   tagline: {
-    en: "CS Student · AI Builder · Product Developer",
-    es: "CS Student · AI Builder · Product Developer",
-    pt: "CS Student · AI Builder · Product Developer",
+    en: "Aspiring AI/ML Engineer · Front-End Developer · CSE Student",
+    es: "Aspiring AI/ML Engineer · Front-End Developer · CSE Student",
+    pt: "Aspiring AI/ML Engineer · Front-End Developer · CSE Student",
   },
   description: {
-    en: "AI Builder • Product Developer • Open Source Contributor. Building technology that solves real-world problems through AI, full-stack development, and innovative digital experiences.",
-    es: "AI Builder • Product Developer • Open Source Contributor. Building technology that solves real-world problems through AI, full-stack development, and innovative digital experiences.",
-    pt: "AI Builder • Product Developer • Open Source Contributor. Building technology that solves real-world problems through AI, full-stack development, and innovative digital experiences.",
+    en: "Dhanu Shree is a Computer Science and Engineering student passionate about Artificial Intelligence, Machine Learning, Computer Vision and modern web development.",
+    es: "Dhanu Shree is a Computer Science and Engineering student passionate about Artificial Intelligence, Machine Learning, Computer Vision and modern web development.",
+    pt: "Dhanu Shree is a Computer Science and Engineering student passionate about Artificial Intelligence, Machine Learning, Computer Vision and modern web development.",
   },
-  url: "https://tbhsanjay.vercel.app",
-  author: "Sanjay S",
-  github: "https://github.com/sanjay-offl",
-  linkedin: "https://linkedin.com/in/sanjayoffl24",
+  url: "http://localhost:3000",
+  author: "Dhanu Shree",
+  email: "dhanushreevg28@gmail.com",
+  phone: "9842815860",
+  github: "",
+  linkedin: "",
   location: "Coimbatore, India",
   ogImage: {
-    alt: "Sanjay S — AI Builder & Product Developer",
+    alt: "Dhanu Shree — Aspiring AI/ML Engineer and Front-End Developer",
   },
 } as const
 
@@ -38,26 +40,20 @@ export function getSiteConfig(locale: Locale = defaultLocale) {
 }
 
 export const navItems = [
-  { key: "projects", href: "/projects" },
   { key: "about", href: "/about" },
-  { key: "books", href: "/books" },
-  { key: "timeline", href: "/timeline" },
-  { key: "certificates", href: "/certificates" },
+  { key: "projects", href: "/projects" },
+  { key: "skills", href: "/about#skills" },
+  { key: "education", href: "/about#education" },
   { key: "contact", href: "/contact" },
 ] as const
 
-export const socials = [
-  { label: "GitHub", href: "https://github.com/sanjay-offl" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/sanjayoffl24" },
-  { label: "Instagram", href: "https://instagram.com/sanjay.hq/" },
-  { label: "YouTube", href: "https://www.youtube.com/@sanjayoffl" },
-] as const
+export const socials = [] as const
 
 export const stats = [
-  { value: "8+", label: { en: "Projects Shipped", es: "Projects Shipped", pt: "Projects Shipped" } },
-  { value: "3+", label: { en: "Hackathons", es: "Hackathons", pt: "Hackathons" } },
-  { value: "2", label: { en: "Books (1 published, 1 writing)", es: "Books (1 published, 1 writing)", pt: "Books (1 published, 1 writing)" } },
-  { value: "2028", label: { en: "B.E. CSE Graduation", es: "B.E. CSE Graduation", pt: "B.E. CSE Graduation" } },
+  { value: "3rd", label: { en: "Year of CSE", es: "Year of CSE", pt: "Year of CSE" } },
+  { value: "AI/ML", label: { en: "Learning focus", es: "Learning focus", pt: "Learning focus" } },
+  { value: "CV", label: { en: "Computer vision", es: "Computer vision", pt: "Computer vision" } },
+  { value: "Web", label: { en: "Front-end development", es: "Front-end development", pt: "Front-end development" } },
 ] as const
 
 export function getStats(locale: Locale = defaultLocale) {
@@ -66,49 +62,19 @@ export function getStats(locale: Locale = defaultLocale) {
 
 export const ecosystem = [
   {
-    title: { en: "Community", es: "Community", pt: "Community" },
-    body: {
-      en: "I share my journey building AI-powered applications, full-stack products, and learning in public.",
-      es: "I share my journey building AI-powered applications, full-stack products, and learning in public.",
-      pt: "I share my journey building AI-powered applications, full-stack products, and learning in public.",
-    },
-    href: "https://sanjay-offl.github.io",
-  },
-  {
-    title: { en: "Projects", es: "Projects", pt: "Projects" },
-    body: {
-      en: "AI-powered platforms, full-stack applications, and open-source tools built with purpose.",
-      es: "AI-powered platforms, full-stack applications, and open-source tools built with purpose.",
-      pt: "AI-powered platforms, full-stack applications, and open-source tools built with purpose.",
-    },
+    title: { en: "Artificial intelligence", es: "Artificial intelligence", pt: "Artificial intelligence" },
+    body: { en: "Learning how intelligent systems can solve practical problems.", es: "Learning how intelligent systems can solve practical problems.", pt: "Learning how intelligent systems can solve practical problems." },
     href: "/projects",
   },
   {
-    title: { en: "Research", es: "Research", pt: "Research" },
-    body: {
-      en: "I explore ideas at the intersection of artificial intelligence, civic technology, sustainability, and software engineering.",
-      es: "I explore ideas at the intersection of artificial intelligence, civic technology, sustainability, and software engineering.",
-      pt: "I explore ideas at the intersection of artificial intelligence, civic technology, sustainability, and software engineering.",
-    },
-    href: "/research",
-  },
-  {
-    title: { en: "Open source", es: "Open source", pt: "Open source" },
-    body: {
-      en: "I build in public and contribute to open-source projects that developers actually use.",
-      es: "I build in public and contribute to open-source projects that developers actually use.",
-      pt: "I build in public and contribute to open-source projects that developers actually use.",
-    },
+    title: { en: "Computer vision", es: "Computer vision", pt: "Computer vision" },
+    body: { en: "Exploring image processing, OpenCV, and face recognition.", es: "Exploring image processing, OpenCV, and face recognition.", pt: "Exploring image processing, OpenCV, and face recognition." },
     href: "/projects",
   },
   {
-    title: { en: "Skills", es: "Skills", pt: "Skills" },
-    body: {
-      en: "Python, TypeScript, JavaScript, React, Next.js, FastAPI, PostgreSQL, AI APIs, and more.",
-      es: "Python, TypeScript, JavaScript, React, Next.js, FastAPI, PostgreSQL, AI APIs, and more.",
-      pt: "Python, TypeScript, JavaScript, React, Next.js, FastAPI, PostgreSQL, AI APIs, and more.",
-    },
-    href: "/team",
+    title: { en: "Front-end development", es: "Front-end development", pt: "Front-end development" },
+    body: { en: "Building responsive interfaces with modern web technologies.", es: "Building responsive interfaces with modern web technologies.", pt: "Building responsive interfaces with modern web technologies." },
+    href: "/projects",
   },
 ] as const
 
@@ -120,257 +86,4 @@ export function getEcosystem(locale: Locale = defaultLocale) {
   }))
 }
 
-export const services = [
-  {
-    title: { en: "AI Products", es: "AI Products", pt: "AI Products" },
-    body: {
-      en: "Streaming LLM UIs, agents, evals, and inference infrastructure. Building with the latest models and patterns that hold up in production.",
-      es: "Streaming LLM UIs, agents, evals, and inference infrastructure. Building with the latest models and patterns that hold up in production.",
-      pt: "Streaming LLM UIs, agents, evals, and inference infrastructure. Building with the latest models and patterns that hold up in production.",
-    },
-    href: "/projects",
-  },
-  {
-    title: { en: "Full Stack Engineering", es: "Full Stack Engineering", pt: "Full Stack Engineering" },
-    body: {
-      en: "End-to-end web products built on Next.js and the React ecosystem with PostgreSQL or MongoDB backends.",
-      es: "End-to-end web products built on Next.js and the React ecosystem with PostgreSQL or MongoDB backends.",
-      pt: "End-to-end web products built on Next.js and the React ecosystem with PostgreSQL or MongoDB backends.",
-    },
-    href: "/projects",
-  },
-  {
-    title: { en: "Civic Tech", es: "Civic Tech", pt: "Civic Tech" },
-    body: {
-      en: "Building technology that solves real problems — from sustainability to civic engagement through data and AI.",
-      es: "Building technology that solves real problems — from sustainability to civic engagement through data and AI.",
-      pt: "Building technology that solves real problems — from sustainability to civic engagement through data and AI.",
-    },
-    href: "/research",
-  },
-  {
-    title: { en: "Developer Experience", es: "Developer Experience", pt: "Developer Experience" },
-    body: {
-      en: "Designing tools, APIs, and workflows that engineers love to use — from local dev to production deployments.",
-      es: "Designing tools, APIs, and workflows that engineers love to use — from local dev to production deployments.",
-      pt: "Designing tools, APIs, and workflows that engineers love to use — from local dev to production deployments.",
-    },
-    href: "/projects",
-  },
-] as const
-
-export function getServices(locale: Locale = defaultLocale) {
-  return services.map((item) => ({
-    ...item,
-    title: localized(item.title, locale),
-    body: localized(item.body, locale),
-  }))
-}
-
-export const communityOffers = [
-  { en: "I share my journey building AI-powered applications, full-stack products, and learning in public.", es: "I share my journey building AI-powered applications, full-stack products, and learning in public.", pt: "I share my journey building AI-powered applications, full-stack products, and learning in public." },
-  { en: "I actively participate in hackathons, GDG events, and the startup ecosystem in Tamil Nadu.", es: "I actively participate in hackathons, GDG events, and the startup ecosystem in Tamil Nadu.", pt: "I actively participate in hackathons, GDG events, and the startup ecosystem in Tamil Nadu." },
-  { en: "Open to collaborating on innovative ideas and contributing to open source projects.", es: "Open to collaborating on innovative ideas and contributing to open source projects.", pt: "Open to collaborating on innovative ideas and contributing to open source projects." },
-  { en: "I build in public — sharing progress, lessons, and finished work along the way.", es: "I build in public — sharing progress, lessons, and finished work along the way.", pt: "I build in public — sharing progress, lessons, and finished work along the way." },
-  { en: "Building technology that is simple, accessible, and solves genuine human problems.", es: "Building technology that is simple, accessible, and solves genuine human problems.", pt: "Building technology that is simple, accessible, and solves genuine human problems." },
-] as const
-
-export function getCommunityOffers(locale: Locale = defaultLocale) {
-  return communityOffers.map((item) => localized(item, locale))
-}
-
-export const products = [
-  {
-    slug: "thadam-ai",
-    title: "THADAM AI",
-    tagline: { en: "AI-powered sustainability platform", es: "AI-powered sustainability platform", pt: "AI-powered sustainability platform" },
-    description: {
-      en: "An AI-powered sustainability platform that helps users understand, track, and reduce their carbon footprint through intelligent insights and eco-friendly recommendations.",
-      es: "An AI-powered sustainability platform that helps users understand, track, and reduce their carbon footprint through intelligent insights and eco-friendly recommendations.",
-      pt: "An AI-powered sustainability platform that helps users understand, track, and reduce their carbon footprint through intelligent insights and eco-friendly recommendations.",
-    },
-    metrics: ["Open source"],
-    technologies: ["AI", "Sustainability", "Full Stack"],
-    url: "https://github.com/sanjay-offl/thadam-ai",
-    sourceUrl: "https://github.com/sanjay-offl/thadam-ai",
-    openSource: true,
-    accent: "from-lime-300 via-emerald-500 to-teal-700",
-  },
-  {
-    slug: "civicbrain",
-    title: "CivicBrain",
-    tagline: { en: "AI-powered civic technology", es: "AI-powered civic technology", pt: "AI-powered civic technology" },
-    description: {
-      en: "An AI-powered civic technology platform that transforms citizen grievances and public data into actionable municipal insights for stronger institutions.",
-      es: "An AI-powered civic technology platform that transforms citizen grievances and public data into actionable municipal insights for stronger institutions.",
-      pt: "An AI-powered civic technology platform that transforms citizen grievances and public data into actionable municipal insights for stronger institutions.",
-    },
-    metrics: ["Open source"],
-    technologies: ["Civic Tech", "AI", "Next.js"],
-    url: "https://github.com/sanjay-offl/civicbrain",
-    sourceUrl: "https://github.com/sanjay-offl/civicbrain",
-    openSource: true,
-    accent: "from-pink-300 via-fuchsia-500 to-purple-700",
-  },
-  {
-    slug: "cybershield-ai",
-    title: "CyberShield AI",
-    tagline: { en: "Intelligent cybersecurity platform", es: "Intelligent cybersecurity platform", pt: "Intelligent cybersecurity platform" },
-    description: {
-      en: "An intelligent cybersecurity platform focused on threat awareness, security analysis, and digital protection.",
-      es: "An intelligent cybersecurity platform focused on threat awareness, security analysis, and digital protection.",
-      pt: "An intelligent cybersecurity platform focused on threat awareness, security analysis, and digital protection.",
-    },
-    metrics: ["Open source"],
-    technologies: ["Cybersecurity", "AI", "React"],
-    url: "https://github.com/sanjay-offl/cybershield-ai",
-    sourceUrl: "https://github.com/sanjay-offl/cybershield-ai",
-    openSource: true,
-    accent: "from-slate-200 via-blue-500 to-indigo-800",
-  },
-  {
-    slug: "epsalipm",
-    title: "Epsalipm",
-    tagline: { en: "Interactive philosophical journal", es: "Interactive philosophical journal", pt: "Interactive philosophical journal" },
-    description: {
-      en: "An interactive philosophical journal inspired by the eight Greek forms of love, combining storytelling, reflection, and personal memories into a unique reading experience.",
-      es: "An interactive philosophical journal inspired by the eight Greek forms of love, combining storytelling, reflection, and personal memories into a unique reading experience.",
-      pt: "An interactive philosophical journal inspired by the eight Greek forms of love, combining storytelling, reflection, and personal memories into a unique reading experience.",
-    },
-    metrics: ["Open source"],
-    technologies: ["Full Stack", "UI/UX", "Storytelling"],
-    url: "https://github.com/sanjay-offl/epsalipm",
-    sourceUrl: "https://github.com/sanjay-offl/epsalipm",
-    openSource: true,
-    accent: "from-stone-200 via-neutral-500 to-black",
-  },
-  {
-    slug: "pleco-ai",
-    title: "Pleco AI",
-    tagline: { en: "AI workflow automation assistant", es: "AI workflow automation assistant", pt: "AI workflow automation assistant" },
-    description: {
-      en: "An AI assistant designed to simplify workflows and improve productivity through intelligent automation.",
-      es: "An AI assistant designed to simplify workflows and improve productivity through intelligent automation.",
-      pt: "An AI assistant designed to simplify workflows and improve productivity through intelligent automation.",
-    },
-    metrics: ["Open source"],
-    technologies: ["AI", "Productivity", "Automation"],
-    url: "https://github.com/sanjay-offl/pleco-ai",
-    sourceUrl: "https://github.com/sanjay-offl/pleco-ai",
-    openSource: true,
-    accent: "from-blue-300 via-cyan-500 to-emerald-600",
-  },
-  {
-    slug: "faynex",
-    title: "FAYNEX",
-    tagline: { en: "Modern digital product", es: "Modern digital product", pt: "Modern digital product" },
-    description: {
-      en: "A modern digital product focused on solving practical challenges with scalable technology and clean user experiences.",
-      es: "A modern digital product focused on solving practical challenges with scalable technology and clean user experiences.",
-      pt: "A modern digital product focused on solving practical challenges with scalable technology and clean user experiences.",
-    },
-    metrics: ["Open source"],
-    technologies: ["Product", "Full Stack", "TypeScript"],
-    url: "https://github.com/sanjay-offl/faynex",
-    sourceUrl: "https://github.com/sanjay-offl/faynex",
-    openSource: true,
-    accent: "from-zinc-200 via-zinc-500 to-zinc-900",
-  },
-] as const
-
-export function getProducts(locale: Locale = defaultLocale) {
-  return products.map((item) => ({
-    ...item,
-    tagline: localized(item.tagline, locale),
-    description: localized(item.description, locale),
-  }))
-}
-
-export const collaborations = [
-  { name: "OpenAI", logo: "/collaborations/openai.svg", href: "https://openai.com" },
-  { name: "Vercel", logo: "/collaborations/vercel.svg", href: "https://vercel.com" },
-  { name: "Supabase", logo: "/collaborations/supabase.svg", href: "https://supabase.com" },
-] as const
-
-export const events = [
-  {
-    title: { en: "Hackathons", es: "Hackathons", pt: "Hackathons" },
-    body: {
-      en: "High-energy build sprints where ideas turn into working products. I actively participate in hackathons across Tamil Nadu.",
-      es: "High-energy build sprints where ideas turn into working products. I actively participate in hackathons across Tamil Nadu.",
-      pt: "High-energy build sprints where ideas turn into working products. I actively participate in hackathons across Tamil Nadu.",
-    },
-  },
-  {
-    title: { en: "Community", es: "Community", pt: "Community" },
-    body: {
-      en: "I founded Codera — a student community focused on practical learning, hackathons, and startup culture.",
-      es: "I founded Codera — a student community focused on practical learning, hackathons, and startup culture.",
-      pt: "I founded Codera — a student community focused on practical learning, hackathons, and startup culture.",
-    },
-  },
-] as const
-
-export function getEvents(locale: Locale = defaultLocale) {
-  return events.map((item) => ({
-    title: localized(item.title, locale),
-    body: localized(item.body, locale),
-  }))
-}
-
-export const researchLinks = [
-  {
-    title: "Sanjay S Research",
-    body: {
-      en: "Research notes, essays, experiments, and technical writing on AI, civic technology, and software engineering.",
-      es: "Research notes, essays, experiments, and technical writing on AI, civic technology, and software engineering.",
-      pt: "Research notes, essays, experiments, and technical writing on AI, civic technology, and software engineering.",
-    },
-    href: "https://github.com/sanjay-offl",
-  },
-  {
-    title: "sanjay-offl GitHub",
-    body: {
-      en: "Open-source projects, experiments, and technical artifacts.",
-      es: "Open-source projects, experiments, and technical artifacts.",
-      pt: "Open-source projects, experiments, and technical artifacts.",
-    },
-    href: "https://github.com/sanjay-offl",
-  },
-] as const
-
-export function getResearchLinks(locale: Locale = defaultLocale) {
-  return researchLinks.map((item) => ({ ...item, body: localized(item.body, locale) }))
-}
-
-export const testimonials = [  {
-    name: "Peer",
-    role: "Hackathon teammate",
-    quote: {
-      en: "Sanjay is one of those rare builders who actually ships — fast, focused, and with real attention to detail. Watching him turn an idea into a working product in 24 hours is something else.",
-      es: "Sanjay is one of those rare builders who actually ships — fast, focused, and with real attention to detail. Watching him turn an idea into a working product in 24 hours is something else.",
-      pt: "Sanjay is one of those rare builders who actually ships — fast, focused, and with real attention to detail. Watching him turn an idea into a working product in 24 hours is something else.",
-    },
-  },
-  {
-    name: "Mentor",
-    role: "College faculty",
-    quote: {
-      en: "Sanjay brings curiosity and rigor to everything he touches. He is building, learning, and contributing back to the ecosystem — exactly the kind of student we want to support.",
-      es: "Sanjay brings curiosity and rigor to everything he touches. He is building, learning, and contributing back to the ecosystem — exactly the kind of student we want to support.",
-      pt: "Sanjay brings curiosity and rigor to everything he touches. He is building, learning, and contributing back to the ecosystem — exactly the kind of student we want to support.",
-    },
-  },
-] as const
-
-export function getTestimonials(locale: Locale = defaultLocale) {
-  return testimonials.map((item) => ({ ...item, quote: localized(item.quote, locale) }))
-}
-
-export const stackLogos = [
-  { name: "Next.js" },
-  { name: "Bun" },
-  { name: "Vercel" },
-  { name: "Drizzle" },
-  { name: "Postgres" },
-] as const
+export const stackLogos = [] as const

@@ -2,19 +2,20 @@ import Link from "next/link"
 import { Container } from "@/components/grid-container"
 import { LiquidHero } from "@/components/liquid-hero"
 import { PixelArrow } from "@/components/pixel-arrow"
+import { SakuraEffect } from "@/components/sakura-effect"
 
 export function Hero() {
   return <HeroContent />
 }
 
 export function HeroContent({
-  eyebrow = "Sanjay S · Coimbatore, India",
-  lines = ["I am", "a builder, author", "founder & developer."],
-  description = "CS student building AI products, leading startup communities, and writing books that make people think.",
-  primaryCta = "See my projects",
+  eyebrow = "Dhanu Shree · Coimbatore, India",
+  lines = ["Aspiring AI/ML", "Engineer", "& Front-End Developer"],
+  description = "Building practical AI, ML and web solutions with curiosity, creativity and code.",
+  primaryCta = "View projects",
   primaryHref = "/projects",
-  secondaryCta = "Read my books",
-  secondaryHref = "/books",
+  secondaryCta = "Contact me",
+  secondaryHref = "/contact",
 }: {
   eyebrow?: string
   lines?: [string, string, string]
@@ -27,11 +28,8 @@ export function HeroContent({
   return (
     <Container innerClassName="overflow-hidden bg-background">
       <div className="relative flex flex-col md:block md:min-h-[calc(100svh-5rem)]">
-        <LiquidHero
-          imagePath="/sanjay-logo.png"
-          imageAlign="right"
-          className="z-0 hidden md:block"
-        />
+        <LiquidHero imagePath="" imageAlign="right" className="z-0 hidden md:block" />
+        <SakuraEffect />
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 z-[1] hidden bg-gradient-to-br from-background/80 via-background/30 to-transparent md:block"
@@ -91,11 +89,7 @@ export function HeroContent({
         <div className="relative mb-8 mt-8 md:hidden">
           <div className="mx-auto w-[68vw]">
             <div className="relative aspect-[1.03]">
-              <LiquidHero
-                imagePath="/sanjay-logo.png"
-                imageAlign="center"
-                fillFactor={0.92}
-              />
+              <LiquidHero imagePath="" imageAlign="center" fillFactor={0.92} />
             </div>
           </div>
         </div>

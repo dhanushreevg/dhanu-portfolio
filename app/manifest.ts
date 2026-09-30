@@ -2,27 +2,27 @@ import type { MetadataRoute } from "next"
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Sanjay S | Portfolio",
-    short_name: "Sanjay S",
+    name: "Dhanu Shree | Portfolio",
+    short_name: "Dhanu Shree",
     description:
-      "Software Developer, AI Builder, Full Stack Developer, Founder, and Innovation Enthusiast.",
+      "Aspiring AI/ML Engineer, Front-End Developer, and Computer Science student.",
     start_url: "/",
     display: "standalone",
-    background_color: "#000000",
-    theme_color: "#000000",
+    background_color: "#F9F9F9",
+    theme_color: "#E42278",
     icons: [
       {
-        src: "/sanjay-logo.png",
+        src: "/og-image.png",
         sizes: "192x192",
         type: "image/png",
       },
       {
-        src: "/sanjay-logo.png",
+        src: "/og-image.png",
         sizes: "512x512",
         type: "image/png",
       },
       {
-        src: "/sanjay-logo.png",
+        src: "/og-image.png",
         sizes: "any",
         type: "image/png",
       },

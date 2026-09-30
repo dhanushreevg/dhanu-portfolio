@@ -36,29 +36,29 @@ export default async function Page({
   return (
     <>
       <SiteHeader locale={lang} />
-      <main className="flex-1 bg-[#000000]">
+      <main className="flex-1 bg-background">
         <Container innerClassName="px-6 py-16 md:px-10 md:py-24">
           <div className="max-w-4xl">
-            <p className="font-mono text-[10px] uppercase tracking-[0.35em] text-white/60">
+              <p className="font-mono text-[10px] uppercase tracking-[0.35em] text-primary">
               {t("eyebrow")}
             </p>
-            <h1 className="mt-5 text-balance text-5xl font-semibold tracking-[-0.05em] text-white md:text-7xl">
+              <h1 className="mt-5 text-balance text-5xl font-semibold tracking-[-0.05em] text-foreground md:text-7xl">
               {t("title")}
             </h1>
-            <p className="mt-6 max-w-2xl text-balance text-lg leading-8 text-zinc-400">
+              <p className="mt-6 max-w-2xl text-balance text-lg leading-8 text-muted-foreground">
               {t("description")}
             </p>
           </div>
         </Container>
 
-        <Container innerClassName="border-t border-white/[0.08] px-6 py-10 md:px-10">
-          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-zinc-500">
+        <Container innerClassName="border-t border-line px-6 py-10 md:px-10">
+          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary">
             {t("section")}
           </p>
-          <h2 className="mt-3 text-3xl tracking-tight text-white md:text-4xl">
+          <h2 className="mt-3 text-3xl tracking-tight text-foreground md:text-4xl">
             {t("sectionTitle")}
           </h2>
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-zinc-400">
+          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
             {t("sectionDescription")}
           </p>
         </Container>
@@ -91,17 +91,9 @@ export default async function Page({
                 {t("githubDescription")}
               </p>
               <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3">
-                <LocalizedLink href="/timeline" locale={lang} className="group">
-                  <ArrowLink>{t("timelineCta")}</ArrowLink>
-                </LocalizedLink>
-                <Link
-                  href="https://github.com/sanjay-offl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group"
-                >
+                <LocalizedLink href="/contact" locale={lang} className="group">
                   <ArrowLink>{t("githubCta")}</ArrowLink>
-                </Link>
+                </LocalizedLink>
               </div>
             </div>
           </section>
