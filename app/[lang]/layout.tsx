@@ -5,7 +5,7 @@ import { notFound } from "next/navigation"
 import { setRequestLocale } from "next-intl/server"
 
 import { isLocale, locales } from "@/lib/i18n"
-import { absoluteUrl, baseUrl } from "@/lib/seo"
+import { absoluteUrl, baseUrl, ogImage } from "@/lib/seo"
 import { profileLinks, siteConfig } from "@/lib/site"
 
 import "../globals.css"
@@ -52,6 +52,20 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description: siteConfig.description.en,
+  openGraph: {
+    title: siteConfig.title,
+    description: siteConfig.description.en,
+    url: baseUrl,
+    siteName: siteConfig.name,
+    images: [ogImage],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.title,
+    description: siteConfig.description.en,
+    images: [ogImage.url],
+  },
   authors: [{ name: siteConfig.author }],
   keywords: [
     "Dhanu Shree",
