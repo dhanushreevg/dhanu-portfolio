@@ -9,7 +9,8 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { isLocale } from "@/lib/i18n";
 import { pageMetadata } from "@/lib/seo";
-import { projects } from "@/lib/projects";
+import { projects } from "@/lib/projects"
+import { siteConfig } from "@/lib/site";
 
 export const dynamicParams = false;
 
@@ -37,25 +38,25 @@ export default async function Page({
     <>
       <SiteHeader locale={lang} />
       <main className="flex-1 bg-background">
-        <Container innerClassName="px-6 py-16 md:px-10 md:py-24">
+        <Container innerClassName="px-6 py-16 sm:px-8 md:px-10 md:py-24">
           <div className="max-w-4xl">
-              <p className="font-mono text-[10px] uppercase tracking-[0.35em] text-primary">
+            <p className="font-mono text-[10px] uppercase tracking-[0.35em] text-primary">
               {t("eyebrow")}
             </p>
-              <h1 className="mt-5 text-balance text-5xl font-semibold tracking-[-0.05em] text-foreground md:text-7xl">
+            <h1 className="mt-5 text-balance text-4xl font-semibold tracking-[-0.05em] text-foreground sm:text-5xl md:text-7xl">
               {t("title")}
             </h1>
-              <p className="mt-6 max-w-2xl text-balance text-lg leading-8 text-muted-foreground">
+            <p className="mt-6 max-w-2xl text-balance text-base leading-8 text-muted-foreground sm:text-lg">
               {t("description")}
             </p>
           </div>
         </Container>
 
-        <Container innerClassName="border-t border-line px-6 py-10 md:px-10">
+        <Container innerClassName="border-t border-line px-6 py-10 sm:px-8 md:px-10">
           <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary">
             {t("section")}
           </p>
-          <h2 className="mt-3 text-3xl tracking-tight text-foreground md:text-4xl">
+          <h2 className="mt-3 text-balance text-2xl tracking-tight text-foreground sm:text-3xl md:text-4xl">
             {t("sectionTitle")}
           </h2>
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
@@ -66,7 +67,7 @@ export default async function Page({
         <Container>
           <section
             aria-label="Projects"
-            className="grid grid-cols-1 gap-8 px-6 py-12 md:grid-cols-2 md:px-10 xl:grid-cols-3"
+            className="grid grid-cols-1 gap-6 px-4 py-10 sm:px-6 sm:py-12 md:grid-cols-2 md:gap-8 md:px-10 xl:grid-cols-3"
           >
             {projects.map((project, index) => (
               <ProjectCard key={project.id} project={project} index={index} />
@@ -78,19 +79,25 @@ export default async function Page({
 
         <Container>
           <section className="grid grid-cols-1 border-b border-line md:grid-cols-[1fr_1.2fr]">
-            <div className="border-b border-line p-8 md:border-b-0 md:border-r md:p-10">
+            <div className="border-b border-line px-6 py-8 sm:px-8 md:border-b-0 md:border-r md:px-10 md:py-10">
               <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
                 {t("githubEyebrow")}
               </p>
-              <h2 className="mt-4 text-3xl tracking-tight md:text-4xl">
+              <h2 className="mt-4 text-balance text-2xl tracking-tight sm:text-3xl md:text-4xl">
                 {t("githubTitle")}
               </h2>
             </div>
-            <div className="p-8 md:p-10">
+            <div className="min-w-0 px-6 py-8 sm:px-8 md:px-10 md:py-10">
               <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">
                 {t("githubDescription")}
               </p>
-              <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3">
+              <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-3">
+                <a href={siteConfig.github} target="_blank" rel="noopener noreferrer" className="group">
+                  <ArrowLink>{t("githubProfile")}</ArrowLink>
+                </a>
+                <a href={siteConfig.linkedin} target="_blank" rel="noopener noreferrer" className="group">
+                  <ArrowLink>{t("linkedinProfile")}</ArrowLink>
+                </a>
                 <LocalizedLink href="/contact" locale={lang} className="group">
                   <ArrowLink>{t("githubCta")}</ArrowLink>
                 </LocalizedLink>
@@ -103,18 +110,18 @@ export default async function Page({
 
         <Container>
           <section className="grid grid-cols-1 border-y border-line md:grid-cols-[1.2fr_1fr]">
-            <div className="border-b border-line p-8 md:border-b-0 md:border-r md:p-10">
+            <div className="border-b border-line px-6 py-8 sm:px-8 md:border-b-0 md:border-r md:px-10 md:py-10">
               <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
                 {t("nextEyebrow")}
               </p>
-              <h2 className="mt-4 text-3xl tracking-tight md:text-4xl">
+              <h2 className="mt-4 text-balance text-2xl tracking-tight sm:text-3xl md:text-4xl">
                 {t("nextTitle")}
               </h2>
               <p className="mt-5 max-w-2xl text-sm leading-relaxed text-muted-foreground">
                 {t("nextDescription")}
               </p>
             </div>
-            <div className="flex items-center p-8 md:p-10">
+            <div className="flex items-center px-6 py-8 sm:px-8 md:px-10 md:py-10">
               <LocalizedLink href="/projects/next" locale={lang} className="group">
                 <ArrowLink>{t("nextCta")}</ArrowLink>
               </LocalizedLink>

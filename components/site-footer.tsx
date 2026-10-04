@@ -2,6 +2,7 @@ import Link from "next/link"
 import { LocalizedLink } from "@/components/localized-link"
 import { SiteWordmark } from "@/components/site-wordmark"
 import { type Locale } from "@/lib/i18n"
+import { projects } from "@/lib/projects"
 import { socials } from "@/lib/site"
 
 const buildLinks = [
@@ -9,27 +10,28 @@ const buildLinks = [
   { label: "Projects", href: "/projects" },
   { label: "Skills", href: "/about#skills" },
   { label: "Education", href: "/about#education" },
+  { label: "Communities", href: "/about#communities" },
   { label: "Contact", href: "/contact" },
 ]
 
-const projectLinks = [
-  { label: "UrbanMind", href: "/projects#urbanmind" },
-  { label: "Goose OS Development", href: "/projects#goose-os" },
-  { label: "PPG Symposium Website", href: "/projects#ppg-symposium" },
-] as const
+// Derived from lib/projects so the footer can never drift from the project ids.
+const projectLinks = projects.slice(0, 5).map((project) => ({
+  label: project.title,
+  href: `/projects#${project.id}`,
+}))
 
 export function SiteFooter({ locale }: { locale: Locale }) {
   return (
     <footer className="border-t border-line bg-background">
-      <div className="grid gap-12 px-8 py-16 md:grid-cols-3 xl:grid-cols-5">
-        <div>
+      <div className="grid gap-12 px-6 py-14 sm:px-8 sm:py-16 md:grid-cols-3 xl:grid-cols-5">
+        <div className="min-w-0">
           <SiteWordmark />
-          <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+          <p className="mt-4 font-mono text-[10px] uppercase leading-5 tracking-[0.25em] text-muted-foreground sm:tracking-[0.3em]">
             Aspiring AI/ML Engineer · Front-End Developer · CSE Student
           </p>
         </div>
 
-        <div>
+        <div className="min-w-0">
           <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
             Build
           </p>
@@ -48,7 +50,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
           </ul>
         </div>
 
-        <div>
+        <div className="min-w-0">
           <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
             Projects
           </p>
@@ -78,7 +80,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
           </ul>
         </div>
 
-        <div>
+        <div className="min-w-0">
           <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
             Explore
           </p>
@@ -108,18 +110,18 @@ export function SiteFooter({ locale }: { locale: Locale }) {
           </ul>
         </div>
 
-        <div>
+        <div className="min-w-0">
           <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
             Elsewhere
           </p>
           <ul className="space-y-3 text-sm">
-            {(socials.length ? socials : [{ label: "Email", href: `mailto:${"dhanushreevg28@gmail.com"}` }]).map((s) => (
+            {socials.map((s) => (
               <li key={s.label}>
                 <Link
                   href={s.href}
-                  target="_blank"
+                  target={s.href.startsWith("http") ? "_blank" : undefined}
                   rel="noopener noreferrer"
-                  className="text-foreground transition-colors hover:text-muted-foreground"
+                  className="break-words text-foreground transition-colors hover:text-muted-foreground"
                 >
                   {s.label}
                 </Link>
@@ -129,7 +131,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
         </div>
       </div>
       <div className="border-t border-line">
-        <div className="flex flex-col items-start justify-between gap-3 px-8 py-6 md:flex-row md:items-center">
+        <div className="flex flex-col items-start justify-between gap-3 px-6 py-6 sm:px-8 md:flex-row md:items-center">
           <p className="font-mono text-[10px] tracking-wider text-muted-foreground">
             © {new Date().getFullYear()} Dhanu Shree
           </p>

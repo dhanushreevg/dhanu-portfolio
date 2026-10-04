@@ -6,7 +6,7 @@ import { setRequestLocale } from "next-intl/server"
 
 import { isLocale, locales } from "@/lib/i18n"
 import { baseUrl } from "@/lib/seo"
-import { siteConfig, socials } from "@/lib/site"
+import { profileLinks, siteConfig } from "@/lib/site"
 
 import "../globals.css"
 
@@ -28,7 +28,7 @@ const structuredData = [
     name: siteConfig.name,
     url: baseUrl,
     logo: `${baseUrl}/og-image.png`,
-    sameAs: socials.map((social) => social.href),
+    sameAs: profileLinks,
   },
   {
     "@context": "https://schema.org",
@@ -60,9 +60,9 @@ export const metadata: Metadata = {
     "Developer Portfolio",
   ],
   icons: {
-    icon: "/og-image.png",
-    shortcut: "/og-image.png",
-    apple: "/og-image.png",
+    icon: "/sanjay-logo.png",
+    shortcut: "/sanjay-logo.png",
+    apple: "/sanjay-logo.png",
   },
   manifest: "/manifest.webmanifest",
 }

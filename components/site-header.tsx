@@ -21,14 +21,14 @@ export function SiteHeader({ locale }: { locale: Locale }) {
       <hr className="border-line" />
       <Container innerClassName="h-16">
         <nav className="relative flex h-full justify-between">
-          <div className="flex h-full w-[180px] items-center border-line lg:w-[215px] lg:border-r">
+          <div className="flex h-full w-auto min-w-0 items-center border-line sm:w-[180px] lg:w-[215px] lg:border-r">
             <Link
               href={withLocale("/", locale)}
-              className="group inline-flex h-full items-center gap-3 px-4 transition-colors lg:hover:bg-primary/5"
+              className="group inline-flex h-full min-w-0 items-center gap-2.5 px-4 transition-colors sm:gap-3 lg:hover:bg-primary/5"
               aria-label="Dhanu Shree — Home"
             >
               <BrandLogo />
-              <span className="font-mono text-xs font-medium uppercase tracking-[0.35em] text-foreground">
+              <span className="truncate font-mono text-xs font-medium uppercase tracking-[0.3em] text-foreground sm:tracking-[0.35em]">
                 Dhanu
               </span>
             </Link>

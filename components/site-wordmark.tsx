@@ -16,8 +16,8 @@ export function SiteWordmark({
       )}
       aria-label="Dhanu Shree"
     >
-      {showIcon ? <BrandLogo className="h-6 w-auto" /> : null}
-      <span className="wordmark-crafter text-sm tracking-[0.08em] text-foreground">
+      {showIcon ? <BrandLogo className="h-6 w-auto shrink-0" /> : null}
+      <span className="wordmark-crafter truncate text-sm tracking-[0.08em] text-foreground">
         Dhanu Shree
       </span>
     </span>

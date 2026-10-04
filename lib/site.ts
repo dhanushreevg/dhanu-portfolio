@@ -22,9 +22,8 @@ export const siteConfig = {
   url: "http://localhost:3000",
   author: "Dhanu Shree",
   email: "dhanushreevg28@gmail.com",
-  phone: "9842815860",
-  github: "",
-  linkedin: "",
+  github: "https://github.com/dhanushreevg",
+  linkedin: "https://www.linkedin.com/in/dhanu-shree-26282a3a0",
   location: "Coimbatore, India",
   ogImage: {
     alt: "Dhanu Shree — Aspiring AI/ML Engineer and Front-End Developer",
@@ -47,7 +46,29 @@ export const navItems = [
   { key: "contact", href: "/contact" },
 ] as const
 
-export const socials = [] as const
+export const socials = [
+  {
+    label: "GitHub",
+    href: siteConfig.github,
+    // Shown instead of the raw URL so long links do not blow out narrow layouts.
+    display: "github.com/dhanushreevg",
+  },
+  {
+    label: "LinkedIn",
+    href: siteConfig.linkedin,
+    display: "linkedin.com/in/dhanu-shree-26282a3a0",
+  },
+  {
+    label: "Email",
+    href: `mailto:${siteConfig.email}`,
+    display: siteConfig.email,
+  },
+] as const
+
+/** Only external http(s) profile links, safe for schema.org `sameAs`. */
+export const profileLinks = socials
+  .map((social) => social.href)
+  .filter((href) => /^https?:\/\//.test(href))
 
 export const stats = [
   { value: "3rd", label: { en: "Year of CSE", es: "Year of CSE", pt: "Year of CSE" } },

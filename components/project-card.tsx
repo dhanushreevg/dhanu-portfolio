@@ -86,6 +86,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
   return (
     <motion.article
+      id={project.id}
       initial={reduceMotion ? false : { opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-64px" }}
@@ -95,7 +96,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         ease: [0.22, 1, 0.36, 1],
       }}
       whileHover={reduceMotion ? undefined : { y: -10, scale: 1.03 }}
-      className="group relative flex h-full min-h-[560px] flex-col overflow-hidden rounded-3xl border border-line bg-card p-7 transition-[border-color,box-shadow] duration-300 hover:border-primary/50 hover:shadow-[0_24px_70px_-20px_rgba(228,34,120,0.18)] focus-within:border-primary/50"
+      className="group relative flex h-full min-h-[560px] scroll-mt-32 flex-col overflow-hidden rounded-3xl border border-line bg-card p-6 transition-[border-color,box-shadow] duration-300 hover:border-primary/50 hover:shadow-[0_24px_70px_-20px_rgba(228,34,120,0.18)] focus-within:border-primary/50 sm:p-7"
     >
       <div
         aria-hidden
@@ -108,7 +109,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           transition={buttonSpring}
           className="shrink-0"
         >
-          <div className="flex size-[88px] shrink-0 items-center justify-center overflow-hidden rounded-[22px] border border-line bg-secondary">
+          <div className="flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-[22px] border border-line bg-secondary sm:size-[88px]">
             <Image
               src={project.logo}
               alt={project.logoAlt}
@@ -118,20 +119,20 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             />
           </div>
         </motion.div>
-        <div className="min-w-0">
-          <h2 className="truncate text-xl font-semibold tracking-tight text-foreground">
+        <div className="min-w-0 flex-1">
+          <h2 className="text-balance text-lg font-semibold leading-snug tracking-tight text-foreground sm:truncate sm:text-xl">
             {project.title}
           </h2>
           <div className="mt-2.5 flex flex-wrap gap-2">
-            <span className="inline-flex h-6 items-center rounded-full border border-line bg-secondary px-2.5 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+            <span className="inline-flex items-center rounded-full border border-line bg-secondary px-2.5 py-1 font-mono text-[10px] uppercase leading-4 tracking-[0.18em] text-muted-foreground">
               {project.category}
             </span>
             <span
               className={cn(
-                "inline-flex h-6 items-center gap-1.5 rounded-full border border-line bg-secondary px-2.5 text-[11px] font-medium text-muted-foreground",
+                "inline-flex items-center gap-1.5 rounded-full border border-line bg-secondary px-2.5 py-1 text-[11px] font-medium leading-4 text-muted-foreground",
               )}
             >
-              <span className="size-1.5 rounded-full bg-primary" />
+              <span className="size-1.5 shrink-0 rounded-full bg-primary" />
               {project.status}
             </span>
           </div>
@@ -151,7 +152,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       >
         {project.technologies.map((tech) => (
           <motion.li key={tech} variants={chip} transition={buttonSpring}>
-            <span className="inline-flex items-center rounded-full border border-line bg-secondary px-2.5 py-1 text-[11px] font-medium text-muted-foreground">
+            <span className="inline-flex max-w-full items-center rounded-full border border-line bg-secondary px-2.5 py-1 text-[11px] font-medium leading-4 text-muted-foreground">
               {tech}
             </span>
           </motion.li>
@@ -162,11 +163,11 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary">
           Impact
         </p>
-        <ul className="mt-3 grid grid-cols-2 gap-x-3 gap-y-2">
+        <ul className="mt-3 grid grid-cols-1 gap-x-3 gap-y-2 sm:grid-cols-2">
           {project.impact.map((item) => (
             <li
               key={item}
-              className="flex items-center gap-1.5 text-xs leading-snug text-foreground"
+              className="flex min-w-0 items-start gap-1.5 text-xs leading-snug text-foreground"
             >
               <Check className="size-3.5 shrink-0 text-primary" />
               {item}
@@ -184,7 +185,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             {project.highlights.map((item) => (
               <li
                 key={item}
-                className="rounded-md border border-line bg-secondary px-2 py-1 text-[11px] text-muted-foreground"
+                className="max-w-full break-words rounded-md border border-line bg-secondary px-2 py-1 text-[11px] leading-4 text-muted-foreground"
               >
                 {item}
               </li>
@@ -198,7 +199,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           {project.awards.map((award) => (
             <span
               key={award}
-              className="inline-flex items-center gap-1.5 rounded-full border border-line bg-secondary px-2.5 py-1 text-[11px] font-medium text-muted-foreground"
+              className="inline-flex max-w-full items-center gap-1.5 rounded-full border border-line bg-secondary px-2.5 py-1 text-[11px] font-medium text-muted-foreground"
             >
               <Trophy className="size-3.5 text-primary" />
               {award}

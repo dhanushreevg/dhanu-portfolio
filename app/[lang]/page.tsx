@@ -5,6 +5,7 @@ import { SectionGap } from "@/components/grid-container"
 import { HeroContent } from "@/components/hero"
 import {
   AboutSnippet,
+  CommunitiesSnippet,
   ContactCta,
   EducationSnippet,
   PracticalWorkSnippet,
@@ -58,6 +59,8 @@ export default async function Page({
         <SkillsSection locale={lang} />
         <SectionGap />
         <EducationSnippet locale={lang} />
+        <SectionGap />
+        <CommunitiesSnippet locale={lang} />
         <SectionGap />
         <PracticalWorkSnippet locale={lang} />
         <SectionGap />

@@ -28,7 +28,7 @@ export function HeroContent({
   return (
     <Container innerClassName="overflow-hidden bg-background">
       <div className="relative flex flex-col md:block md:min-h-[calc(100svh-5rem)]">
-        <LiquidHero imagePath="" imageAlign="right" className="z-0 hidden md:block" />
+        <LiquidHero imagePath="/sanjay-logo.png" imageAlign="right" className="z-0 hidden md:block" />
         <SakuraEffect />
         <div
           aria-hidden
@@ -41,12 +41,12 @@ export function HeroContent({
 
         <div className="pointer-events-none relative z-10 flex flex-col md:absolute md:inset-0 md:flex-col">
           <div className="mx-auto flex w-full max-w-[1380px] flex-col justify-between px-4 pt-8 sm:px-6 md:h-full md:gap-14 md:px-10 md:py-11">
-            <div className="md:max-w-[55%]">
+            <div className="min-w-0 md:max-w-[55%]">
               <p className="mb-3 font-mono text-[10px] uppercase tracking-[0.4em] text-accent md:mb-5">
                 {eyebrow}
               </p>
               <h1
-                className="select-none text-balance font-bold uppercase tracking-tight leading-[0.95] text-foreground text-[clamp(2rem,7.5vw,3rem)] md:text-6xl lg:text-7xl xl:text-[5.5rem]"
+                className="select-none break-words text-balance font-bold uppercase leading-[0.95] tracking-tight text-foreground text-[clamp(1.75rem,7.5vw,3rem)] sm:text-[clamp(2rem,6.5vw,3rem)] md:text-6xl lg:text-7xl xl:text-[5.5rem]"
                 style={{
                   filter:
                     "drop-shadow(0 2px 24px hsl(var(--background) / 0.6))",
@@ -67,7 +67,7 @@ export function HeroContent({
               </p>
             </div>
 
-            <div className="pointer-events-auto mt-8 inline-grid w-full grid-cols-1 gap-4 sm:w-fit md:mt-0">
+            <div className="pointer-events-auto mt-8 grid w-full grid-cols-1 gap-4 sm:inline-grid sm:w-fit sm:grid-cols-2 md:mt-0">
               <Link
                 href={primaryHref}
                 className="group flex items-center justify-between gap-3 border border-foreground/20 bg-background/20 px-6 py-3 text-foreground/85 backdrop-blur-[2px] transition-colors hover:border-foreground/50 hover:bg-background/40"
@@ -87,9 +87,9 @@ export function HeroContent({
         </div>
 
         <div className="relative mb-8 mt-8 md:hidden">
-          <div className="mx-auto w-[68vw]">
+          <div className="mx-auto w-[68vw] max-w-[420px]">
             <div className="relative aspect-[1.03]">
-              <LiquidHero imagePath="" imageAlign="center" fillFactor={0.92} />
+              <LiquidHero imagePath="/sanjay-logo.png" imageAlign="center" fillFactor={0.92} />
             </div>
           </div>
         </div>
