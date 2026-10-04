@@ -31,14 +31,14 @@ export default async function Page({
       <SiteHeader locale={lang} />
       <main className="flex-1">
         <Container>
-          <div className="px-6 py-16 md:px-10 md:py-24">
+          <div className="px-6 py-16 sm:px-8 md:px-10 md:py-24">
             <p className="font-mono text-[10px] uppercase tracking-[0.35em] text-accent">
               Certificates
             </p>
-            <h1 className="mt-5 max-w-4xl text-balance font-serif text-5xl font-semibold tracking-[-0.02em] md:text-7xl">
+            <h1 className="mt-5 max-w-4xl text-balance font-serif text-4xl font-semibold tracking-[-0.02em] sm:text-5xl md:text-7xl">
               Certified by the names behind the tools.
             </h1>
-            <p className="mt-6 max-w-2xl text-balance text-lg leading-8 text-muted-foreground">
+            <p className="mt-6 max-w-2xl text-balance text-base leading-8 text-muted-foreground sm:text-lg">
               Proof of the learning, not just the building.
             </p>
           </div>
@@ -102,15 +102,15 @@ export default async function Page({
 
         <Container>
           <section className="border-y border-line">
-            <div className="border-b border-line p-8 md:p-10">
+            <div className="border-b border-line px-6 py-8 sm:px-8 md:p-10">
               <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
                 Verified
               </p>
-              <h2 className="mt-3 font-serif text-3xl tracking-tight md:text-4xl">
+              <h2 className="mt-3 font-serif text-2xl tracking-tight sm:text-3xl md:text-4xl">
                 Every certificate links to its original file.
               </h2>
             </div>
-            <div className="p-8 md:p-10">
+            <div className="px-6 py-8 sm:px-8 md:p-10">
               <p className="max-w-3xl text-sm leading-relaxed text-muted-foreground">
                 Select any certificate to open the original on Google Drive and
                 verify it for yourself.

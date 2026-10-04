@@ -1,24 +1,30 @@
 import React from "react"
 import type { Metadata, Viewport } from "next"
-import { JetBrains_Mono, Space_Grotesk } from "next/font/google"
+import localFont from "next/font/local"
 import { notFound } from "next/navigation"
 import { setRequestLocale } from "next-intl/server"
 
 import { isLocale, locales } from "@/lib/i18n"
-import { baseUrl } from "@/lib/seo"
+import { absoluteUrl, baseUrl } from "@/lib/seo"
 import { profileLinks, siteConfig } from "@/lib/site"
 
 import "../globals.css"
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
+// Self-hosted so builds never fetch from Google Fonts at build time. Both files
+// are variable fonts, so one file per family covers every weight in use.
+const spaceGrotesk = localFont({
+  src: "../fonts/space-grotesk-latin.woff2",
+  weight: "300 700",
+  style: "normal",
+  display: "swap",
   variable: "--font-sans",
-  weight: ["300", "400", "500", "600", "700"],
 })
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
+const jetbrainsMono = localFont({
+  src: "../fonts/jetbrains-mono-latin.woff2",
+  weight: "100 800",
+  style: "normal",
+  display: "swap",
   variable: "--font-mono",
-  weight: ["300", "400", "500", "700"],
 })
 
 const structuredData = [
@@ -27,7 +33,7 @@ const structuredData = [
     "@type": "Organization",
     name: siteConfig.name,
     url: baseUrl,
-    logo: `${baseUrl}/og-image.png`,
+    logo: absoluteUrl(siteConfig.ogImage.path),
     sameAs: profileLinks,
   },
   {
@@ -42,15 +48,16 @@ const structuredData = [
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-  default: "Dhanu Shree | Aspiring AI/ML Engineer & Front-End Developer",
+    default: siteConfig.title,
     template: "%s",
   },
   description: siteConfig.description.en,
-  authors: [{ name: "Dhanu Shree" }],
+  authors: [{ name: siteConfig.author }],
   keywords: [
     "Dhanu Shree",
     "Portfolio",
-    "Aspiring AI/ML Engineer",
+    "AI/ML Engineer",
+    "CSE Student",
     "React",
     "Next.js",
     "AI",
@@ -60,9 +67,9 @@ export const metadata: Metadata = {
     "Developer Portfolio",
   ],
   icons: {
-    icon: "/sanjay-logo.png",
-    shortcut: "/sanjay-logo.png",
-    apple: "/sanjay-logo.png",
+    icon: siteConfig.ogImage.path,
+    shortcut: siteConfig.ogImage.path,
+    apple: siteConfig.ogImage.path,
   },
   manifest: "/manifest.webmanifest",
 }

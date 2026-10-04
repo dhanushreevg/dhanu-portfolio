@@ -6,27 +6,42 @@ function localized(value: LocalizedString, locale: Locale) {
   return value[locale] ?? value[defaultLocale]
 }
 
+/**
+ * Absolute origin used for canonicals, sitemap, robots and OG/Twitter image URLs.
+ * Set `NEXT_PUBLIC_SITE_URL` in the Vercel project env vars (e.g. the production
+ * domain) so production ships absolute URLs instead of the dev-server default.
+ */
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
+
+const shortDescription =
+  "CS student building AI products, leading startup communities, and creating innovative digital experiences."
+
 export const siteConfig = {
   name: "Dhanu Shree",
-  domain: "localhost:3000",
+  title: "Dhanu Shree | AI/ML Engineer & CSE Student",
+  domain: new URL(siteUrl).host,
   tagline: {
-    en: "Aspiring AI/ML Engineer · Front-End Developer · CSE Student",
-    es: "Aspiring AI/ML Engineer · Front-End Developer · CSE Student",
-    pt: "Aspiring AI/ML Engineer · Front-End Developer · CSE Student",
+    en: "AI/ML Engineer & CSE Student",
+    es: "AI/ML Engineer & CSE Student",
+    pt: "AI/ML Engineer & CSE Student",
   },
   description: {
-    en: "Dhanu Shree is a Computer Science and Engineering student passionate about Artificial Intelligence, Machine Learning, Computer Vision and modern web development.",
-    es: "Dhanu Shree is a Computer Science and Engineering student passionate about Artificial Intelligence, Machine Learning, Computer Vision and modern web development.",
-    pt: "Dhanu Shree is a Computer Science and Engineering student passionate about Artificial Intelligence, Machine Learning, Computer Vision and modern web development.",
+    en: shortDescription,
+    es: shortDescription,
+    pt: shortDescription,
   },
-  url: "http://localhost:3000",
+  url: siteUrl,
   author: "Dhanu Shree",
   email: "dhanushreevg28@gmail.com",
   github: "https://github.com/dhanushreevg",
   linkedin: "https://www.linkedin.com/in/dhanu-shree-26282a3a0",
   location: "Coimbatore, India",
   ogImage: {
-    alt: "Dhanu Shree — Aspiring AI/ML Engineer and Front-End Developer",
+    path: "/meta-tag.png",
+    width: 1200,
+    height: 630,
+    type: "image/png",
+    alt: "Dhanu Shree — AI/ML Engineer and CSE Student",
   },
 } as const
 

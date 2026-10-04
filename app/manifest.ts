@@ -1,30 +1,23 @@
 import type { MetadataRoute } from "next"
 
+import { siteConfig } from "@/lib/site"
+
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Dhanu Shree | Portfolio",
-    short_name: "Dhanu Shree",
-    description:
-      "Aspiring AI/ML Engineer, Front-End Developer, and Computer Science student.",
+    name: siteConfig.title,
+    short_name: siteConfig.name,
+    description: siteConfig.description.en,
     start_url: "/",
     display: "standalone",
     background_color: "#F9F9F9",
     theme_color: "#E42278",
     icons: [
       {
-        src: "/og-image.png",
-        sizes: "192x192",
-        type: "image/png",
-      },
-      {
-        src: "/og-image.png",
-        sizes: "512x512",
-        type: "image/png",
-      },
-      {
-        src: "/og-image.png",
-        sizes: "any",
-        type: "image/png",
+        src: siteConfig.ogImage.path,
+        // meta-tag.png is 1672x941, so the previous square 192/512 claims were wrong.
+        sizes: "1672x941",
+        type: siteConfig.ogImage.type,
+        purpose: "any",
       },
     ],
   }

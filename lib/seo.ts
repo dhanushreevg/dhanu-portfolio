@@ -34,11 +34,13 @@ export function absoluteUrl(path: string) {
 }
 
 export const ogImage = {
-  url: absoluteUrl("/og-image.png"),
-  width: 1200,
-  height: 630,
+  url: absoluteUrl(siteConfig.ogImage.path),
+  secureUrl: absoluteUrl(siteConfig.ogImage.path),
+  width: siteConfig.ogImage.width,
+  height: siteConfig.ogImage.height,
+  type: siteConfig.ogImage.type,
   alt: siteConfig.ogImage.alt,
-}
+} as const
 
 export function localizedUrl(path: string, locale: Locale) {
   return absoluteUrl(pathForLocale(path, locale))
@@ -67,18 +69,19 @@ export function buildMetadata({
   const url = localizedUrl(path, locale)
   const fullTitle =
     title === siteConfig.name
-      ? "Dhanu Shree | Aspiring AI/ML Engineer & Front-End Developer"
+      ? siteConfig.title
       : `${title} | ${siteConfig.name}`
 
   return {
     metadataBase: new URL(baseUrl),
     title: fullTitle,
     description,
-    authors: [{ name: "Dhanu Shree" }],
+    authors: [{ name: siteConfig.author }],
     keywords: [
       "Dhanu Shree",
       "Portfolio",
-      "Aspiring AI/ML Engineer",
+      "AI/ML Engineer",
+      "CSE Student",
       "React",
       "Next.js",
       "AI",
