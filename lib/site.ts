@@ -39,8 +39,8 @@ export const siteConfig = {
   location: "Coimbatore, India",
   ogImage: {
     path: "/meta-tag.png",
-    width: 1672,
-    height: 941,
+    width: 1200,
+    height: 675,
     type: "image/png",
     alt: "Dhanu Shree — AI/ML Engineer and CSE Student",
   },
